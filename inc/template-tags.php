@@ -53,7 +53,7 @@ function twentysixteen_entry_meta() {
 			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
 			_x( 'Author', 'Used before post author name.', 'twentysixteen' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() )
+			get_the_author()
 		);
 	}
 
@@ -66,7 +66,7 @@ function twentysixteen_entry_meta() {
 		printf( '<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
 			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'twentysixteen' ) ),
 			esc_url( get_post_format_link( $format ) ),
-			esc_html( get_post_format_string( $format ) )
+			get_post_format_string( $format )
 		);
 	}
 
@@ -99,9 +99,9 @@ function twentysixteen_entry_date() {
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		get_the_date(),
 		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		get_the_modified_date()
 	);
 
 	printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
@@ -182,7 +182,7 @@ function twentysixteen_excerpt_more( $more ) {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading %s', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
+		sprintf( __( 'Continue reading %s', 'twentysixteen' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
 	);
 	return ' &hellip; ' . $link;
 }
