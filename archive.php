@@ -52,8 +52,8 @@ get_header(); ?>
 				) );
 			endif;
 
-		// If no content, include the "No posts found" template.
 		else :
+				// If no content, include the "No posts found" template.
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
