@@ -1546,7 +1546,7 @@ article[class^="post-"] {
 	position: relative;
 }
 
-.site-main > article[class^="post-"]:first-child {
+.site-main > article[class^="post-"]:first-of-type {
 	padding-top: 0;
 }
 
