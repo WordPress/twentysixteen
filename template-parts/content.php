@@ -12,7 +12,7 @@
 	<header class="entry-header">
 		<?php
 			if ( is_sticky() && is_home() && ! is_paged() ) {
-				printf( '<span class="sticky-post">%s</span>', __( 'Featured', 'twentysixteen' ) );
+				printf( '<span class="sticky-post">%s</span>', esc_html__( 'Featured', 'twentysixteen' ) );
 			}
 
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
@@ -29,18 +29,18 @@
 
 	<div class="entry-content">
 		<?php
+			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				/* translators: %s: Name of current post */
-				__( 'Continue reading %s', 'twentysixteen' ),
+				wp_kses( __( 'Continue reading %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'twentysixteen' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'twentysixteen' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>
@@ -48,6 +48,6 @@
 
 	<footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
-		<?php edit_post_link( __( 'Edit', 'twentysixteen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'twentysixteen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
