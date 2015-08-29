@@ -1387,6 +1387,7 @@ article[class^="post-"]:after,
 	color: #757575;
 	display: block;
 	font-family: Montserrat, sans-serif;
+	margin-bottom: 1em;
 }
 
 /* RSS widget */
