@@ -1544,6 +1544,7 @@ article[class^="post-"]:after,
 article[class^="post-"] {
 	padding: 3.5em 0;
 	position: relative;
+	word-wrap: break-word;
 }
 
 .site-main > article[class^="post-"]:first-child {
@@ -1598,7 +1599,6 @@ a.post-thumbnail:focus {
 	font-size: 1.1875rem;
 	line-height: 1.4736842105;
 	margin: 0 7.6923% 1.4736842105em;
-	word-wrap: break-word;
 }
 
 .entry-header + .entry-intro {
@@ -1647,12 +1647,8 @@ a.post-thumbnail:focus {
 	margin-bottom: 1.4736842105em;
 }
 
-.entry-content,
-.entry-summary,
-.entry-intro,
 .page-content,
-.comment-content,
-.textwidget {
+.comment-content {
 	word-wrap: break-word;
 }
 
@@ -2015,10 +2011,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 	margin-bottom: 1.75em;
 }
 
-.type-attachment .entry-title {
-	word-wrap: break-word;
-}
-
 .entry-caption {
 	color: #757575;
 	font-size: 13px;
@@ -2026,7 +2018,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 	font-style: italic;
 	line-height: 1.6153846154;
 	padding-top: 1.0769230769em;
-	word-wrap: break-word;
 }
 
 .entry-caption > :last-child {
