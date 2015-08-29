@@ -30,8 +30,8 @@
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php else : ?>
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
-
+					<?php endif; ?>
+					<?php
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; ?></p>
@@ -49,7 +49,7 @@
 								<?php
 									wp_nav_menu( array(
 										'theme_location' => 'primary',
-										'menu_class'     => 'primary-menu'
+										'menu_class'     => 'primary-menu',
 									 ) );
 								?>
 							</nav><!-- .main-navigation -->
@@ -63,7 +63,7 @@
 										'menu_class'     => 'social-links-menu',
 										'depth'          => 1,
 										'link_before'    => '<span class="screen-reader-text">',
-										'link_after'     => '</span>'
+										'link_after'     => '</span>',
 									) );
 								?>
 							</nav><!-- .social-navigation -->
