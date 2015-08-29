@@ -10,17 +10,19 @@
 /**
  * Set up the WordPress core custom header and custom background features.
  *
+ * @since Twenty Sixteen 1.0
+ *
  * @uses twentysixteen_header_style()
  */
 function twentysixteen_custom_header_and_background() {
-	$color_scheme             = twentysixteen_get_color_scheme();
-	$default_background_color = trim( $color_scheme[0], '#' );
-	$default_text_color       = trim( $color_scheme[3], '#' );
+  $color_scheme             = twentysixteen_get_color_scheme();
+  $default_background_color = trim( $color_scheme[0], '#' );
+  $default_text_color       = trim( $color_scheme[3], '#' );
 
-	/**
-	 * Filter Twenty Sixteen custom-background support argument.
-	 *
-	 * @since Twenty Sixteen 1.0
+  /**
+   * Filter Twenty Sixteen custom-background support argument.
+   *
+   * @since Twenty Sixteen 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-background support arguments.
