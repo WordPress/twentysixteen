@@ -53,7 +53,7 @@ get_header(); ?>
 			endif;
 
 		else :
-				// If no content, include the "No posts found" template.
+			// If no content, include the "No posts found" template.
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
