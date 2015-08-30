@@ -156,6 +156,16 @@ function twentysixteen_get_color_schemes() {
 				'#774e24',
 			),
 		),
+		'blue' => array(
+			'label'  => esc_html__( 'Blue', 'twentysixteen' ),
+			'colors' => array(
+				'#84abaa',
+				'#6ca19e',
+				'#ded1b6',
+				'#42282c',
+				'#ededed',
+			),
+		),
 	) );
 }
 
