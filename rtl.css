@@ -1,0 +1,567 @@
+/*
+Theme Name: Twenty Sixteen
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+See: https://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Normalize
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigation
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Widgets
+ * 11.0 - Content
+ *    11.1 - Header
+ *    11.2 - Posts and pages
+ *    11.3 - Post Formats
+ *    11.4 - Comments
+ *    11.5 - Sidebar
+ *    11.6 - Footer
+ * 12.0 -  Media
+ *    12.1 - Captions
+ *    12.2 - Galleries
+ * 13.0 - Multisite
+ * 14.0 - Media Queries
+ *    14.1 - >= 710px
+ *    14.2 - >= 783px
+ *    14.3 - >= 910px
+ *    14.4 - >= 985px
+ *    14.5 - >= 1200px
+ */
+
+
+/**
+ * 1.0 Normalize
+ *
+ * Normalizing styles have been helped along thanks to the fine work of
+ * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+ */
+
+body {
+	direction: rtl;
+  unicode-bidi: embed;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-left: 0.4375em;
+}
+
+/**
+ * 2.0 Typography
+ */
+
+blockquote {
+	padding: 0 1.263157895em 0 0;
+}
+
+/**
+ * 4.0 Elements
+ */
+
+ul,
+ol {
+	margin: 0 1.25em 1.75em 0;
+}
+
+ol {
+	margin-right: 1.5em;
+}
+
+th {
+	border-width: 0 0 1px 1px;
+}
+
+td {
+	border-width: 0 0 1px 1px;
+}
+
+/**
+ * 4.0 Navigation
+ */
+
+/**
+ * 4.2 - Menus
+ */
+
+.main-navigation ul ul {
+	margin-right: 0.875em;
+	left: auto;
+	right: -999em;
+}
+
+.main-navigation .menu-item-has-children > a {
+	padding-left: 48px;
+}
+
+.dropdown-toggle {
+	right: auto;
+  left: 0;
+}
+
+.dropdown-toggle:after {
+	left: auto;
+  right: 1px;
+}
+
+.social-navigation li {
+	float: right;
+	margin: 0 0 0.4375em 0.4375em;
+}
+
+.pagination .nav-links {
+	padding-left: 106px;
+}
+
+.pagination .page-numbers {
+	margin: 0 -0.7368421053em 0 0.7368421053em;
+}
+
+.pagination .nav-links:before {
+	right: auto;
+	left: 0;
+}
+
+.pagination .prev {
+	right: auto;
+	left: 54px;
+}
+
+.pagination .prev:before {
+	left: auto;
+	right: -1px;
+}
+
+.pagination .next {
+	right: auto;
+	left: 0;
+}
+
+.pagination .next:before {
+	right: auto;
+	left: -1px;
+}
+
+/**
+ * 5.0 Accessibility
+ */
+
+/* must have higher specificity than alternative color schemes inline styles */
+.site .skip-link {
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+	left: auto;
+	right: -999em;
+}
+
+.logged-in .site .skip-link {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.site .skip-link:focus {
+	left: auto;
+	right: 6px;
+}
+
+/**
+ * 6.0 Widgets
+ */
+
+
+/* Tag Cloud widget */
+.tagcloud a {
+	margin: 0 0 0.1875em 0.4375em !important;
+}
+
+
+/**
+ * 7.0 Content
+ */
+
+
+/**
+ * 7.1 - Header
+ */
+
+.site-branding {
+	margin: 0.875em 0 0.875em auto;
+}
+
+/**
+ * 7.2 - Posts and pages
+ */
+
+.entry-intro .alignleft {
+	margin: 0.2631578947em 0 1.2105263158em 1.4736842105em;
+}
+
+.entry-intro .alignright {
+	margin: 0.2631578947em 1.2105263158em 1.4736842105em 0;
+}
+
+.author-avatar .avatar {
+	margin: 0 0 1.75em 1.75em;
+}
+
+.entry-footer .avatar {
+	margin: -0.1538461538em 0 0 0.5384615385em;
+}
+
+.page-links > .page-links-title {
+	padding-right: inherit;
+	padding-left: 0.6153846154em;
+}
+
+/**
+ * 7.3 - Comments
+ */
+
+.comment-list .children > li {
+	padding-left: inherit;
+	padding-right: 0.875em;
+}
+
+.comment-author .avatar {
+	float: right;
+	margin-right: auto;
+	margin-left: 0.875em;
+}
+
+.bypostauthor > article .fn:after {
+	left: auto;
+	right: 3px;
+}
+
+.comment-content ul,
+.comment-content ol {
+	margin: 0 1.25em 1.5em 0;
+}
+
+.comment-reply-title small a {
+	float: left;
+}
+
+
+/**
+ * 7.6 - Footer
+ */
+
+.site-footer .site-title:after {
+	padding: 0 0.538461538em 0 0.307692308em;
+}
+
+
+/**
+ * 8.0 Multisites
+ */
+
+
+.widecolumn .mu_register label {
+	margin: 2.1538461538em 0 0.5384615385em 0.7692307692em;
+}
+
+
+/**
+ * 9.0 Media Queries
+ */
+
+/**
+ * 14.1 - >= 710px
+ */
+
+@media screen and (min-width: 44.375em) {
+	body:not(.custom-background-image):before,
+	body:not(.custom-background-image):after {
+		left: auto;
+		right: 0;
+	}
+
+	.pagination {
+		margin: 2.947368421em 7.6923% 5.894736842em 23.0769%
+	}
+
+	.sidebar {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.entry-header,
+	.entry-intro,
+	.post-thumbnail,
+	.entry-content,
+	.entry-summary,
+	.entry-footer,
+	.comments-area,
+	.image-navigation,
+	.post-navigation,
+	.page-header,
+	.page-content,
+	.content-bottom-widgets {
+		margin-right: auto;
+		margin-left: 0;
+	}
+
+	.entry-content blockquote:not(.alignleft):not(.alignright),
+	.entry-summary blockquote,
+	.entry-intro blockquote,
+	.page-content blockquote,
+	.comment-content blockquote {
+		margin-left: auto;
+		margin-right: -1.473684211em;
+	}
+
+	.entry-content blockquote blockquote,
+	.entry-summary blockquote blockquote,
+	.entry-intro blockquote blockquote,
+	.page-content blockquote blockquote,
+	.comment-content blockquote blockquote {
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.entry-content ul,
+	.entry-summary ul,
+	.entry-intro ul,
+	.page-content ul,
+	.comment-content ul,
+	.entry-content ol,
+	.entry-summary ol,
+	.entry-intro ol,
+	.page-content ol,
+	.comment-content ol {
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.entry-content li > ul,
+	.entry-summary li > ul,
+	.page-content li > ul,
+	.comment-content li > ul,
+	.entry-content blockquote > ul,
+	.entry-summary blockquote > ul,
+	.page-content blockquote > ul,
+	.comment-content blockquote > ul {
+		margin-left: auto;
+		margin-right: 1.25em;
+	}
+
+	.entry-intro li > ul,
+	.entry-intro blockquote > ul {
+		margin-left: auto;
+		margin-right: 1.157894737em;
+	}
+
+	.entry-content li > ol,
+	.entry-summary li > ol,
+	.page-content li > ol,
+	.comment-content li > ol,
+	.entry-content blockquote > ol,
+	.entry-summary blockquote > ol,
+	.page-content blockquote > ol,
+	.comment-content blockquote > ol {
+		margin-left: auto;
+		margin-right: 1.5em;
+	}
+
+	.entry-intro li > ol,
+	.entry-intro blockquote > ol {
+		margin-left: auto;
+		margin-right: 1.473684211em;
+	}
+
+	.comment-list .children > li {
+		padding-left: inherit;
+		padding-right: 1.75em;
+	}
+
+	.widecolumn {
+		padding-right: inherit;
+		padding-left: 23.0769%;
+	}
+}
+
+
+/**
+ * 8.3 - >= 910px
+ */
+
+@media screen and (min-width: 56.875em) {
+
+	.main-navigation li {
+		float: right;
+	}
+
+	.main-navigation ul ul:before {
+		left: auto;
+		right: 7px;
+	}
+
+	.main-navigation ul ul:after {
+		left: auto;
+		right: 9px;
+	}
+
+	.main-navigation li:hover > ul,
+	.main-navigation li.focus > ul {
+		right: auto;
+	}
+
+	.main-navigation .menu-item-has-children > a {
+		padding-right: 2.25em;
+		padding-left: 0;
+	}
+
+	.main-navigation .menu-item-has-children > a:after	{
+		left: auto;
+		right: 0.625em;
+	}
+
+	.main-navigation .menu-item-has-children > a:after {
+		right: 0.625em;
+		left: auto;
+	}
+
+	.main-navigation ul ul .menu-item-has-children > a:after {
+		content: '';
+	}
+
+	.main-navigation ul ul .menu-item-has-children > a {
+		    padding-right: 0.875em;
+	}
+
+	.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+    right: 94%;
+		left: 0;
+	}
+
+	.main-navigation ul ul .menu-item-has-children > a:before {
+		    content: "\f432";
+				right: auto;
+				left: 0.625em;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				font-family: "Genericons";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				line-height: 1;
+				speak: none;
+				text-align: center;
+				text-decoration: inherit;
+				text-transform: none;
+				vertical-align: top;
+				position: absolute;
+    		transform: rotate(-90deg);
+	}
+
+	.content-area {
+		float: right;
+		margin-right: auto;
+		margin-left: -100%;
+	}
+
+	.sidebar {
+		float: right;
+		margin-left: auto;
+		margin-right: 75%;
+	}
+
+	.widget blockquote {
+		padding-left: inherit;
+		padding-right: 1.0625em;
+	}
+
+	.tagcloud a {
+		margin: 0 0 0.5384615385em 0.2307692308em !important;
+	}
+
+	.content-bottom-widgets .widget-area:nth-child(1):nth-last-child(2),
+	.content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1) {
+		float: right;
+		margin-right: auto;
+		margin-left: 7.1428571%;
+	}
+
+	.content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1):last-of-type {
+		margin-right: auto;
+		margin-left: 0;
+	}
+
+}
+
+
+/**
+ * 14.4 - >= 985px
+ */
+
+@media screen and (min-width: 61.5625em) {
+
+	body:not(.search-results) .type-post .entry-content {
+		float: left;
+	}
+
+	body:not(.search-results) .type-post .entry-content blockquote.alignleft {
+		margin-left: auto;
+		margin-right: -40%;
+	}
+
+	body:not(.search-results) .type-post .size-big,
+	body:not(.search-results) .type-post .caption-big {
+		margin-right: -40%;
+		margin-left: 0;
+	}
+
+	body:not(.search-results) .type-post .entry-footer {
+		float: right;
+	}
+
+	body.no-sidebar:not(.search-results) .type-post .entry-content {
+		float: right;
+		margin-left: -100%;
+		margin-right: 34.99999999%;
+	}
+
+	body.no-sidebar:not(.search-results) .type-post .entry-footer {
+		margin-left: -100%;
+		margin-right: 15%;
+	}
+}
+
+
+/**
+ * 14.5 - >= 1200px
+ */
+
+@media screen and (min-width: 75em) {
+
+	.entry-intro li > ul,
+	.entry-intro blockquote > ul {
+		margin-left: auto;
+		margin-right: 0.956521739em;
+	}
+
+	.entry-intro li > ol,
+	.entry-intro blockquote > ol {
+		margin-left: auto;
+		margin-right: 1.52173913em;
+	}
+
+	.entry-intro blockquote {
+		margin: 0 -1.52173913em 1.5217391304em 0;
+		padding-left: 0;
+		padding-right: 1.347826087em;
+	}
+}
