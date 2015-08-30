@@ -462,6 +462,8 @@ html {
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 body {
@@ -1328,7 +1330,6 @@ article[class^="post-"]:after,
 .widget {
 	border-top: 4px solid #1a1a1a;
 	padding: 1.75em 0 3.5em;
-	word-wrap: break-word;
 }
 
 .widget > :last-child {
@@ -1544,7 +1545,6 @@ article[class^="post-"]:after,
 article[class^="post-"] {
 	padding: 3.5em 0;
 	position: relative;
-	word-wrap: break-word;
 }
 
 .site-main > article[class^="post-"]:first-child {
@@ -1645,10 +1645,6 @@ a.post-thumbnail:focus {
 
 .entry-intro .aligncenter {
 	margin-bottom: 1.4736842105em;
-}
-
-.page-content {
-	word-wrap: break-word;
 }
 
 .entry-content h1,
@@ -1841,10 +1837,6 @@ a.post-thumbnail:focus {
 	width: 42px;
 }
 
-.author-description {
-	word-wrap: break-word;
-}
-
 .author-description > :last-child {
 	margin-bottom: 0;
 }
@@ -1865,7 +1857,6 @@ a.post-thumbnail:focus {
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin-bottom: 1.6153846154em;
-	word-wrap: break-word;
 }
 
 .author-link {
@@ -2059,7 +2050,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .comments-area {
 	margin: 0 7.6923% 3.5em;
-	word-wrap: break-word;
 }
 
 .comment-list + .comment-respond,
