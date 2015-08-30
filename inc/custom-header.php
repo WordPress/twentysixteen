@@ -68,11 +68,11 @@ if ( ! function_exists( 'twentysixteen_header_style' ) ) :
  */
 function twentysixteen_header_style() {
 	// If the header text option is untouched, let's bail.
-	if ( display_header_text() ) {
+	if ( display_header_text() ) :
 		return;
 
 	// If the header text has been hidden.
-	} else {
+	else :
 	?>
 		<style type="text/css" id="twentysixteen-header-css">
 			.site-branding {
@@ -86,6 +86,6 @@ function twentysixteen_header_style() {
 			}
 		</style>
 	<?php
-	}
+	endif;
 }
 endif; // twentysixteen_header_style

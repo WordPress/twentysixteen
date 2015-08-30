@@ -13,11 +13,11 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_excerpt() ) { ?>
+	<?php if ( has_excerpt() ) : ?>
 		<div class="entry-intro">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-intro -->
-	<?php } ?>
+	<?php endif; ?>
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
@@ -34,9 +34,9 @@
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 
-			if ( '' != get_the_author_meta( 'description' ) ) :
+			if ( '' != get_the_author_meta( 'description' ) ) {
 				get_template_part( 'template-parts/biography' );
-			endif;
+			}
 		?>
 	</div><!-- .entry-content -->
 

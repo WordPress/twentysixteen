@@ -23,13 +23,13 @@ function twentysixteen_comment_nav() {
 		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'twentysixteen' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'twentysixteen' ) ) ) :
+				if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'twentysixteen' ) ) ) {
 					printf( '<div class="nav-previous">%s</div>', $prev_link );
-				endif;
+				}
 
-				if ( $next_link = get_next_comments_link( esc_html__( 'Newer Comments', 'twentysixteen' ) ) ) :
+				if ( $next_link = get_next_comments_link( esc_html__( 'Newer Comments', 'twentysixteen' ) ) ) {
 					printf( '<div class="nav-next">%s</div>', $next_link );
-				endif;
+				}
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .comment-navigation -->
