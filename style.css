@@ -1940,7 +1940,7 @@ a.post-thumbnail:focus {
 
 body:not(.error404):not(.search-no-results) .page-header {
 	border-top: 4px solid #1a1a1a;
-	padding-top: 1.75em;
+	padding: 1.75em 0 3.5em;
 }
 
 .page-title {
