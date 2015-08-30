@@ -1319,8 +1319,8 @@ blockquote.aligncenter {
 .site-content:after,
 .site-footer:before,
 .site-footer:after,
-article[class^="post-"]:before,
-article[class^="post-"]:after,
+article.entry:before,
+article.entry:after,
 .primary-menu:before,
 .primary-menu:after,
 .social-links-menu:before,
@@ -1339,7 +1339,7 @@ article[class^="post-"]:after,
 .comment-content:after,
 .site-content:after,
 .site-footer:after,
-article[class^="post-"]:after,
+article.entry:after,
 .primary-menu:after,
 .social-links-menu:after,
 .textwidget:after,
@@ -1582,12 +1582,12 @@ article[class^="post-"]:after,
  * 11.2 - Posts and pages
  */
 
-article[class^="post-"] {
+article.entry {
 	padding-bottom: 3.5em;
 	position: relative;
 }
 
-article[class^="post-"] + article[class^="post-"] {
+article.entry + article.entry {
 	padding-top: 3.5em;
 }
 

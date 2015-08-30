@@ -296,6 +296,21 @@ function twentysixteen_body_classes( $classes ) {
 add_filter( 'body_class', 'twentysixteen_body_classes' );
 
 /**
+ * Adds custom classes to the array of post classes.
+ *
+ * @param array $classes Classes for the post element.
+ * @return array
+ */
+function twentysixteen_post_classes( $classes ) {
+
+	// Single selector for all content types
+	$classes[] = 'entry';
+
+	return $classes;
+}
+add_filter( 'post_class', 'twentysixteen_post_classes' );
+
+/**
  * Convert HEX to RGB.
  *
  * @since Twenty Sixteen 1.0
