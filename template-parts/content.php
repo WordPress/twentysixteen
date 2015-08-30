@@ -19,11 +19,11 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_excerpt() ) { ?>
+	<?php if ( has_excerpt() ) : ?>
 		<div class="entry-intro">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-intro -->
-	<?php } ?>
+	<?php endif; ?>
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
