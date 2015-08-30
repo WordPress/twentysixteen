@@ -1647,8 +1647,7 @@ a.post-thumbnail:focus {
 	margin-bottom: 1.4736842105em;
 }
 
-.page-content,
-.comment-content {
+.page-content {
 	word-wrap: break-word;
 }
 
@@ -2060,6 +2059,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .comments-area {
 	margin: 0 7.6923% 3.5em;
+	word-wrap: break-word;
 }
 
 .comment-list + .comment-respond,
