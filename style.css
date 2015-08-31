@@ -418,6 +418,11 @@ pre {
 	font-family: Inconsolata, monospace;
 }
 
+code {
+	background: #f5f5f5;
+    	padding: 1px 2px;
+}
+
 pre {
 	border: 1px solid #e8e8e8;
 	font-size: 16px;
