@@ -34,7 +34,7 @@
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 
-			if ( '' != get_the_author_meta( 'description' ) ) :
+			if ( '' != get_the_author_meta( 'description' ) && is_multi_author() ) :
 				get_template_part( 'template-parts/biography' );
 			endif;
 		?>
