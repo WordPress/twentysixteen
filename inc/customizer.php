@@ -156,6 +156,16 @@ function twentysixteen_get_color_schemes() {
 				'#774e24',
 			),
 		),
+		'purple' => array(
+			'label'  => esc_html__( 'Purple', 'twentysixteen' ),
+			'colors' => array(
+				'#2e2256',
+				'#ffffff',
+				'#674970',
+				'#2e2256',
+				'#674970',
+			),
+		),
 	) );
 }
 
