@@ -201,7 +201,7 @@ endif;
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'') + ' js'})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
 
