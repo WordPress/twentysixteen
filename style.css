@@ -315,7 +315,7 @@ input,
 select,
 textarea {
 	color: #1a1a1a;
-	font-family: Merriweather, serif;
+	font-family: Merriweather, Georgia, serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -560,24 +560,24 @@ td {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 :-moz-placeholder {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 ::-moz-placeholder {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	opacity: 1;
 	/* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 
@@ -601,7 +601,7 @@ input[type="submit"][disabled]:focus {
 	border-radius: 2px;
 	background: #007acc;
 	color: #fff;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-weight: 700;
 	line-height: 1;
 	padding: 0.75em 0.875em 0.625em;
@@ -654,7 +654,7 @@ textarea:focus {
 
 .post-password-form label {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -759,7 +759,7 @@ a:active {
 }
 
 .main-navigation {
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 .site-footer .main-navigation {
@@ -1014,7 +1014,7 @@ a:active {
 	border-top: 4px solid #1a1a1a;
 	border-bottom: 4px solid #1a1a1a;
 	clear: both;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	margin: 0 7.6923% 3.5em;
 }
 
@@ -1039,7 +1039,7 @@ a:active {
 
 .post-navigation .post-title {
 	display: inline;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	-webkit-font-variant-ligatures: common-ligatures;
@@ -1060,7 +1060,7 @@ a:active {
 
 .pagination {
 	border-top: 4px solid #1a1a1a;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 19px;
 	font-size: 1.1875rem;
 	margin: 0 7.6923% 2.947368421em;
@@ -1165,7 +1165,7 @@ a:active {
 	color: #757575;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	line-height: 1.6153846154;
 	margin: 0 7.6923% 2.1538461538em;
 	padding: 1.0769230769em 0;
@@ -1212,7 +1212,7 @@ a:active {
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 	color: #21759b;
 	display: block;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	left: -9999em;
@@ -1336,7 +1336,7 @@ article[class^="post-"]:after,
 }
 
 .widget .widget-title {
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.3125;
@@ -1386,7 +1386,7 @@ article[class^="post-"]:after,
 .widget_recent_entries .post-date {
 	color: #757575;
 	display: block;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 /* RSS widget */
@@ -1403,7 +1403,7 @@ article[class^="post-"]:after,
 	color: #757575;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	display: block;
 	line-height: 2.1538461538;
@@ -1414,7 +1414,7 @@ article[class^="post-"]:after,
 	border: 1px solid #e8e8e8;
 	border-radius: 2px;
 	display: inline-block;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: inherit !important;
 	line-height: 1;
 	margin: 0 0.1875em 0.4375em 0 !important;
@@ -1468,7 +1468,7 @@ article[class^="post-"]:after,
 }
 
 .site-title {
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	font-weight: 700;
@@ -1560,7 +1560,7 @@ article[class^="post-"] {
 }
 
 .entry-title {
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 28px;
 	font-size: 1.75rem;
 	font-weight: 700;
@@ -1879,7 +1879,7 @@ a.post-thumbnail:focus {
 
 .entry-footer {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -1915,7 +1915,7 @@ a.post-thumbnail:focus {
 .sticky-post {
 	color: #757575;
 	display: block;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -1944,7 +1944,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 }
 
 .page-title {
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	line-height: 1.2173913043;
@@ -1971,7 +1971,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .page-links {
 	clear: both;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	margin: 0 0 1.75em;
 }
 
@@ -2079,7 +2079,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 .comments-title,
 .comment-reply-title {
 	border-top: 4px solid #1a1a1a;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	font-weight: 700;
@@ -2135,7 +2135,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 .comment-metadata,
 .pingback .edit-link {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -2185,7 +2185,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 	border-radius: 2px;
 	color: #007acc;
 	display: inline-block;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1;
@@ -2206,7 +2206,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .comment-form label {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	display: block;
@@ -2232,7 +2232,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .no-comments {
 	border-top: 1px solid #e8e8e8;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-weight: 700;
 	margin: 0;
 	padding-top: 1.75em;
@@ -2317,7 +2317,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 .site-footer .site-title:after {
 	content: "\002f";
 	display: inline-block;
-	font-family: Montserrat;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	opacity: 0.7;
 	padding: 0 0.307692308em 0 0.538461538em;
 }
@@ -2531,7 +2531,7 @@ p > video {
 .widecolumn label,
 .widecolumn .mu_register label {
 	color: #757575;
-	font-family: Montserrat, sans-serif;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: 400;
