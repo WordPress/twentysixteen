@@ -319,6 +319,10 @@ img {
 	vertical-align: middle;
 }
 
+a img {
+	display: block;
+}
+
 body.post-type-page img {
 	max-width: 840px;
 }
@@ -332,12 +336,7 @@ del {
 }
 
 a {
-	background-image: -webkit-linear-gradient(left, $color__border-medium 0%, $color__border-medium 100%);
-	background-image: linear-gradient(to right, $color__border-medium 0%, $color__border-medium 100%);
-	background-position: 0 100%;
-	background-repeat: repeat-x;
-	-webkit-background-size: 100% 1px;
-	background-size: 100% 1px;
+	box-shadow: 0 1px 0 0 currentColor;
 	color: #007acc;
 	text-decoration: none;
 }
@@ -469,6 +468,11 @@ a {
 
 .mce-content-body .wp-audio-playlist {
 	margin: 0;
+}
+
+.wp-audio-shortcode a,
+.wp-playlist a {
+	box-shadow: none;
 }
 
 
