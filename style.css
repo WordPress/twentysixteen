@@ -1397,10 +1397,6 @@ article[class^="post-"]:after,
 	margin-bottom: 0.538461538em;
 }
 
-.widget_recent_entries li:last-child .post-date {
-	margin-bottom: 0;
-}
-
 /* RSS widget */
 .widget_rss .rsswidget img {
 	margin-top: -0.375em;
