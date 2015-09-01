@@ -81,7 +81,17 @@ get_header(); ?>
 								);
 							}
 						?>
-						<?php edit_post_link( esc_html__( 'Edit', 'twentysixteen' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php
+							edit_post_link(
+								sprintf(
+									/* translators: %s: Name of current post */
+									esc_html__( 'Edit %s', 'twentysixteen' ),
+									the_title( '<span class="screen-reader-text">', '</span>', false )
+								),
+								'<span class="edit-link">',
+								'</span>'
+							);
+						?>
 					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->
 
