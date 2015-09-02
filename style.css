@@ -1096,8 +1096,7 @@ a:active {
 }
 
 .pagination .prev,
-.pagination .next,
-.pagination .nav-links:before {
+.pagination .next {
 	background-color: #1a1a1a;
 	color: #fff;
 	display: inline-block;
