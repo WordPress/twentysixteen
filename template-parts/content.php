@@ -20,9 +20,9 @@
 	</header><!-- .entry-header -->
 
 	<?php if ( has_excerpt() ) { ?>
-		<div class="entry-intro">
+		<div class="entry-summary">
 			<?php the_excerpt(); ?>
-		</div><!-- .entry-intro -->
+		</div><!-- .entry-summary -->
 	<?php } ?>
 
 	<?php twentysixteen_post_thumbnail(); ?>
