@@ -1386,7 +1386,15 @@ article[class^="post-"]:after,
 .widget_recent_entries .post-date {
 	color: #757575;
 	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
 	font-family: Montserrat, sans-serif;
+	line-height: 1.615384615;
+	margin-bottom: 0.538461538em;
+}
+
+.widget_recent_entries li:last-child .post-date {
+	margin-bottom: 0;
 }
 
 /* RSS widget */
@@ -1394,19 +1402,24 @@ article[class^="post-"]:after,
 	margin-top: -0.375em;
 }
 
-.widget_rss li:not(:last-child) > :last-child:not(.rsswidget) {
-	margin-bottom: 1.75em;
-}
-
 .widget_rss .rss-date,
 .widget_rss cite {
 	color: #757575;
+	display: block;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
-	display: block;
-	line-height: 2.1538461538;
+	line-height: 1.615384615;
+	margin-bottom: 0.538461538em;
+}
+
+.widget_rss .rssSummary:last-child {
+	margin-bottom: 2.1538461538em;
+}
+
+.widget_rss li:last-child :last-child {
+	margin-bottom: 0;
 }
 
 /* Tag Cloud widget */
@@ -3137,13 +3150,8 @@ p > video {
 		padding: 0;
 	}
 
-	.widget_rss li:not(:last-child) > :last-child:not(.rsswidget) {
+	.widget_rss .rssSummary:last-child {
 		margin-bottom: 1.615384615em;
-	}
-
-	.widget_rss .rss-date,
-	.widget_rss cite {
-		line-height: 1.6153846154;
 	}
 
 	.tagcloud a {
