@@ -38,7 +38,7 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 
-				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
+				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php esc_html_e( 'Menu', 'twentysixteen' ); ?></button>
 				<?php endif; ?>
 
