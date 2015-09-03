@@ -816,7 +816,9 @@ a:active {
 
 .dropdown-toggle {
 	background-color: #fff;
-	border: 1px solid #e8e8e8;
+	border: none;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
 	border-radius: 0;
 	color: #1a1a1a;
 	content: "";
@@ -842,7 +844,7 @@ a:active {
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
 	background-color: #fff;
-	border-color: #007acc;
+	border: 1px solid #007acc;
 	color: #007acc;
 	z-index: 1;
 }
