@@ -182,6 +182,11 @@ pre {
 	word-wrap: break-word;
 }
 
+code {
+	background-color: #e8e8e8;
+	padding: 2px 4px;
+}
+
 abbr[title] {
 	border-bottom: 1px dotted #e8e8e8;
 	cursor: help;

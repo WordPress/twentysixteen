@@ -568,7 +568,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		border-color: {$colors['border_color']};
 	}
 
-	hr {
+	hr,
+	code {
 		background-color: {$colors['border_color']};
 	}
 
@@ -937,7 +938,8 @@ function twentysixteen_main_text_color_css() {
 			border-color: %2$s;
 		}
 
-		hr {
+		hr,
+		code {
 			background-color: %2$s;
 		}
 
