@@ -284,8 +284,7 @@ function twentysixteen_body_classes( $classes ) {
 	}
 
 	// Adds a class of hfeed to pages with multiple hentry elements
-	global $wp_query;
-	if ( $wp_query->post_count > 1 ) {
+	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
 
