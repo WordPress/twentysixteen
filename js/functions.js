@@ -108,7 +108,7 @@
 		}
 
 		var entryContent = $( '.entry-content' );
-		entryContent.find( 'img.size-full, img.size-large' ).each( function() {
+		entryContent.find( 'img.size-full' ).each( function() {
 			var img                  = $( this ),
 			    caption              = $( this ).closest( 'figure' ),
 			    imgPos               = $( this ).offset(),
