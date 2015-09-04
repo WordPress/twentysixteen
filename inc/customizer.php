@@ -140,8 +140,8 @@ function twentysixteen_get_color_schemes() {
 			'label'  => esc_html__( 'Green', 'twentysixteen' ),
 			'colors' => array(
 				'#ffffff',
-				'#acc1a2',
-				'#6d8c87',
+				'#596353',
+				'#f9f3c2',
 				'#ffffff',
 				'#efeef4',
 			),
