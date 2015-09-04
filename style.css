@@ -603,6 +603,7 @@ input[type="submit"][disabled]:focus {
 	color: #fff;
 	font-family: Montserrat, sans-serif;
 	font-weight: 700;
+	letter-spacing: 0.046875em;
 	line-height: 1;
 	padding: 0.75em 0.875em 0.625em;
 	text-transform: uppercase;
@@ -657,6 +658,7 @@ textarea:focus {
 	font-family: Montserrat, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	display: block;
 	margin-bottom: 1.75em;
@@ -1029,6 +1031,7 @@ a:active {
 	color: #757575;
 	font-size: 13px;
 	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
 	text-transform: uppercase;
@@ -1082,6 +1085,7 @@ a:active {
 .pagination .page-numbers {
 	display: none;
 	font-weight: 700;
+	letter-spacing: 0.013157895em;
 	line-height: 1;
 	margin: 0 0.7368421053em 0 -0.7368421053em;
 	padding: 0.8157894737em 0.7368421053em 0.3947368421em;
@@ -1333,6 +1337,7 @@ article[class^="post-"]:after,
 	font-family: Montserrat, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
+	letter-spacing: 0.046875em;
 	line-height: 1.3125;
 	margin: 0 0 1.75em;
 	text-transform: uppercase;
@@ -1670,7 +1675,7 @@ a.post-thumbnail:focus {
 .page-content h4,
 .comment-content h4,
 .textwidget h4 {
-	letter-spacing: 0.13333em;
+	letter-spacing: 0.140625em;
 	text-transform: uppercase;
 }
 
@@ -1899,6 +1904,7 @@ body:not(.search-results) .entry-summary > :last-child,
 	font-family: Montserrat, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
 	text-transform: uppercase;
@@ -2191,6 +2197,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	display: block;
+	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
 	text-transform: uppercase;
@@ -3131,6 +3138,10 @@ p > video {
 		margin-top: 2.625em;
 	}
 
+	.textwidget h4 {
+		letter-spacing: 0.153846154em;
+	}
+
 	.textwidget h4,
 	.textwidget h5,
 	.textwidget h6 {
@@ -3284,6 +3295,14 @@ p > video {
 		line-height: 1.2173913043;
 		margin-top: 2.4347826087em;
 		margin-bottom: 1.2173913043em;
+	}
+
+	.entry-content h4,
+	.entry-summary h4,
+	.entry-intro h4,
+	.page-content h4,
+	.comment-content h4 {
+		letter-spacing: 0.131578947em;
 	}
 
 	.entry-content h4,
