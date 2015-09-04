@@ -131,7 +131,7 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
-				'#aaaaaa',
+				'#cacaca',
 				'#ededed',
 				'#ededed',
 			),
@@ -140,8 +140,8 @@ function twentysixteen_get_color_schemes() {
 			'label'  => esc_html__( 'Green', 'twentysixteen' ),
 			'colors' => array(
 				'#ffffff',
-				'#acc1a2',
-				'#6d8c87',
+				'#596353',
+				'#f9f3c2',
 				'#ffffff',
 				'#efeef4',
 			),
@@ -151,7 +151,7 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
-				'#7f7d6f',
+				'#605f54',
 				'#3b3721',
 				'#774e24',
 			),
