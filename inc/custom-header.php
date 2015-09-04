@@ -2,6 +2,8 @@
 /**
  * Custom Header and Custom Background functionality for Twenty Sixteen
  *
+ * @since Twenty Sixteen 1.0
+ *
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
