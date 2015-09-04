@@ -131,7 +131,7 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
-				'#aaaaaa',
+				'#cacaca',
 				'#ededed',
 				'#ededed',
 			),
