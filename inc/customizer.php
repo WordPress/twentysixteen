@@ -151,7 +151,7 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
-				'#7f7d6f',
+				'#605f54',
 				'#3b3721',
 				'#774e24',
 			),
