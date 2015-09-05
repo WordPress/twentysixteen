@@ -194,7 +194,7 @@ endif;
  *
  * @since Twenty Sixteen 1.0
  *
- * @return bool True of there is more than one category, false otherwise.
+ * @return bool True if there is more than one category, false otherwise.
  */
 function twentysixteen_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'twentysixteen_categories' ) ) ) {
