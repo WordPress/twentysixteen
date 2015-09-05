@@ -110,10 +110,10 @@
 		var entryContent = $( '.entry-content' );
 		entryContent.find( 'img.size-full' ).each( function() {
 			var img                  = $( this ),
-			    caption              = $( this ).closest( 'figure' ),
-			    imgPos               = $( this ).offset(),
+			    caption              = img.closest( 'figure' ),
+			    imgPos               = img.offset(),
 			    imgPosTop            = imgPos.top,
-			    entryFooter          = $( this ).closest( 'article' ).find( '.entry-footer' ),
+			    entryFooter          = img.closest( 'article' ).find( '.entry-footer' ),
 			    entryFooterPos       = entryFooter.offset(),
 			    entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
 			    newImg               = new Image();
@@ -125,7 +125,7 @@
 
 				if ( imgPosTop > entryFooterPosBottom ) {
 					if ( 840 <= imgWidth  ) {
-						$( img ).addClass( 'size-big' );
+						img.addClass( 'size-big' );
 					}
 
 					if ( caption.hasClass( 'wp-caption' ) && 840 <= imgWidth  ) {
@@ -133,7 +133,7 @@
 						caption.removeAttr( 'style' );
 					}
 				} else {
-					$( img ).removeClass( 'size-big' );
+					img.removeClass( 'size-big' );
 					caption.removeClass( 'caption-big' );
 				}
 			} );
