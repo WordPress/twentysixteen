@@ -10,6 +10,8 @@
 /**
  * Set up the WordPress core custom header and custom background features.
  *
+ * @since Twenty Sixteen 1.0
+ *
  * @uses twentysixteen_header_style()
  */
 function twentysixteen_custom_header_and_background() {
