@@ -201,7 +201,7 @@ endif;
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'') + ' js'})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
 
@@ -244,6 +244,13 @@ function twentysixteen_scripts() {
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'twentysixteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'twentysixteen' ) . '</span>',
+	) );
+
+	// configure twentysixteen JavaScript
+	wp_localize_script( 'twentysixteen-script', 'twentysixteenSettings', array(
+		// bypass the bigImageClass on some pages: "true" and "false" passed as strings 
+		// to ensure the data is consistant.
+		'bypassBigImageClass' => ( is_page() || is_search() || is_attachment() || is_404() ) ? "true" : "false",
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );

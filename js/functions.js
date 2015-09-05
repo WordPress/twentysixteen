@@ -103,7 +103,9 @@
 
 	// Add a class to big image and caption larger than or equal to 840px.
 	function bigImageClass() {
-		if ( $body.hasClass( 'page' ) || $body.hasClass( 'search' ) || $body.hasClass( 'single-attachment' ) || $body.hasClass( 'error404' ) ) {
+		// check settings for bypassing the big image class. The bypass setting is set as
+		// a string. Do not change this to a boolean.
+		if ( "true" === twentysixteenSettings.bypassBigImageClass ) {
 			return;
 		}
 
