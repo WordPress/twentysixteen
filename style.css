@@ -1451,7 +1451,7 @@ article[class^="post-"]:after,
 
 .site {
 	background-color: #fff;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .site-inner {
