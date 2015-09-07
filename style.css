@@ -3383,7 +3383,7 @@ p > video {
 	}
 
 	body:not(.search-results) .type-post .entry-footer > span:not(:last-child):after {
-		content: "";
+		display: none;
 	}
 
 	.single .byline,
