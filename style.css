@@ -1103,7 +1103,8 @@ a:active {
 
 .pagination .prev,
 .pagination .next,
-.pagination .nav-links:before {
+.pagination .nav-links:before,
+.pagination .nav-links:after {
 	background-color: #1a1a1a;
 	color: #fff;
 	display: inline-block;
@@ -1114,11 +1115,27 @@ a:active {
 	position: absolute;
 	top: 0;
 	width: 52px;
+	z-index: 2;
+}
+
+.pagination .nav-links:before,
+.pagination .nav-links:after {
+	color: #6a6a6a;
+	content: "";
+	font-family: "Genericons";
+	font-size: 32px;
+	line-height: 51px;
+	text-align: center;
 	z-index: 1;
 }
 
 .pagination .nav-links:before {
-	content: "";
+	content: "\f430";
+	right: 54px;
+}
+
+.pagination .nav-links:after {
+	content: "\f429";
 	right: 0;
 }
 
