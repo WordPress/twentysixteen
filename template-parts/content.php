@@ -31,7 +31,7 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( esc_html__( 'Continue reading %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
