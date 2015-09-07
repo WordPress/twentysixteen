@@ -283,6 +283,11 @@ function twentysixteen_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Adds a class of hfeed to pages with multiple hentry elements
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'twentysixteen_body_classes' );
