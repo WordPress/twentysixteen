@@ -1117,11 +1117,11 @@ a:active {
 	z-index: 1;
 }
 
-.pagination .nav-links:before {
+/*.pagination .nav-links:before {
 	content: "";
 	right: 0;
 }
-
+*/
 .pagination .prev:before,
 .pagination .next:before {
 	font-size: 32px;
@@ -1146,6 +1146,10 @@ a:active {
 
 .pagination .prev {
 	right: 54px;
+}
+
+.pagination.last-page .prev {
+	right: 0;
 }
 
 .pagination .prev:before {

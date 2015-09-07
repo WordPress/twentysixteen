@@ -152,5 +152,9 @@
 			} );
 
 		bigImageClass();
+
+		if ( ! $( '.pagination a' ).hasClass( 'next' ) ) {
+			$( '.pagination' ).addClass( 'last-page' );
+		}
 	} );
 } )( jQuery );
