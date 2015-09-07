@@ -2887,6 +2887,12 @@ p > video {
 		left: 100%;
 	}
 
+	.main-navigation ul li:last-child ul li:hover > ul,
+	.main-navigation ul li:last-child ul li.focus > ul {
+		left: auto;
+		right: 100%;
+	}
+
 	.main-navigation ul ul a {
 		white-space: normal;
 		width: 15em;
@@ -2906,6 +2912,7 @@ p > video {
 		border-color: #e8e8e8 transparent;
 	}
 
+
 	.main-navigation ul ul:after {
 		top: -7px;
 		left: 9px;
@@ -2913,9 +2920,24 @@ p > video {
 		border-color: #fff transparent;
 	}
 
+	.main-navigation ul li:last-child ul:before {
+		left: auto;
+		right: 7px;
+	}
+
+	.main-navigation ul li:last-child ul:after {
+		left: auto;
+		right: 9px;
+	}
+
 	.main-navigation li:hover > ul,
 	.main-navigation li.focus > ul {
 		left: auto;
+	}
+
+	.main-navigation li:last-child:hover > ul,
+	.main-navigation li:last-child.focus > ul {
+		right: 0;
 	}
 
 	.main-navigation .menu-item-has-children > a {
