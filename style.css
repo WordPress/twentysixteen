@@ -1052,6 +1052,12 @@ a:active {
 	font-weight: 700;
 	line-height: 1.2173913043;
 	text-rendering: optimizeLegibility;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .post-navigation a:hover .post-title,
@@ -1583,6 +1589,12 @@ article[class^="post-"] {
 	font-weight: 700;
 	line-height: 1.25;
 	margin-bottom: 1em;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .entry-title a {
@@ -2081,6 +2093,12 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .comments-title {
 	margin-bottom: 1.217391304em;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .comment-list {
