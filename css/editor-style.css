@@ -398,6 +398,7 @@ a {
 .wp-caption .wp-caption-text,
 .wp-caption-dd {
 	font-size: 13px;
+	font-style: italic;
 	line-height: 1.75;
 	padding: 7px 0 0;
 }
