@@ -20,7 +20,7 @@ function twentysixteen_comment_nav() {
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 	?>
 	<nav class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'twentysixteen' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'twentysixteen' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'twentysixteen' ) ) ) :
