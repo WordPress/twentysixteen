@@ -110,13 +110,13 @@
 		var entryContent = $( '.entry-content' );
 		entryContent.find( 'img.size-full' ).each( function() {
 			var img                  = $( this ),
-			    caption              = img.closest( 'figure' ),
-			    imgPos               = img.offset(),
-			    imgPosTop            = imgPos.top,
-			    entryFooter          = img.closest( 'article' ).find( '.entry-footer' ),
-			    entryFooterPos       = entryFooter.offset(),
-			    entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
-			    newImg               = new Image();
+				caption              = img.closest( 'figure' ),
+				imgPos               = img.offset(),
+				imgPosTop            = imgPos.top,
+				entryFooter          = img.closest( 'article' ).find( '.entry-footer' ),
+				entryFooterPos       = entryFooter.offset(),
+				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
+				newImg               = new Image();
 
 			newImg.src = img.attr( 'src' );
 
