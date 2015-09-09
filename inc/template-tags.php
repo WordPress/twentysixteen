@@ -20,16 +20,16 @@ function twentysixteen_comment_nav() {
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 	?>
 	<nav class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'twentysixteen' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'twentysixteen' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'twentysixteen' ) ) ) :
+				if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'twentysixteen' ) ) ) {
 					printf( '<div class="nav-previous">%s</div>', $prev_link );
-				endif;
+				}
 
-				if ( $next_link = get_next_comments_link( esc_html__( 'Newer Comments', 'twentysixteen' ) ) ) :
+				if ( $next_link = get_next_comments_link( esc_html__( 'Newer Comments', 'twentysixteen' ) ) ) {
 					printf( '<div class="nav-next">%s</div>', $next_link );
-				endif;
+				}
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .comment-navigation -->
@@ -182,7 +182,7 @@ function twentysixteen_excerpt_more( $more ) {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading %s', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
+		sprintf( esc_html__( 'Continue reading %s', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
 		);
 	return ' &hellip; ' . $link;
 }
@@ -194,14 +194,13 @@ endif;
  *
  * @since Twenty Sixteen 1.0
  *
- * @return bool True of there is more than one category, false otherwise.
+ * @return bool True if there is more than one category, false otherwise.
  */
 function twentysixteen_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'twentysixteen_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
-			'hide_empty' => 1,
 
 			// We only need to know if there is more than one category.
 			'number'     => 2,

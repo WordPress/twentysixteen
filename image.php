@@ -81,15 +81,25 @@ get_header(); ?>
 								);
 							}
 						?>
-						<?php edit_post_link( esc_html__( 'Edit', 'twentysixteen' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php
+							edit_post_link(
+								sprintf(
+									/* translators: %s: Name of current post */
+									esc_html__( 'Edit %s', 'twentysixteen' ),
+									the_title( '<span class="screen-reader-text">', '</span>', false )
+								),
+								'<span class="edit-link">',
+								'</span>'
+							);
+						?>
 					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
+					if ( comments_open() || get_comments_number() ) {
 						comments_template();
-					endif;
+					}
 
 					// Parent post navigation
 					the_post_navigation( array(
