@@ -76,12 +76,7 @@ function twentysixteen_entry_meta() {
 
 	if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link(
-			sprintf(
-				_x( 'Leave a comment %s', 'Screen reader text', 'twentysixteen' ),
-				'<span class="screen-reader-text">' . sprintf( esc_html_x( 'on %s', 'Name of current post', 'twentysixteen' ), esc_html( get_the_title() ) ) . '</span>'
-			)
-		);
+		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
 		echo '</span>';
 	}
 }
