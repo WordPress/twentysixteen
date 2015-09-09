@@ -13,11 +13,11 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_excerpt() ) { ?>
-		<div class="entry-intro">
+	<?php if ( has_excerpt() ) : ?>
+		<div class="entry-summary">
 			<?php the_excerpt(); ?>
-		</div><!-- .entry-intro -->
-	<?php } ?>
+		</div><!-- .entry-summary -->
+	<?php endif; ?>
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
@@ -34,14 +34,24 @@
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 
-			if ( '' != get_the_author_meta( 'description' ) ) :
+			if ( '' != get_the_author_meta( 'description' ) ) {
 				get_template_part( 'template-parts/biography' );
-			endif;
+			}
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
-		<?php edit_post_link( esc_html__( 'Edit', 'twentysixteen' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post */
+					esc_html__( 'Edit %s', 'twentysixteen' ),
+					the_title( '<span class="screen-reader-text">', '</span>', false )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
