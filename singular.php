@@ -20,7 +20,7 @@ get_header(); ?>
             while ( have_posts() ) : the_post();
 
                 // Include the page content template.
-                if (is_singular('page')) {
+                if ( is_singular('page') ) {
                     get_template_part( 'template-parts/content', 'page' );
                 } else {
                     get_template_part( 'template-parts/content', 'single' );
@@ -31,6 +31,13 @@ get_header(); ?>
                     comments_template();
                 }
 
+                if ( is_singular('attachment') ) {
+                    // Parent post navigation
+                    the_post_navigation( array(
+                        'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
+                    ) );
+                }
+                
                 if ( is_singular('post') ) {
                     // Previous/next post navigation.
                     the_post_navigation( array(
