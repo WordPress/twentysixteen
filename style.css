@@ -287,7 +287,9 @@ th {
 .bypostauthor > article .fn:after,
 .comment-reply-title small a:before,
 .pagination .prev:before,
-.pagination .next:before {
+.pagination .next:before,
+.pagination .nav-links:before,
+.pagination .nav-links:after {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -1070,6 +1072,26 @@ a:active {
 	font-size: 1.1875rem;
 	margin: 0 7.6923% 2.947368421em;
 	min-height: 56px;
+	position: relative;
+}
+
+.pagination:before,
+.pagination:after {
+	background-color: #1a1a1a;
+	content: "";
+	height: 52px;
+	position: absolute;
+	top:0;
+	width: 52px;
+	z-index: 0;
+}
+
+.pagination:before {
+	right: 0;
+}
+
+.pagination:after {
+	right: 54px;
 }
 
 .pagination a:hover,
@@ -1080,6 +1102,27 @@ a:active {
 .pagination .nav-links {
 	padding-right: 106px;
 	position: relative;
+}
+
+.pagination .nav-links:before,
+.pagination .nav-links:after {
+	color: #fff;
+	font-size: 32px;
+	line-height: 51px;
+	opacity: 0.3;
+	position: absolute;
+	width: 52px;
+	z-index: 1;
+}
+
+.pagination .nav-links:before {
+	content: "\f429";
+	right: -1px;
+}
+
+.pagination .nav-links:after {
+	content: "\f430";
+	right: 55px;
 }
 
 /* reset screen-reader-text */
@@ -1102,8 +1145,7 @@ a:active {
 }
 
 .pagination .prev,
-.pagination .next,
-.pagination .nav-links:before {
+.pagination .next {
 	background-color: #1a1a1a;
 	color: #fff;
 	display: inline-block;
@@ -1114,12 +1156,7 @@ a:active {
 	position: absolute;
 	top: 0;
 	width: 52px;
-	z-index: 1;
-}
-
-.pagination .nav-links:before {
-	content: "";
-	right: 0;
+	z-index: 2;
 }
 
 .pagination .prev:before,

@@ -428,6 +428,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.pagination .prev:focus,
 	.pagination .next:hover,
 	.pagination .next:focus,
+	.pagination .nav-links:before,
+	.pagination .nav-links:after,
 	.widget_calendar tbody a,
 	.widget_calendar tbody a:hover,
 	.widget_calendar tbody a:focus,
@@ -570,9 +572,10 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.dropdown-toggle.toggled-on,
 	.dropdown-toggle.toggled-on:hover,
 	.dropdown-toggle.toggled-on:focus,
+	.pagination:before,
+	.pagination:after,
 	.pagination .prev,
 	.pagination .next,
-	.pagination .nav-links:before,
 	.page-links a {
 		background-color: {$colors['main_text_color']};
 	}
@@ -765,6 +768,8 @@ function twentysixteen_page_background_color_css() {
 		.pagination .prev:focus,
 		.pagination .next:hover,
 		.pagination .next:focus,
+		.pagination .nav-links:before,
+		.pagination .nav-links:after,
 		.widget_calendar tbody a,
 		.widget_calendar tbody a:hover,
 		.widget_calendar tbody a:focus,
@@ -982,9 +987,10 @@ function twentysixteen_main_text_color_css() {
 		.dropdown-toggle.toggled-on,
 		.dropdown-toggle.toggled-on:hover,
 		.dropdown-toggle.toggled-on:focus,
+		.pagination:before,
+		.pagination:after,
 		.pagination .prev,
 		.pagination .next,
-		.pagination .nav-links:before,
 		.page-links a {
 			background-color: %1$s;
 		}
