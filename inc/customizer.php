@@ -732,6 +732,10 @@ function twentysixteen_page_background_color_css() {
 		return;
 	}
 
+	// Convert page background hex color to rgba.
+	$page_background_color_rgb = twentysixteen_hex2rgb( $page_background_color );
+	$disabled_nav_links_color = vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.4)', $page_background_color_rgb );
+
 	$css = '
 		/* Custom Page Background Color */
 		.site,
@@ -774,6 +778,11 @@ function twentysixteen_page_background_color_css() {
 			color: %1$s;
 		}
 
+		.pagination .nav-links:before,
+		.pagination .nav-links:after {
+			color: %2$s;
+		}
+
 		@media screen and (min-width: 56.875em) {
 			.main-navigation ul ul li {
 				background-color: %1$s;
@@ -786,7 +795,7 @@ function twentysixteen_page_background_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'twentysixteen-style', sprintf( $css, $page_background_color ) );
+	wp_add_inline_style( 'twentysixteen-style', sprintf( $css, $page_background_color, $disabled_nav_links_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'twentysixteen_page_background_color_css', 11 );
 
