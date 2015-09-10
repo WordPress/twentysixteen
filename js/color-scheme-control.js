@@ -25,6 +25,7 @@
 		ready: function() {
 			if ( 'color_scheme' === this.id ) {
 				this.setting.bind( 'change', function( value ) {
+
 					// Update Background Color.
 					api( 'background_color' ).set( colorScheme[value].colors[0] );
 					api.control( 'background_color' ).container.find( '.color-picker-hex' )

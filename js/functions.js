@@ -9,6 +9,7 @@
 	var $body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
 	function initMainNavigation( container ) {
+
 		// Add dropdown toggle that display child menu items.
 		container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
@@ -38,6 +39,7 @@
 
 	// Enable menuToggle.
 	( function() {
+
 		// Return early if menuToggle is missing.
 		if ( ! menuToggle ) {
 			return;
@@ -48,7 +50,7 @@
 
 		menuToggle.on( 'click.twentysixteen', function() {
 			$( this ).add( siteHeaderMenu ).toggleClass( 'toggled-on' );
-			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false');
+			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 		} );
 	} )();
 
