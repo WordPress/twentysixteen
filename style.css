@@ -287,7 +287,9 @@ th {
 .bypostauthor > article .fn:after,
 .comment-reply-title small a:before,
 .pagination .prev:before,
-.pagination .next:before {
+.pagination .next:before,
+.pagination .nav-links:before,
+.pagination .nav-links:after {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -1103,7 +1105,8 @@ a:active {
 
 .pagination .prev,
 .pagination .next,
-.pagination .nav-links:before {
+.pagination .nav-links:before,
+.pagination .nav-links:after {
 	background-color: #1a1a1a;
 	color: #fff;
 	display: inline-block;
@@ -1114,11 +1117,25 @@ a:active {
 	position: absolute;
 	top: 0;
 	width: 52px;
+	z-index: 2;
+}
+
+.pagination .nav-links:before,
+.pagination .nav-links:after {
+	color: rgba( 255, 255, 255, 0.4 );
+	content: "";
+	font-size: 32px;
+	line-height: 51px;
 	z-index: 1;
 }
 
 .pagination .nav-links:before {
-	content: "";
+	content: "\f430";
+	right: 54px;
+}
+
+.pagination .nav-links:after {
+	content: "\f429";
 	right: 0;
 }
 
