@@ -49,7 +49,7 @@
 								<?php
 									wp_nav_menu( array(
 										'theme_location' => 'primary',
-										'menu_class'     => 'primary-menu'
+										'menu_class'     => 'primary-menu',
 									 ) );
 								?>
 							</nav><!-- .main-navigation -->
@@ -63,7 +63,7 @@
 										'menu_class'     => 'social-links-menu',
 										'depth'          => 1,
 										'link_before'    => '<span class="screen-reader-text">',
-										'link_after'     => '</span>'
+										'link_after'     => '</span>',
 									) );
 								?>
 							</nav><!-- .social-navigation -->

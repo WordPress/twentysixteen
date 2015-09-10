@@ -19,11 +19,11 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_excerpt() ) { ?>
+	<?php if ( has_excerpt() ) : ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
-	<?php } ?>
+	<?php endif; ?>
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
@@ -31,7 +31,7 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( esc_html__( 'Continue reading %s', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 

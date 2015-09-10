@@ -24,7 +24,7 @@ Description: Used to style the TinyMCE editor.
  */
 body {
 	color: #1a1a1a;
-	font-family: Merriweather, serif;
+	font-family: Merriweather, Georgia, serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.75;
