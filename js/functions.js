@@ -169,7 +169,15 @@
 			} );
 		} );
 
-		// Prevent blockquote on the top of the post from bleeding over to post meta
+	}
+
+	// Prevent blockquote on the top of the post from bleeding over to post meta
+	function blockquoteFix() {
+		if ( $body.hasClass( 'page' ) || $body.hasClass( 'search' ) || $body.hasClass( 'single-attachment' ) || $body.hasClass( 'error404' ) ) {
+			return;
+		}
+
+		var entryContent = $( '.entry-content' );
 		entryContent.find( 'blockquote.alignleft' ).each( function() {
 			var blockquote           = $( this ),
 				blockquotePos        = blockquote.offset(),
@@ -198,5 +206,6 @@
 			} );
 
 		bigImageClass();
+		blockquoteFix();
 	} );
 } )( jQuery );
