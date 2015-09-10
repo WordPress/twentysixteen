@@ -168,6 +168,22 @@
 				}
 			} );
 		} );
+
+		// Prevent blockquote on the top of the post from bleeding over to post meta
+		entryContent.find( 'blockquote.alignleft' ).each( function() {
+			var blockquote           = $( this ),
+				blockquotePos        = blockquote.offset(),
+				blockquotePosTop     = blockquotePos.top,
+				entryFooter          = blockquote.closest( 'article' ).find( '.entry-footer' ),
+				entryFooterPos       = entryFooter.offset(),
+				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 );
+
+			if ( blockquotePosTop > entryFooterPosBottom ) {
+				blockquote.addClass( 'farleft' );
+			} else {
+				blockquote.removeClass( 'farleft' );
+			}
+		} );
 	}
 
 	$( document ).ready( function() {
