@@ -326,7 +326,7 @@ function twentysixteen_color_scheme_css() {
 	$color_textcolor_rgb = twentysixteen_hex2rgb( $color_scheme[3] );
 
 	// If the rgba values are empty return early.
-	if ( empty ( $color_textcolor_rgb ) ) {
+	if ( empty( $color_textcolor_rgb ) ) {
 		return;
 	}
 
@@ -928,7 +928,7 @@ function twentysixteen_main_text_color_css() {
 	$main_text_color_rgb = twentysixteen_hex2rgb( $main_text_color );
 
 	// If the rgba values are empty return early.
-	if ( empty ( $main_text_color_rgb ) ) {
+	if ( empty( $main_text_color_rgb ) ) {
 		return;
 	}
 
