@@ -821,45 +821,32 @@ a:active {
 }
 
 .dropdown-toggle {
-	background-color: #fff;
-	border: 1px solid #e8e8e8;
+	background-color: transparent;
+	border: 0;
 	border-radius: 0;
 	color: #1a1a1a;
 	content: "";
-	height: 50px;
+	height: 48px;
 	padding: 0;
 	position: absolute;
 	text-transform: none;
-	top: -1px;
+	top: 0;
 	right: 0;
-	width: 50px;
+	width: 48px;
 }
 
 .dropdown-toggle:after {
+	border-left: 1px solid #e8e8e8;
 	content: "\f431";
 	font-size: 24px;
-	line-height: 48px;
 	position: relative;
-	top: 0;
 	left: 1px;
 	width: 48px;
 }
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
-	background-color: #fff;
-	border-color: #007acc;
 	color: #007acc;
-	z-index: 1;
-}
-
-.dropdown-toggle.toggled-on,
-.dropdown-toggle.toggled-on:hover,
-.dropdown-toggle.toggled-on:focus {
-	background-color: #1a1a1a;
-	border-color: #1a1a1a;
-	color: #fff;
-	z-index: 1;
 }
 
 .dropdown-toggle.toggled-on:after {

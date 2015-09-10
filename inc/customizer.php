@@ -397,10 +397,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	}
 
 	/* Page Background Color */
-	.site,
-	.dropdown-toggle,
-	.dropdown-toggle:hover,
-	.dropdown-toggle:focus {
+	.site {
 		background-color: {$colors['page_background_color']};
 	}
 
@@ -419,9 +416,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.pagination .prev,
 	.pagination .next,
 	.pagination .prev:hover,
@@ -520,9 +514,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.tagcloud a:hover,
 	.tagcloud a:focus,
 	.menu-toggle:hover,
-	.menu-toggle:focus,
-	.dropdown-toggle:hover,
-	.dropdown-toggle:focus {
+	.menu-toggle:focus {
 		border-color: {$colors['link_color']};
 	}
 
@@ -552,9 +544,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.post-navigation,
 	.post-navigation div + div,
 	.pagination,
@@ -569,9 +558,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.pagination:before,
 	.pagination:after,
 	.pagination .prev,
@@ -640,7 +626,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.main-navigation li,
 	.main-navigation .primary-menu,
 	.menu-toggle,
-	.dropdown-toggle,
+	.dropdown-toggle:after,
 	.social-navigation a,
 	.image-navigation,
 	.comment-navigation,
@@ -737,10 +723,7 @@ function twentysixteen_page_background_color_css() {
 
 	$css = '
 		/* Custom Page Background Color */
-		.site,
-		.dropdown-toggle,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus {
+		.site {
 			background-color: %1$s;
 		}
 
@@ -759,9 +742,6 @@ function twentysixteen_page_background_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.pagination .prev,
 		.pagination .next,
 		.pagination .prev:hover,
@@ -894,9 +874,7 @@ function twentysixteen_link_color_css() {
 		.tagcloud a:hover,
 		.tagcloud a:focus,
 		.menu-toggle:hover,
-		.menu-toggle:focus,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus {
+		.menu-toggle:focus {
 			border-color: %1$s;
 		}
 
@@ -967,9 +945,6 @@ function twentysixteen_main_text_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.post-navigation,
 		.post-navigation div + div,
 		.pagination,
@@ -984,9 +959,6 @@ function twentysixteen_main_text_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.pagination:before,
 		.pagination:after,
 		.pagination .prev,
@@ -1013,7 +985,7 @@ function twentysixteen_main_text_color_css() {
 		.main-navigation li,
 		.main-navigation .primary-menu,
 		.menu-toggle,
-		.dropdown-toggle,
+		.dropdown-toggle:after,
 		.social-navigation a,
 		.image-navigation,
 		.comment-navigation,
