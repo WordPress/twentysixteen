@@ -2443,12 +2443,14 @@ p > video {
 
 .gallery {
 	margin-bottom: 1.75em;
+	margin-left: -1.1666667%;
+	margin-right: -1.1666667%;
 }
 
 .gallery-item {
 	display: inline-block;
 	text-align: center;
-	padding: 0 2.3333333% 2.3333333%;
+	padding: 0 1.1666667% 2.3333333%;
 	vertical-align: top;
 	width: 100%;
 }
