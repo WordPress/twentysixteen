@@ -1039,14 +1039,8 @@ a:active {
 	-webkit-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
 	line-height: 1.2173913043;
 	text-rendering: optimizeLegibility;
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
 }
 
 .post-navigation a:hover .post-title,
@@ -1611,14 +1605,8 @@ article[class^="post-"] + article[class^="post-"] {
 	font-size: 28px;
 	font-size: 1.75rem;
 	font-weight: 700;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
 	line-height: 1.25;
 	margin-bottom: 1em;
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
 }
 
 .entry-title a {
@@ -1792,6 +1780,17 @@ a.post-thumbnail:focus {
 .textwidget h5:first-child,
 .textwidget h6:first-child {
 	margin-top: 0;
+}
+
+.post-navigation .post-title,
+.entry-title,
+.comments-title {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
 }
 
 body:not(.search-results) .entry-summary {
@@ -2116,13 +2115,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 }
 
 .comments-title {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
 	margin-bottom: 1.217391304em;
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
 }
 
 .comment-list {
