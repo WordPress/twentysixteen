@@ -2733,6 +2733,9 @@ p > video {
 		font-size: 2.0625rem;
 		line-height: 1.2727272727;
 		margin-bottom: 0.8484848485em;
+		word-break: break-all;
+		word-break: break-word; /* Non standard for webkit/blink */
+		hyphens: auto;
 	}
 
 	.entry-content blockquote:not(.alignleft):not(.alignright),
