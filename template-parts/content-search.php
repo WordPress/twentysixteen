@@ -10,16 +10,40 @@
  */
 ?>
 
+<?php
+/**
+ * Fire template_entry_before hook
+ */
+template_entry_before();
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_top();
+	?>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
+	<?php
+	/**
+	 * Fire template_entry_content_before hook
+	 */
+	template_entry_content_before();
+	?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php
+	/**
+	 * Fire template_entry_content_after hook
+	 */
+	template_entry_content_after();
+	?>
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 
@@ -53,5 +77,15 @@
 		?>
 
 	<?php endif; ?>
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_bottom();
+	?>
 </article><!-- #post-## -->
-
+<?php
+/**
+ * Fire template_entry_after hook
+ */
+template_entry_after();

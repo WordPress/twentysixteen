@@ -8,7 +8,19 @@
  */
 ?>
 
+<?php
+/**
+ * Fire template_entry_before hook
+ */
+template_entry_before();
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_top();
+	?>
 	<header class="entry-header">
 		<?php
 			if ( is_sticky() && is_home() && ! is_paged() ) {
@@ -27,6 +39,12 @@
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
+	<?php
+	/**
+	 * Fire template_entry_content_before hook
+	 */
+	template_entry_content_before();
+	?>
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
@@ -45,6 +63,12 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<?php
+	/**
+	 * Fire template_entry_content_after hook
+	 */
+	template_entry_content_after();
+	?>
 
 	<footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
@@ -60,4 +84,15 @@
 			);
 		?>
 	</footer><!-- .entry-footer -->
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_bottom();
+	?>
 </article><!-- #post-## -->
+<?php
+/**
+ * Fire template_entry_after hook
+ */
+template_entry_after();
