@@ -326,7 +326,7 @@ function twentysixteen_color_scheme_css() {
 	$color_textcolor_rgb = twentysixteen_hex2rgb( $color_scheme[3] );
 
 	// If the rgba values are empty return early.
-	if ( empty ( $color_textcolor_rgb ) ) {
+	if ( empty( $color_textcolor_rgb ) ) {
 		return;
 	}
 
@@ -397,10 +397,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	}
 
 	/* Page Background Color */
-	.site,
-	.dropdown-toggle,
-	.dropdown-toggle:hover,
-	.dropdown-toggle:focus {
+	.site {
 		background-color: {$colors['page_background_color']};
 	}
 
@@ -419,15 +416,14 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.pagination .prev,
 	.pagination .next,
 	.pagination .prev:hover,
 	.pagination .prev:focus,
 	.pagination .next:hover,
 	.pagination .next:focus,
+	.pagination .nav-links:before,
+	.pagination .nav-links:after,
 	.widget_calendar tbody a,
 	.widget_calendar tbody a:hover,
 	.widget_calendar tbody a:focus,
@@ -518,9 +514,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.tagcloud a:hover,
 	.tagcloud a:focus,
 	.menu-toggle:hover,
-	.menu-toggle:focus,
-	.dropdown-toggle:hover,
-	.dropdown-toggle:focus {
+	.menu-toggle:focus {
 		border-color: {$colors['link_color']};
 	}
 
@@ -550,9 +544,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.post-navigation,
 	.post-navigation div + div,
 	.pagination,
@@ -567,12 +558,10 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
+	.pagination:before,
+	.pagination:after,
 	.pagination .prev,
 	.pagination .next,
-	.pagination .nav-links:before,
 	.page-links a {
 		background-color: {$colors['main_text_color']};
 	}
@@ -637,7 +626,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.main-navigation li,
 	.main-navigation .primary-menu,
 	.menu-toggle,
-	.dropdown-toggle,
+	.dropdown-toggle:after,
 	.social-navigation a,
 	.image-navigation,
 	.comment-navigation,
@@ -734,10 +723,7 @@ function twentysixteen_page_background_color_css() {
 
 	$css = '
 		/* Custom Page Background Color */
-		.site,
-		.dropdown-toggle,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus {
+		.site {
 			background-color: %1$s;
 		}
 
@@ -756,15 +742,14 @@ function twentysixteen_page_background_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.pagination .prev,
 		.pagination .next,
 		.pagination .prev:hover,
 		.pagination .prev:focus,
 		.pagination .next:hover,
 		.pagination .next:focus,
+		.pagination .nav-links:before,
+		.pagination .nav-links:after,
 		.widget_calendar tbody a,
 		.widget_calendar tbody a:hover,
 		.widget_calendar tbody a:focus,
@@ -889,9 +874,7 @@ function twentysixteen_link_color_css() {
 		.tagcloud a:hover,
 		.tagcloud a:focus,
 		.menu-toggle:hover,
-		.menu-toggle:focus,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus {
+		.menu-toggle:focus {
 			border-color: %1$s;
 		}
 
@@ -928,7 +911,7 @@ function twentysixteen_main_text_color_css() {
 	$main_text_color_rgb = twentysixteen_hex2rgb( $main_text_color );
 
 	// If the rgba values are empty return early.
-	if ( empty ( $main_text_color_rgb ) ) {
+	if ( empty( $main_text_color_rgb ) ) {
 		return;
 	}
 
@@ -962,9 +945,6 @@ function twentysixteen_main_text_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.post-navigation,
 		.post-navigation div + div,
 		.pagination,
@@ -979,12 +959,10 @@ function twentysixteen_main_text_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
+		.pagination:before,
+		.pagination:after,
 		.pagination .prev,
 		.pagination .next,
-		.pagination .nav-links:before,
 		.page-links a {
 			background-color: %1$s;
 		}
@@ -1007,7 +985,7 @@ function twentysixteen_main_text_color_css() {
 		.main-navigation li,
 		.main-navigation .primary-menu,
 		.menu-toggle,
-		.dropdown-toggle,
+		.dropdown-toggle:after,
 		.social-navigation a,
 		.image-navigation,
 		.comment-navigation,

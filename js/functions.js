@@ -9,6 +9,7 @@
 	var $body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
 	function initMainNavigation( container ) {
+
 		// Add dropdown toggle that display child menu items.
 		container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
@@ -24,7 +25,10 @@
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+			// jscs:disable
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
 			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		} );
 	}
@@ -38,6 +42,7 @@
 
 	// Enable menuToggle.
 	( function() {
+
 		// Return early if menuToggle is missing.
 		if ( ! menuToggle ) {
 			return;
@@ -48,7 +53,10 @@
 
 		menuToggle.on( 'click.twentysixteen', function() {
 			$( this ).add( siteHeaderMenu ).toggleClass( 'toggled-on' );
-			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false');
+
+			// jscs:disable
+			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
 		} );
 	} )();
 
@@ -107,7 +115,9 @@
 			return;
 		}
 
+		// jscs:disable
 		var entryContent = $( '.entry-content' );
+		// jscs:enable
 		entryContent.find( 'img.size-full' ).each( function() {
 			var img                  = $( this ),
 				caption              = img.closest( 'figure' ),
