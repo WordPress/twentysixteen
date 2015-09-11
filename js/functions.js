@@ -25,7 +25,10 @@
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+			// jscs:disable
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
 			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		} );
 	}
@@ -50,7 +53,10 @@
 
 		menuToggle.on( 'click.twentysixteen', function() {
 			$( this ).add( siteHeaderMenu ).toggleClass( 'toggled-on' );
+
+			// jscs:disable
 			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
 		} );
 	} )();
 
@@ -109,7 +115,9 @@
 			return;
 		}
 
+		// jscs:disable
 		var entryContent = $( '.entry-content' );
+		// jscs:enable
 		entryContent.find( 'img.size-full' ).each( function() {
 			var img                  = $( this ),
 				caption              = img.closest( 'figure' ),
