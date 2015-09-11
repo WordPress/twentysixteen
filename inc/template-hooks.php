@@ -63,15 +63,31 @@ function template_html_head_top() {
  *
  * current_theme_supports( 'template_hooks' ) = 'header';
  */
+
+/**
+ * Before header container
+ */
 function template_header_before() {
 	do_action( 'template_header_before' );
 }
+
+/**
+ * After header container
+ */
 function template_header_after() {
 	do_action( 'template_header_after' );
 }
+
+/**
+ * Inside header container opening
+ */
 function template_header_top() {
 	do_action( 'template_header_top' );
 }
+
+/**
+ * Inside header container closing
+ */
 function template_header_bottom() {
 	do_action( 'template_header_bottom' );
 }
@@ -80,21 +96,45 @@ function template_header_bottom() {
  *
  * current_theme_supports( 'template_hooks' ) = 'content';
  */
+
+/**
+ * Before content container
+ */
 function template_content_before() {
 	do_action( 'template_content_before' );
 }
+
+/**
+ * After header container
+ */
 function template_content_after() {
 	do_action( 'template_content_after' );
 }
+
+/**
+ * Inside header container opening
+ */
 function template_content_top() {
 	do_action( 'template_content_top' );
 }
+
+/**
+ * Inside header container closing
+ */
 function template_content_bottom() {
 	do_action( 'template_content_bottom' );
 }
+
+/**
+ * Before Loop while
+ */
 function template_content_while_before() {
 	do_action( 'template_content_while_before' );
 }
+
+/**
+ * After Loop endwhile
+ */
 function template_content_while_after() {
 	do_action( 'template_content_while_after' );
 }
@@ -103,21 +143,45 @@ function template_content_while_after() {
  *
  * current_theme_supports( 'template_hooks' ) = 'entry';
  */
+
+/**
+ * Before entry container
+ */
 function template_entry_before() {
 	do_action( 'template_entry_before' );
 }
+
+/**
+ * After entry container
+ */
 function template_entry_after() {
 	do_action( 'template_entry_after' );
 }
+
+/**
+ * Before entry content/container
+ */
 function template_entry_content_before() {
 	do_action( 'template_entry_content_before' );
 }
+
+/**
+ * After entry content/container
+ */
 function template_entry_content_after() {
 	do_action( 'template_entry_content_after' );
 }
+
+/**
+ * Inside entry container opening
+ */
 function template_entry_top() {
 	do_action( 'template_entry_top' );
 }
+
+/**
+ * Inside entry container closing
+ */
 function template_entry_bottom() {
 	do_action( 'template_entry_bottom' );
 }
@@ -126,9 +190,17 @@ function template_entry_bottom() {
  *
  * current_theme_supports( 'template_hooks' ) = 'comments';
  */
+
+/**
+ * Before comments container
+ */
 function template_comments_before() {
 	do_action( 'template_comments_before' );
 }
+
+/**
+ * After comments container
+ */
 function template_comments_after() {
 	do_action( 'template_comments_after' );
 }
@@ -137,15 +209,31 @@ function template_comments_after() {
  *
  * current_theme_supports( 'template_hooks' ) = 'sidebar';
  */
+
+/**
+ * Before sidebar container
+ */
 function template_sidebars_before() {
 	do_action( 'template_sidebars_before' );
 }
+
+/**
+ * After sidebar container
+ */
 function template_sidebars_after() {
 	do_action( 'template_sidebars_after' );
 }
+
+/**
+ * Inside sidebar container opening
+ */
 function template_sidebar_top() {
 	do_action( 'template_sidebar_top' );
 }
+
+/**
+ * Inside sidebar container closing
+ */
 function template_sidebar_bottom() {
 	do_action( 'template_sidebar_bottom' );
 }
@@ -154,15 +242,31 @@ function template_sidebar_bottom() {
  *
  * current_theme_supports( 'template_hooks' ) = 'footer';
  */
+
+/**
+ * Before footer container
+ */
 function template_footer_before() {
 	do_action( 'template_footer_before' );
 }
+
+/**
+ * After footer container
+ */
 function template_footer_after() {
 	do_action( 'template_footer_after' );
 }
+
+/**
+ * Inside footer container opening
+ */
 function template_footer_top() {
 	do_action( 'template_footer_top' );
 }
+
+/**
+ * Inside footer container closing
+ */
 function template_footer_bottom() {
 	do_action( 'template_footer_bottom' );
 }
