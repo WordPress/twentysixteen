@@ -10,7 +10,7 @@
  */
 
 /**
- * Declare Theme support for template hooks. 
+ * Declare Theme support for template hooks.
  * Use 'all' to declare support for all
  * template hooks. Support for the following
  * template hooks can also be declared
@@ -38,7 +38,7 @@ function template_html_before() {
 }
 /**
  * HTML <body> hooks
- * Reference current_theme_supports( 'template_hooks' ) = 'body'; 
+ * Reference current_theme_supports( 'template_hooks' ) = 'body';
  * Note: for HTML body bottom,
  * use wp_footer()
  */
@@ -46,8 +46,8 @@ function template_body_top() {
 	do_action( 'template_body_top' );
 }
 /**
- * HTML <head> hooks 
- * Note: for HTML head bottom, 
+ * HTML <head> hooks
+ * Note: for HTML head bottom,
  * use wp_head().
  * Reference current_theme_supports( 'template_hooks' ) = 'html_head';
  */
