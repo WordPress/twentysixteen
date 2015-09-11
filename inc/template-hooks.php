@@ -10,8 +10,7 @@
  */
 
 /**
- * Declare Theme support for template hooks
- * 
+ * Declare Theme support for template hooks. 
  * Use 'all' to declare support for all
  * template hooks. Support for the following
  * template hooks can also be declared
@@ -32,15 +31,14 @@ add_theme_support( 'template_hooks', array( 'all' ) );
 /**
  * HTML <html> hook
  * Special case, useful for <DOCTYPE>, etc.
- * current_theme_supports( 'template_hooks' ) = 'html';
+ * Reference current_theme_supports( 'template_hooks' ) = 'html';
  */
 function template_html_before() {
 	do_action( 'template_html_before' );
 }
 /**
  * HTML <body> hooks
- * current_theme_supports( 'template_hooks' ) = 'body';
- * 
+ * Reference current_theme_supports( 'template_hooks' ) = 'body'; 
  * Note: for HTML body bottom,
  * use wp_footer()
  */
@@ -48,20 +46,17 @@ function template_body_top() {
 	do_action( 'template_body_top' );
 }
 /**
- * HTML <head> hooks
- * 
+ * HTML <head> hooks 
  * Note: for HTML head bottom, 
- * use wp_head()
- *
- * current_theme_supports( 'template_hooks' ) = 'html_head';
+ * use wp_head().
+ * Reference current_theme_supports( 'template_hooks' ) = 'html_head';
  */
 function template_html_head_top() {
 	do_action( 'template_head_top' );
 }
 /**
  * Semantic <header> hooks
- *
- * current_theme_supports( 'template_hooks' ) = 'header';
+ * Reference current_theme_supports( 'template_hooks' ) = 'header';
  */
 
 /**
@@ -93,8 +88,7 @@ function template_header_bottom() {
 }
 /**
  * Semantic <content> hooks
- *
- * current_theme_supports( 'template_hooks' ) = 'content';
+ * Reference current_theme_supports( 'template_hooks' ) = 'content';
  */
 
 /**
@@ -140,8 +134,7 @@ function template_content_while_after() {
 }
 /**
  * Semantic <entry> hooks
- *
- * current_theme_supports( 'template_hooks' ) = 'entry';
+ * Reference current_theme_supports( 'template_hooks' ) = 'entry';
  */
 
 /**
@@ -187,8 +180,7 @@ function template_entry_bottom() {
 }
 /**
  * Comments block hooks
- *
- * current_theme_supports( 'template_hooks' ) = 'comments';
+ * Reference current_theme_supports( 'template_hooks' ) = 'comments';
  */
 
 /**
@@ -206,8 +198,7 @@ function template_comments_after() {
 }
 /**
  * Semantic <sidebar> hooks
- *
- * current_theme_supports( 'template_hooks' ) = 'sidebar';
+ * Reference current_theme_supports( 'template_hooks' ) = 'sidebar';
  */
 
 /**
@@ -239,8 +230,7 @@ function template_sidebar_bottom() {
 }
 /**
  * Semantic <footer> hooks
- *
- * current_theme_supports( 'template_hooks' ) = 'footer';
+ * Reference current_theme_supports( 'template_hooks' ) = 'footer';
  */
 
 /**
