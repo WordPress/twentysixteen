@@ -1940,7 +1940,6 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .sticky .posted-on,
-.byline,
 .updated:not(.published) {
 	display: none;
 }
