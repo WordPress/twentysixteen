@@ -71,7 +71,9 @@
 		} );
 
 		// Add additional color.
+		// jscs:disable
 		colors.border_color = Color( colors.main_text_color ).toCSS( 'rgba', 0.1 );
+		// jscs:enable
 
 		css = cssTemplate( colors );
 
