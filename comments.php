@@ -64,6 +64,6 @@ template_comments_before();
 </div><!-- .comments-area -->
 <?php
 /**
- * Fire template_comments_before hook
+ * Fire template_comments_after hook
  */
-template_comments_before();
+template_comments_after();
