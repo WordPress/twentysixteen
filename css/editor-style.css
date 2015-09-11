@@ -409,14 +409,12 @@ a {
  */
 
 .gallery {
-    margin-bottom: 1.75em;
-    margin-left: -1.1666667%;
-    margin-right: -1.1666667%;
+    margin: 0 -1.1666667% 1.75em;
 }
 
 .gallery .gallery-item {
 	display: inline-block;
-	padding: 0 1.1666667% 2.3333333%;
+	padding: 0 1.1400652% 2.2801304%;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
