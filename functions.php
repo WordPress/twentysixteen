@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twenty Sixteen functions and definitions
  *
@@ -33,6 +34,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.2', '<' ) ) {
 }
 
 if ( ! function_exists( 'twentysixteen_setup' ) ) :
+	
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -41,6 +43,7 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function twentysixteen_setup() {
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -163,6 +166,7 @@ function twentysixteen_widgets_init() {
 add_action( 'widgets_init', 'twentysixteen_widgets_init' );
 
 if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
+	
 /**
  * Register Google fonts for Twenty Sixteen.
  *
