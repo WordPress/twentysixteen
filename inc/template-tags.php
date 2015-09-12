@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom template tags for this theme.
  *
@@ -10,6 +11,7 @@
  */
 
 if ( ! function_exists( 'twentysixteen_comment_nav' ) ) :
+	
 /**
  * Display navigation to next/previous comments when applicable.
  *
@@ -39,6 +41,7 @@ function twentysixteen_comment_nav() {
 endif;
 
 if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
+	
 /**
  * Prints HTML with meta information for the categories, tags.
  *
@@ -83,6 +86,7 @@ function twentysixteen_entry_meta() {
 endif;
 
 if ( ! function_exists( 'twentysixteen_entry_date' ) ) :
+	
 /**
  * Print HTML with date information for current post.
  *
@@ -113,6 +117,7 @@ function twentysixteen_entry_date() {
 endif;
 
 if ( ! function_exists( 'twentysixteen_entry_taxonomies' ) ) :
+	
 /**
  * Print HTML with category and tags for current post.
  *
@@ -140,6 +145,7 @@ function twentysixteen_entry_taxonomies() {
 endif;
 
 if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
+	
 /**
  * Display an optional post thumbnail.
  *
@@ -171,6 +177,7 @@ function twentysixteen_post_thumbnail() {
 endif;
 
 if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
+	
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'Continue reading' link.
  *
