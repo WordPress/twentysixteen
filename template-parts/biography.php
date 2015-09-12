@@ -11,6 +11,7 @@
 <div class="author-info">
 	<div class="author-avatar">
 		<?php
+		
 		/**
 		 * Filter the author bio avatar size.
 		 *
