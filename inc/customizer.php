@@ -61,6 +61,7 @@ function twentysixteen_custom_header_and_background() {
 add_action( 'after_setup_theme', 'twentysixteen_custom_header_and_background' );
 
 if ( ! function_exists( 'twentysixteen_header_style' ) ) :
+	
 /**
  * Styles the header text displayed on the site
  *
@@ -245,6 +246,7 @@ function twentysixteen_get_color_schemes() {
 }
 
 if ( ! function_exists( 'twentysixteen_get_color_scheme' ) ) :
+	
 /**
  * Get the current Twenty Sixteen color scheme.
  *
@@ -265,6 +267,7 @@ function twentysixteen_get_color_scheme() {
 endif; // twentysixteen_get_color_scheme
 
 if ( ! function_exists( 'twentysixteen_get_color_scheme_choices' ) ) :
+	
 /**
  * Returns an array of color scheme choices registered for Twenty Sixteen.
  *
@@ -286,6 +289,7 @@ endif; // twentysixteen_get_color_scheme_choices
 
 
 if ( ! function_exists( 'twentysixteen_sanitize_color_scheme' ) ) :
+	
 /**
  * Sanitization callback for color schemes.
  *
@@ -677,7 +681,6 @@ CSS;
 
 	return $css;
 }
-
 
 /**
  * Output an Underscore template for generating CSS for the color scheme.
