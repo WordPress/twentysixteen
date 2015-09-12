@@ -48,7 +48,7 @@
 					do_action( 'twentysixteen_credits' );
 				?>
 				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
+				<a href="https://wordpress.org/"><?php esc_html_e( 'Proudly powered by WordPress', 'twentysixteen' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
