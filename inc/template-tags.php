@@ -76,7 +76,7 @@ function twentysixteen_entry_meta() {
 
 	if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 }
@@ -181,7 +181,7 @@ if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
 function twentysixteen_excerpt_more() {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
-		sprintf( _x( 'Continue reading %s', 'Name of current post', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
+		sprintf( esc_html_x( 'Continue reading %s', 'Name of current post', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
 	);
 	return ' &hellip; ' . $link;
 }
