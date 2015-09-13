@@ -103,7 +103,7 @@ get_header(); ?>
 
 					// Parent post navigation
 					the_post_navigation( array(
-						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
+						'prev_text' => wp_kses( _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ), array( 'span' => array( 'class' => array() ) ) ),
 					) );
 				// End the loop.
 				endwhile;
