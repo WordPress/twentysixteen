@@ -25,6 +25,7 @@
 		ready: function() {
 			if ( 'color_scheme' === this.id ) {
 				this.setting.bind( 'change', function( value ) {
+
 					// Update Background Color.
 					api( 'background_color' ).set( colorScheme[value].colors[0] );
 					api.control( 'background_color' ).container.find( '.color-picker-hex' )
@@ -70,7 +71,9 @@
 		} );
 
 		// Add additional color.
+		// jscs:disable
 		colors.border_color = Color( colors.main_text_color ).toCSS( 'rgba', 0.1 );
+		// jscs:enable
 
 		css = cssTemplate( colors );
 

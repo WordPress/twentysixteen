@@ -9,16 +9,9 @@
 	var $body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
 	function initMainNavigation( container ) {
-		// Add dropdown toggle that display child menu items.
-		var dropdownToggle = $( '<button />', {
-			'class': 'dropdown-toggle',
-			'aria-expanded' : false
-		} ).append( $( '<span />', {
-			'class': 'screen-reader-text',
-			text: screenReaderText.expand
-		} ) );
 
-		container.find( '.menu-item-has-children > a' ).after( dropdownToggle );
+		// Add dropdown toggle that display child menu items.
+		container.find( '.menu-item-has-children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
 
 		// Toggle buttons and submenu items with active children menu items.
 		container.find( '.current-menu-ancestor > button' ).addClass( 'toggled-on' );
@@ -28,14 +21,15 @@
 		container.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' );
 
 		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this            = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text');
-
+			var _this = $( this );
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+			// jscs:disable
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-			screenReaderSpan.text(  screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+			// jscs:enable
+			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		} );
 	}
 	initMainNavigation( $( '.main-navigation' ) );
@@ -48,6 +42,7 @@
 
 	// Enable menuToggle.
 	( function() {
+
 		// Return early if menuToggle is missing.
 		if ( ! menuToggle ) {
 			return;
@@ -58,7 +53,10 @@
 
 		menuToggle.on( 'click.twentysixteen', function() {
 			$( this ).add( siteHeaderMenu ).toggleClass( 'toggled-on' );
-			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false');
+
+			// jscs:disable
+			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
 		} );
 	} )();
 
@@ -117,16 +115,18 @@
 			return;
 		}
 
+		// jscs:disable
 		var entryContent = $( '.entry-content' );
-		entryContent.find( 'img.size-full, img.size-large' ).each( function() {
+		// jscs:enable
+		entryContent.find( 'img.size-full' ).each( function() {
 			var img                  = $( this ),
-			    caption              = $( this ).closest( 'figure' ),
-			    imgPos               = $( this ).offset(),
-			    imgPosTop            = imgPos.top,
-			    entryFooter          = $( this ).closest( 'article' ).find( '.entry-footer' ),
-			    entryFooterPos       = entryFooter.offset(),
-			    entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
-			    newImg               = new Image();
+				caption              = img.closest( 'figure' ),
+				imgPos               = img.offset(),
+				imgPosTop            = imgPos.top,
+				entryFooter          = img.closest( 'article' ).find( '.entry-footer' ),
+				entryFooterPos       = entryFooter.offset(),
+				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
+				newImg               = new Image();
 
 			newImg.src = img.attr( 'src' );
 
@@ -135,7 +135,7 @@
 
 				if ( imgPosTop > entryFooterPosBottom ) {
 					if ( 840 <= imgWidth  ) {
-						$( img ).addClass( 'size-big' );
+						img.addClass( 'size-big' );
 					}
 
 					if ( caption.hasClass( 'wp-caption' ) && 840 <= imgWidth  ) {
@@ -143,7 +143,7 @@
 						caption.removeAttr( 'style' );
 					}
 				} else {
-					$( img ).removeClass( 'size-big' );
+					img.removeClass( 'size-big' );
 					caption.removeClass( 'caption-big' );
 				}
 			} );

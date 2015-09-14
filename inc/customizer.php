@@ -8,6 +8,91 @@
  */
 
 /**
+ * Set up the WordPress core custom header and custom background features.
+ *
+ * @since Twenty Sixteen 1.0
+ *
+ * @uses twentysixteen_header_style()
+ */
+function twentysixteen_custom_header_and_background() {
+	$color_scheme             = twentysixteen_get_color_scheme();
+	$default_background_color = trim( $color_scheme[0], '#' );
+	$default_text_color       = trim( $color_scheme[3], '#' );
+
+	/**
+	 * Filter Twenty Sixteen custom-background support argument.
+	 *
+	 * @since Twenty Sixteen 1.0
+	 *
+	 * @param array $args {
+	 *     An array of custom-background support arguments.
+	 *
+	 *     @type string $default-color     Default color of the background.
+	 * }
+	 */
+	add_theme_support( 'custom-background', apply_filters( 'twentysixteen_custom_background_args', array(
+		'default-color' => $default_background_color,
+	) ) );
+
+	/**
+	 * Filter Twenty Sixteen custom-header support arguments.
+	 *
+	 * @since Twenty Sixteen 1.0
+	 *
+	 * @param array $args {
+	 *     An array of custom-header support arguments.
+	 *
+	 *     @type string $default-text-color     Default color of the header text.
+	 *     @type int    $width                  Width in pixels of the custom header image. Default 1200.
+	 *     @type int    $height                 Height in pixels of the custom header image. Default 280.
+	 *     @type bool   $flex-height            Whether to allow flexible-height header images. Default true.
+	 *     @type string $wp-head-callback       Callback function used to styles the header image and text
+	 *                                          displayed on the blog.
+	 * }
+	 */
+	add_theme_support( 'custom-header', apply_filters( 'twentysixteen_custom_header_args', array(
+		'default-text-color'     => $default_text_color,
+		'width'                  => 1200,
+		'height'                 => 280,
+		'flex-height'            => true,
+		'wp-head-callback'       => 'twentysixteen_header_style',
+	) ) );
+}
+add_action( 'after_setup_theme', 'twentysixteen_custom_header_and_background' );
+
+if ( ! function_exists( 'twentysixteen_header_style' ) ) :
+/**
+ * Styles the header text displayed on the site
+ *
+ * @since Twenty Sixteen 1.0
+ *
+ * @see twentysixteen_custom_header_and_background().
+ */
+function twentysixteen_header_style() {
+	// If the header text option is untouched, let's bail.
+	if ( display_header_text() ) {
+		return;
+
+	// If the header text has been hidden.
+	} else {
+	?>
+		<style type="text/css" id="twentysixteen-header-css">
+			.site-branding {
+				margin: 0 auto 0 0;
+			}
+
+			.site-title,
+			.site-description {
+				clip: rect(1px, 1px, 1px, 1px);
+				position: absolute;
+			}
+		</style>
+	<?php
+	}
+}
+endif; // twentysixteen_header_style
+
+/**
  * Add postMessage support for site title and description for the Customizer.
  *
  * @since Twenty Sixteen 1.0
@@ -28,7 +113,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'color_scheme', array(
-		'label'    => __( 'Base Color Scheme', 'twentysixteen' ),
+		'label'    => esc_html__( 'Base Color Scheme', 'twentysixteen' ),
 		'section'  => 'colors',
 		'type'     => 'select',
 		'choices'  => twentysixteen_get_color_scheme_choices(),
@@ -43,7 +128,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'page_background_color', array(
-		'label'       => __( 'Page Background Color', 'twentysixteen' ),
+		'label'       => esc_html__( 'Page Background Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -58,7 +143,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label'       => __( 'Link Color', 'twentysixteen' ),
+		'label'       => esc_html__( 'Link Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -70,7 +155,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_text_color', array(
-		'label'       => __( 'Main Text Color', 'twentysixteen' ),
+		'label'       => esc_html__( 'Main Text Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -82,7 +167,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
-		'label'       => __( 'Secondary Text Color', 'twentysixteen' ),
+		'label'       => esc_html__( 'Secondary Text Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 }
@@ -107,7 +192,7 @@ add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
 function twentysixteen_get_color_schemes() {
 	return apply_filters( 'twentysixteen_color_schemes', array(
 		'default' => array(
-			'label'  => __( 'Default', 'twentysixteen' ),
+			'label'  => esc_html__( 'Default', 'twentysixteen' ),
 			'colors' => array(
 				'#1a1a1a',
 				'#ffffff',
@@ -117,7 +202,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'dark' => array(
-			'label'  => __( 'Dark', 'twentysixteen' ),
+			'label'  => esc_html__( 'Dark', 'twentysixteen' ),
 			'colors' => array(
 				'#262626',
 				'#1a1a1a',
@@ -127,7 +212,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'gray' => array(
-			'label'  => __( 'Gray', 'twentysixteen' ),
+			'label'  => esc_html__( 'Gray', 'twentysixteen' ),
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
@@ -137,7 +222,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'green' => array(
-			'label'  => __( 'Green', 'twentysixteen' ),
+			'label'  => esc_html__( 'Green', 'twentysixteen' ),
 			'colors' => array(
 				'#ffffff',
 				'#acc1a2',
@@ -147,7 +232,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'yellow' => array(
-			'label'  => __( 'Yellow', 'twentysixteen' ),
+			'label'  => esc_html__( 'Yellow', 'twentysixteen' ),
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
@@ -241,7 +326,7 @@ function twentysixteen_color_scheme_css() {
 	$color_textcolor_rgb = twentysixteen_hex2rgb( $color_scheme[3] );
 
 	// If the rgba values are empty return early.
-	if ( empty ( $color_textcolor_rgb ) ) {
+	if ( empty( $color_textcolor_rgb ) ) {
 		return;
 	}
 
@@ -312,10 +397,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	}
 
 	/* Page Background Color */
-	.site,
-	.dropdown-toggle,
-	.dropdown-toggle:hover,
-	.dropdown-toggle:focus {
+	.site {
 		background-color: {$colors['page_background_color']};
 	}
 
@@ -334,15 +416,14 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.pagination .prev,
 	.pagination .next,
 	.pagination .prev:hover,
 	.pagination .prev:focus,
 	.pagination .next:hover,
 	.pagination .next:focus,
+	.pagination .nav-links:before,
+	.pagination .nav-links:after,
 	.widget_calendar tbody a,
 	.widget_calendar tbody a:hover,
 	.widget_calendar tbody a:focus,
@@ -433,9 +514,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.tagcloud a:hover,
 	.tagcloud a:focus,
 	.menu-toggle:hover,
-	.menu-toggle:focus,
-	.dropdown-toggle:hover,
-	.dropdown-toggle:focus {
+	.menu-toggle:focus {
 		border-color: {$colors['link_color']};
 	}
 
@@ -465,9 +544,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
 	.post-navigation,
 	.post-navigation div + div,
 	.pagination,
@@ -482,12 +558,10 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
 	.menu-toggle.toggled-on:focus,
-	.dropdown-toggle.toggled-on,
-	.dropdown-toggle.toggled-on:hover,
-	.dropdown-toggle.toggled-on:focus,
+	.pagination:before,
+	.pagination:after,
 	.pagination .prev,
 	.pagination .next,
-	.pagination .nav-links:before,
 	.page-links a {
 		background-color: {$colors['main_text_color']};
 	}
@@ -505,7 +579,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.widget_rss .rss-date,
 	.widget_rss cite,
 	.site-description,
-	.entry-intro,
+	body:not(.search-results) .entry-summary,
 	.author-bio,
 	.entry-footer,
 	.entry-footer a,
@@ -552,7 +626,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.main-navigation li,
 	.main-navigation .primary-menu,
 	.menu-toggle,
-	.dropdown-toggle,
+	.dropdown-toggle:after,
 	.social-navigation a,
 	.image-navigation,
 	.comment-navigation,
@@ -568,7 +642,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		border-color: {$colors['border_color']};
 	}
 
-	hr {
+	hr,
+	code {
 		background-color: {$colors['border_color']};
 	}
 
@@ -648,10 +723,7 @@ function twentysixteen_page_background_color_css() {
 
 	$css = '
 		/* Custom Page Background Color */
-		.site,
-		.dropdown-toggle,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus {
+		.site {
 			background-color: %1$s;
 		}
 
@@ -670,15 +742,14 @@ function twentysixteen_page_background_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.pagination .prev,
 		.pagination .next,
 		.pagination .prev:hover,
 		.pagination .prev:focus,
 		.pagination .next:hover,
 		.pagination .next:focus,
+		.pagination .nav-links:before,
+		.pagination .nav-links:after,
 		.widget_calendar tbody a,
 		.widget_calendar tbody a:hover,
 		.widget_calendar tbody a:focus,
@@ -803,9 +874,7 @@ function twentysixteen_link_color_css() {
 		.tagcloud a:hover,
 		.tagcloud a:focus,
 		.menu-toggle:hover,
-		.menu-toggle:focus,
-		.dropdown-toggle:hover,
-		.dropdown-toggle:focus {
+		.menu-toggle:focus {
 			border-color: %1$s;
 		}
 
@@ -842,7 +911,7 @@ function twentysixteen_main_text_color_css() {
 	$main_text_color_rgb = twentysixteen_hex2rgb( $main_text_color );
 
 	// If the rgba values are empty return early.
-	if ( empty ( $main_text_color_rgb ) ) {
+	if ( empty( $main_text_color_rgb ) ) {
 		return;
 	}
 
@@ -876,9 +945,6 @@ function twentysixteen_main_text_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
 		.post-navigation,
 		.post-navigation div + div,
 		.pagination,
@@ -893,12 +959,10 @@ function twentysixteen_main_text_color_css() {
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
 		.menu-toggle.toggled-on:focus,
-		.dropdown-toggle.toggled-on,
-		.dropdown-toggle.toggled-on:hover,
-		.dropdown-toggle.toggled-on:focus,
+		.pagination:before,
+		.pagination:after,
 		.pagination .prev,
 		.pagination .next,
-		.pagination .nav-links:before,
 		.page-links a {
 			background-color: %1$s;
 		}
@@ -921,7 +985,7 @@ function twentysixteen_main_text_color_css() {
 		.main-navigation li,
 		.main-navigation .primary-menu,
 		.menu-toggle,
-		.dropdown-toggle,
+		.dropdown-toggle:after,
 		.social-navigation a,
 		.image-navigation,
 		.comment-navigation,
@@ -937,7 +1001,8 @@ function twentysixteen_main_text_color_css() {
 			border-color: %2$s;
 		}
 
-		hr {
+		hr,
+		code {
 			background-color: %2$s;
 		}
 
@@ -989,7 +1054,7 @@ function twentysixteen_secondary_text_color_css() {
 		.widget_rss .rss-date,
 		.widget_rss cite,
 		.site-description,
-		.entry-intro,
+		body:not(.search-results) .entry-summary,
 		.author-bio,
 		.entry-footer,
 		.entry-footer a,

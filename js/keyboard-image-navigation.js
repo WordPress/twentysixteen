@@ -7,11 +7,11 @@
 		var url = false;
 
 		// Left arrow key code.
-		if ( e.which === 37 ) {
+		if ( 37 === e.which ) {
 			url = $( '.nav-previous a' ).attr( 'href' );
 
 		// Right arrow key code.
-		} else if ( e.which === 39 ) {
+		} else if ( 39 === e.which ) {
 			url = $( '.nav-next a' ).attr( 'href' );
 		}
 

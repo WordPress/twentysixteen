@@ -18,7 +18,7 @@
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'primary',
-							'menu_class'     => 'primary-menu'
+							'menu_class'     => 'primary-menu',
 						 ) );
 					?>
 				</nav><!-- .main-navigation -->
@@ -48,7 +48,7 @@
 					do_action( 'twentysixteen_credits' );
 				?>
 				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
