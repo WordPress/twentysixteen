@@ -250,8 +250,8 @@ function twentysixteen_scripts() {
 	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150825', true );
 
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'twentysixteen' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'twentysixteen' ) . '</span>',
+		'expand'   => esc_html__( 'expand child menu', 'twentysixteen' ),
+		'collapse' => esc_html__( 'collapse child menu', 'twentysixteen' ),
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
