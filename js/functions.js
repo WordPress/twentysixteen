@@ -129,8 +129,8 @@
 		}
 	}
 
-	// Add a class to big image and caption larger than or equal to 840px.
-	function bigImageClass() {
+	// Preventing left offseted elements to bleed into the post meta
+	function offsetLeft( param ) {
 		if ( $body.hasClass( 'page' ) || $body.hasClass( 'search' ) || $body.hasClass( 'single-attachment' ) || $body.hasClass( 'error404' ) ) {
 			return;
 		}
@@ -138,59 +138,51 @@
 		// jscs:disable
 		var entryContent = $( '.entry-content' );
 		// jscs:enable
-		entryContent.find( 'img.size-full' ).each( function() {
-			var img                  = $( this ),
-				caption              = img.closest( 'figure' ),
-				imgPos               = img.offset(),
-				imgPosTop            = imgPos.top,
-				entryFooter          = img.closest( 'article' ).find( '.entry-footer' ),
-				entryFooterPos       = entryFooter.offset(),
-				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
-				newImg               = new Image();
 
-			newImg.src = img.attr( 'src' );
-
-			$( newImg ).load( function() {
-				var imgWidth = newImg.width;
-
-				if ( imgPosTop > entryFooterPosBottom ) {
-					if ( imgWidth >= 840 ) {
-						img.addClass( 'size-big' );
-					}
-
-					if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 840 ) {
-						caption.addClass( 'caption-big' );
-						caption.removeAttr( 'style' );
-					}
-				} else {
-					img.removeClass( 'size-big' );
-					caption.removeClass( 'caption-big' );
-				}
-			} );
-		} );
-
-	}
-
-	// Prevent blockquote on the top of the post from bleeding over to post meta
-	function blockquoteFix() {
-		if ( $body.hasClass( 'page' ) || $body.hasClass( 'search' ) || $body.hasClass( 'single-attachment' ) || $body.hasClass( 'error404' ) ) {
-			return;
-		}
-
-		var entryContent = $( '.entry-content' );
-		entryContent.find( 'blockquote.alignleft' ).each( function() {
-			var blockquote           = $( this ),
-				blockquotePos        = blockquote.offset(),
-				blockquotePosTop     = blockquotePos.top,
-				entryFooter          = blockquote.closest( 'article' ).find( '.entry-footer' ),
+		entryContent.find( param ).each( function() {
+			var element              = $( this ),
+				elementPos           = element.offset(),
+				elementPosTop        = elementPos.top,
+				entryFooter          = element.closest( 'article' ).find( '.entry-footer' ),
 				entryFooterPos       = entryFooter.offset(),
 				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 );
+			
+			// Add a class to big image and caption larger than or equal to 840px.	
+			if ( 'img.size-full' == param ) {
 
-			if ( blockquotePosTop > entryFooterPosBottom ) {
-				blockquote.addClass( 'farleft' );
-			} else {
-				blockquote.removeClass( 'farleft' );
+				var caption              = element.closest( 'figure' ),
+					newImg               = new Image();
+
+				newImg.src = element.attr( 'src' );
+
+				$( newImg ).load( function() {
+					var imgWidth = newImg.width;
+
+					if ( elementPosTop > entryFooterPosBottom ) {
+						if ( 840 <= imgWidth  ) {
+							element.addClass( 'size-big' );
+						}
+
+						if ( caption.hasClass( 'wp-caption' ) && 840 <= imgWidth  ) {
+							caption.addClass( 'caption-big' );
+							caption.removeAttr( 'style' );
+						}
+					} else {
+						element.removeClass( 'size-big' );
+						caption.removeClass( 'caption-big' );
+					}
+				} );
 			}
+
+			// Prevent blockquote on the top of the post from bleeding over to post meta
+			if ( 'blockquote.alignleft' == param ) {
+				if ( elementPosTop > entryFooterPosBottom ) {
+					element.addClass( 'farleft' );
+				} else {
+					element.removeClass( 'farleft' );
+				}
+			}
+
 		} );
 	}
 
@@ -201,11 +193,11 @@
 			.on( 'load.twentysixteen', onResizeARIA )
 			.on( 'resize.twentysixteen', function() {
 				clearTimeout( resizeTimer );
-				resizeTimer = setTimeout( bigImageClass, 300 );
+				resizeTimer = setTimeout( offsetLeft, 300 );
 				onResizeARIA();
 			} );
 
-		bigImageClass();
-		blockquoteFix();
+		offsetLeft( 'img.size-full' );
+		offsetLeft( 'blockquote.alignleft' );
 	} );
 } )( jQuery );
