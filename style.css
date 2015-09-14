@@ -1273,13 +1273,11 @@ a:active {
  */
 
 .alignleft {
-	display: inline;
 	float: left;
 	margin: 0.375em 1.75em 1.75em 0;
 }
 
 .alignright {
-	display: inline;
 	float: right;
 	margin: 0.375em 0 1.75em 1.75em;
 }
@@ -2881,7 +2879,6 @@ p > video {
 
 	.main-navigation ul ul {
 		border-bottom: 1px solid #e8e8e8;
-		display: block;
 		float: left;
 		margin: 0;
 		position: absolute;
