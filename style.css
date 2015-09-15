@@ -1788,9 +1788,7 @@ a.post-thumbnail:focus {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
+	word-wrap: break-word;
 }
 
 body:not(.search-results) .entry-summary {
