@@ -212,7 +212,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'gray' => array(
-			'label'  => esc_html__( 'Gray', 'twentysixteen' ),
+			'label'  => esc_html__( 'Gray (Does not meet accessibility requirements)', 'twentysixteen' ),
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
@@ -222,7 +222,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'green' => array(
-			'label'  => esc_html__( 'Green', 'twentysixteen' ),
+			'label'  => esc_html__( 'Green (Does not meet accessibility requirements)', 'twentysixteen' ),
 			'colors' => array(
 				'#ffffff',
 				'#acc1a2',
@@ -232,7 +232,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'yellow' => array(
-			'label'  => esc_html__( 'Yellow', 'twentysixteen' ),
+			'label'  => esc_html__( 'Yellow (Does not meet accessibility requirements)', 'twentysixteen' ),
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
