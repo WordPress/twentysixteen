@@ -1787,6 +1787,7 @@ a.post-thumbnail:focus {
 .comments-title {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
+	-ms-hyphens: auto;
 	hyphens: auto;
 	word-wrap: break-word;
 }
