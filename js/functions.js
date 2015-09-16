@@ -95,7 +95,7 @@
 
 	// Add the default ARIA attributes for the menu toggle and the navigations.
 	function onResizeARIA() {
-		if ( 910 > window.innerWidth ) {
+		if ( window.innerWidth < 910 ) {
 			if ( menuToggle.hasClass( 'toggled-on' ) ) {
 				menuToggle.attr( 'aria-expanded', 'true' );
 			} else {
@@ -144,11 +144,11 @@
 				var imgWidth = newImg.width;
 
 				if ( imgPosTop > entryFooterPosBottom ) {
-					if ( 840 <= imgWidth  ) {
+					if ( imgWidth >= 840 ) {
 						img.addClass( 'size-big' );
 					}
 
-					if ( caption.hasClass( 'wp-caption' ) && 840 <= imgWidth  ) {
+					if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 840 ) {
 						caption.addClass( 'caption-big' );
 						caption.removeAttr( 'style' );
 					}
