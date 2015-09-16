@@ -1782,6 +1782,16 @@ a.post-thumbnail:focus {
 	margin-top: 0;
 }
 
+.post-navigation .post-title,
+.entry-title,
+.comments-title {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+}
+
 body:not(.search-results) .entry-summary {
 	color: #757575;
 	font-size: 19px;
