@@ -76,16 +76,26 @@
 			return;
 		}
 
-		if ( 'ontouchstart' in window ) {
-			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.twentysixteen', function( e ) {
-				var el = $( this ).parent( 'li' );
+		// Toggle `focus` class to allow submenu access on tablets.
+		function toggleFocusClassTouchScreen() {
+			if ( window.innerWidth > 910 ) {
+				siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.twentysixteen', function( e ) {
+					var el = $( this ).parent( 'li' );
 
-				if ( ! el.hasClass( 'focus' ) ) {
-					e.preventDefault();
-					el.toggleClass( 'focus' );
-					el.siblings( '.focus' ).removeClass( 'focus' );
-				}
-			} );
+					if ( ! el.hasClass( 'focus' ) ) {
+						e.preventDefault();
+						el.toggleClass( 'focus' );
+						el.siblings( '.focus' ).removeClass( 'focus' );
+					}
+				} );
+			} else {
+				siteNavigation.find( '.menu-item-has-children > a' ).unbind( 'touchstart.twentysixteen' );
+			}
+		}
+
+		if ( 'ontouchstart' in window ) {
+			$( window ).on( 'resize.twentysixteen', toggleFocusClassTouchScreen );
+			toggleFocusClassTouchScreen();
 		}
 
 		siteNavigation.find( 'a' ).on( 'focus.twentysixteen blur.twentysixteen', function() {
