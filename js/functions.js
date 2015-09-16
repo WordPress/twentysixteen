@@ -160,6 +160,32 @@
 		} );
 	}
 
+	// Add class to left-aligned blockquotes that clear the entry footer.
+	function leftAlignedBlockquoteClass() {
+		if ( $body.hasClass( 'page' ) || $body.hasClass( 'search' ) || $body.hasClass( 'single-attachment' ) || $body.hasClass( 'error404' ) ) {
+			return;
+		}
+
+		// jscs:disable
+		var entryContent = $( '.entry-content' );
+		// jscs:enable
+		entryContent.find( 'blockquote.alignleft' ).each( function() {
+			var blockquote           = $( this ),
+				blockquotePos        = blockquote.offset(),
+				blockquotePosTop     = blockquotePos.top,
+				entryFooter          = blockquote.closest( 'article' ).find( '.entry-footer' ),
+				entryFooterPos       = entryFooter.offset(),
+				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 );
+
+			if ( blockquotePosTop > entryFooterPosBottom ) {
+				blockquote.addClass( 'pull-left' );
+			} else {
+				blockquote.removeClass( 'pull-left' );
+			}
+
+		} );
+	}
+
 	$( document ).ready( function() {
 		$body = $( document.body );
 
@@ -167,10 +193,14 @@
 			.on( 'load.twentysixteen', onResizeARIA )
 			.on( 'resize.twentysixteen', function() {
 				clearTimeout( resizeTimer );
-				resizeTimer = setTimeout( bigImageClass, 300 );
+				resizeTimer = setTimeout( function() {
+					bigImageClass();
+					leftAlignedBlockquoteClass();
+				}, 300 );
 				onResizeARIA();
 			} );
 
 		bigImageClass();
+		leftAlignedBlockquoteClass();
 	} );
 } )( jQuery );
