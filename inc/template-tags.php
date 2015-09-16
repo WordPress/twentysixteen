@@ -181,7 +181,8 @@ if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
 function twentysixteen_excerpt_more() {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
-		sprintf( _x( 'Continue reading %s', 'Name of current post', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Continue reading %s', 'twentysixteen' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
 	);
 	return ' &hellip; ' . $link;
 }
