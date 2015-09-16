@@ -93,7 +93,7 @@
 		} );
 	} )();
 
-	// Add he default ARIA attributes for the menu toggle and the navigations.
+	// Add the default ARIA attributes for the menu toggle and the navigations.
 	function onResizeARIA() {
 		if ( 910 > window.innerWidth ) {
 			if ( menuToggle.hasClass( 'toggled-on' ) ) {
