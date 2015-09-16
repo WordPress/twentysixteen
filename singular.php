@@ -3,7 +3,8 @@
  * The template for displaying all pages, single posts and attachments
  *
  * This is a new template file that WordPress introduced in
- * version 4.2. Note that it uses conditional logic to display
+ * version 4.3: https://core.trac.wordpress.org/changeset/32846
+ * Note that it uses conditional logic to display
  * different content based on the post type.
  *
  * @package WordPress
