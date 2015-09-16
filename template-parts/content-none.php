@@ -10,11 +10,29 @@
  */
 ?>
 
+<?php
+/**
+ * Fire template_entry_before hook
+ */
+template_entry_before();
+?>
 <section class="no-results not-found">
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_top();
+	?>
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'twentysixteen' ); ?></h1>
 	</header><!-- .page-header -->
 
+	<?php
+	/**
+	 * Fire template_entry_content_before hook
+	 */
+	template_entry_content_before();
+	?>
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
@@ -32,4 +50,21 @@
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
+	<?php
+	/**
+	 * Fire template_entry_content_after hook
+	 */
+	template_entry_content_after();
+	?>
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_bottom();
+	?>
 </section><!-- .no-results -->
+<?php
+/**
+ * Fire template_entry_after hook
+ */
+template_entry_after();

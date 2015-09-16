@@ -8,13 +8,31 @@
  */
 ?>
 
+<?php
+/**
+ * Fire template_entry_before hook
+ */
+template_entry_before();
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_top();
+	?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
+	<?php
+	/**
+	 * Fire template_entry_content_before hook
+	 */
+	template_entry_content_before();
+	?>
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -29,6 +47,12 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+	<?php
+	/**
+	 * Fire template_entry_content_after hook
+	 */
+	template_entry_content_after();
+	?>
 
 	<?php
 		edit_post_link(
@@ -42,4 +66,15 @@
 		);
 	?>
 
+	<?php
+	/**
+	 * Fire template_entry_top hook
+	 */
+	template_entry_bottom();
+	?>
 </article><!-- #post-## -->
+<?php
+/**
+ * Fire template_entry_after hook
+ */
+template_entry_after();

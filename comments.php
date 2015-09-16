@@ -20,6 +20,12 @@ if ( post_password_required() ) {
 }
 ?>
 
+<?php
+/**
+ * Fire template_comments_before hook
+ */
+template_comments_before();
+?>
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
@@ -56,3 +62,8 @@ if ( post_password_required() ) {
 	<?php comment_form(); ?>
 
 </div><!-- .comments-area -->
+<?php
+/**
+ * Fire template_comments_after hook
+ */
+template_comments_after();

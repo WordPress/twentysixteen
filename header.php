@@ -9,8 +9,20 @@
  * @since Twenty Sixteen 1.0
  */
 ?><!DOCTYPE html>
+<?php
+/**
+ * Fire template_html_before hook
+ */
+template_html_before();
+?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
+	<?php
+	/**
+	 * Fire template_html_head_top hook
+	 */
+	template_html_head_top();
+	?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -19,11 +31,29 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php
+/**
+ * Fire template_body_top hook
+ */
+template_body_top();
+?>
 <div id="page" class="hfeed site">
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentysixteen' ); ?></a>
 
+		<?php
+		/**
+		 * Fire template_header_before hook
+		 */
+		template_header_before();
+		?>
 		<header id="masthead" class="site-header" role="banner">
+			<?php
+			/**
+			 * Fire template_header_top hook
+			 */
+			template_header_top();
+			?>
 			<div class="site-header-main">
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
@@ -77,6 +107,18 @@
 					</a>
 				</div>
 			<?php endif; // End header image check. ?>
+			<?php
+			/**
+			 * Fire template_header_bottom hook
+			 */
+			template_header_bottom();
+			?>
 		</header><!-- .site-header -->
+		<?php
+		/**
+		 * Fire template_header_after hook
+		 */
+		template_header_after();
+		?>
 
 		<div id="content" class="site-content">

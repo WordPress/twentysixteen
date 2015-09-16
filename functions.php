@@ -331,3 +331,9 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Theme template hooks.
+ */
+require get_template_directory() . '/inc/template-hooks.php';
+

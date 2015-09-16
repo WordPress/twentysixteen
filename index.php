@@ -15,8 +15,20 @@
 
 get_header(); ?>
 
+	<?php
+	/**
+	 * Fire template_content_before hook
+	 */
+	template_content_before();
+	?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<?php
+		/**
+		 * Fire template_content_top hook
+		 */
+		template_content_top();
+		?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -26,6 +38,13 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
+			<?php
+			/**
+			 * Fire template_content_while_before hook
+			 */
+			template_content_while_before();
+			?>
+		
 			<?php
 			// Start the loop.
 			while ( have_posts() ) : the_post();
@@ -39,6 +58,11 @@ get_header(); ?>
 
 			// End the loop.
 			endwhile;
+
+			/**
+			 * Fire template_content_while_after hook
+			 */
+			template_content_while_after();
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
@@ -54,8 +78,20 @@ get_header(); ?>
 		endif;
 		?>
 
+		<?php
+		/**
+		 * Fire template_content_bottom hook
+		 */
+		template_content_bottom();
+		?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
+	<?php
+	/**
+	 * Fire template_content_after hook
+	 */
+	template_content_after();
+	?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

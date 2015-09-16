@@ -9,8 +9,20 @@
 
 get_header(); ?>
 
+	<?php
+	/**
+	 * Fire template_content_before hook
+	 */
+	template_content_before();
+	?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<?php
+			/**
+			 * Fire template_content_top hook
+			 */
+			template_content_top();
+			?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
@@ -24,8 +36,20 @@ get_header(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
+		<?php
+		/**
+		 * Fire template_content_bottom hook
+		 */
+		template_content_bottom();
+		?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
+	<?php
+	/**
+	 * Fire template_content_after hook
+	 */
+	template_content_after();
+	?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

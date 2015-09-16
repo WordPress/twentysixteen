@@ -11,8 +11,21 @@
 ?>
 
 		</div><!-- .site-content -->
+		
+		<?php
+		/**
+		 * Fire template_footer_before template hook
+		 */
+		template_footer_before();
+		?>
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="site-footer" role="contentinfo">		
+			<?php
+			/**
+			 * Fire template_footer_top template hook
+			 */
+			template_footer_top();
+			?>
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<nav class="main-navigation" role="navigation">
 					<?php
@@ -49,8 +62,20 @@
 				?>
 				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- .site-footer -->
+			</div><!-- .site-info -->	
+			<?php
+			/**
+			 * Fire template_footer_bottom template hook
+			 */
+			template_footer_bottom();
+			?>
+		</footer><!-- .site-footer -->	
+		<?php
+		/**
+		 * Fire template_footer_after template hook
+		 */
+		template_footer_after();
+		?>
 	</div><!-- .site-inner -->
 </div><!-- .site -->
 
