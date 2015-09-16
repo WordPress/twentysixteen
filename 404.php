@@ -18,7 +18,7 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentysixteen' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try searching for what your looking for:', 'twentysixteen' ); ?></p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
