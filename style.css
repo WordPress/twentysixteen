@@ -1202,8 +1202,13 @@ a:active {
 }
 
 .comment-navigation {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.comments-title + .comment-navigation {
 	border-bottom: 0;
-	margin: 0;
+	margin-bottom: 0;
 }
 
 .image-navigation .nav-previous:not(:empty),
@@ -1354,7 +1359,8 @@ article[class^="post-"]:after,
 
 .widget {
 	border-top: 4px solid #1a1a1a;
-	padding: 1.75em 0 3.5em;
+	margin-bottom: 3.5em;
+	padding-top: 1.75em;
 	word-wrap: break-word;
 }
 
@@ -1483,6 +1489,14 @@ article[class^="post-"]:after,
 	position: relative;
 }
 
+.site-main {
+	margin-bottom: 3.5em;
+}
+
+.site-main > :last-child {
+	margin-bottom: 0;
+}
+
 
 /**
  * 11.1 - Header
@@ -1583,12 +1597,8 @@ article[class^="post-"]:after,
  */
 
 article[class^="post-"] {
-	padding-bottom: 3.5em;
+	margin-bottom: 3.5em;
 	position: relative;
-}
-
-article[class^="post-"] + article[class^="post-"] {
-	padding-top: 3.5em;
 }
 
 .entry-header,
@@ -1961,12 +1971,12 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .page-header {
-	margin: 0 7.6923%;
+	margin: 0 7.6923% 3.5em;
 }
 
 body:not(.error404):not(.search-no-results) .page-header {
 	border-top: 4px solid #1a1a1a;
-	padding: 1.75em 0 3.5em;
+	padding-top: 1.75em;
 }
 
 .page-title {
@@ -1989,10 +1999,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .taxonomy-description > :last-child {
 	margin-bottom: 0;
-}
-
-.page-content {
-	padding: 3.5em 0;
 }
 
 .page-links {
@@ -2265,6 +2271,11 @@ body:not(.error404):not(.search-no-results) .page-header {
 	padding-top: 1.75em;
 }
 
+.comment-navigation + .no-comments {
+	border-top: 0;
+	padding-top: 0;
+}
+
 .form-allowed-tags code {
 	font-family: Inconsolata, monospace;
 }
@@ -2307,7 +2318,12 @@ body:not(.error404):not(.search-no-results) .page-header {
  */
 
 .sidebar {
+	margin-bottom: 3.5em;
 	padding: 0 7.6923%;
+}
+
+.sidebar > :last-child {
+	margin-bottom: 0;
 }
 
 
@@ -2522,7 +2538,8 @@ p > video {
  */
 
 .widecolumn {
-	padding: 0 7.6923% 3.5em;
+	margin-bottom: 3.5em;
+	padding: 0 7.6923%;
 }
 
 .widecolumn .mu_register {
@@ -2662,6 +2679,10 @@ p > video {
 		margin: 21px;
 	}
 
+	.site-main {
+		margin-bottom: 5.25em;
+	}
+
 	.site-header {
 		padding: 3.9375em 7.6923%;
 	}
@@ -2701,11 +2722,11 @@ p > video {
 	}
 
 	.pagination {
-		margin: 2.947368421em 23.0769% 5.894736842em 7.6923%
+		margin: 0 23.0769% 4.421052632em 7.6923%
 	}
 
-	.sidebar {
-		padding-right: 23.0769%;
+	.post-navigation {
+		margin-bottom: 5.25em;
 	}
 
 	.post-navigation .post-title {
@@ -2722,6 +2743,10 @@ p > video {
 	.pagination .page-numbers {
 		display: inline-block;
 		font-weight: 400;
+	}
+
+	article[class^="post-"] {
+		margin-bottom: 5.25em;
 	}
 
 	.entry-header,
@@ -2810,6 +2835,10 @@ p > video {
 		width: calc(50% - 0.736842105em);
 	}
 
+	.comments-area {
+		margin-bottom: 5.25em;
+	}
+
 	.comment-author {
 		margin-bottom: 0;
 	}
@@ -2825,7 +2854,22 @@ p > video {
 		padding-left: 1.75em;
 	}
 
+	.comment-list + .comment-respond,
+	.comment-navigation + .comment-respond {
+		padding-top: 3.5em;
+	}
+
+	.sidebar {
+		margin-bottom: 5.25em;
+		padding-right: 23.0769%;
+	}
+
+	.widget {
+		margin-bottom: 5.25em;
+	}
+
 	.widecolumn {
+		margin-bottom: 5.25em;
 		padding-right: 23.0769%;
 	}
 }
@@ -2985,11 +3029,6 @@ p > video {
 		display: none;
 	}
 
-	.pagination {
-		margin-top: 2.947368421em;
-		margin-bottom: 2.947368421em;
-	}
-
 	.site-content {
 		padding: 0 4.5455%;
 	}
@@ -3026,7 +3065,8 @@ p > video {
 	.widget {
 		font-size: 13px;
 		font-size: 0.8125rem;
-		padding: 1.615384615em 0 3.230769231em;
+		margin-bottom: 3.230769231em;
+		padding-top: 1.615384615em;
 		line-height: 1.6153846154;
 	}
 
@@ -3209,7 +3249,7 @@ p > video {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 3.5em 4.5455%;
+		padding: 0 4.5455% 3.5em;
 	}
 
 	.site-footer .social-navigation {
@@ -3263,6 +3303,10 @@ p > video {
  */
 
 @media screen and (min-width: 61.5625em) {
+	.site-main {
+		margin-bottom: 7.0em;
+	}
+
 	.site-header {
 		padding: 5.25em 4.5455%;
 	}
@@ -3276,6 +3320,18 @@ p > video {
 
 	.image-navigation {
 		margin-bottom: 3.230769231em;
+	}
+
+	.post-navigation {
+		margin-bottom: 7.0em;
+	}
+
+	.pagination {
+		margin-bottom: 5.894736842em;
+	}
+
+	article[class^="post-"] {
+		margin-bottom: 7.0em;
 	}
 
 	.entry-title {
@@ -3454,6 +3510,27 @@ p > video {
 		margin-right: -100%;
 		margin-left: 15%;
 		width: 15%;
+	}
+
+	.comments-area {
+		margin-bottom: 7.0em;
+	}
+
+	.comment-list + .comment-respond,
+	.comment-navigation + .comment-respond {
+		padding-top: 5.25em;
+	}
+
+	.sidebar {
+		margin-bottom: 7.0em;
+	}
+
+	.widget {
+		margin-bottom: 4.307692308em;
+	}
+
+	.widecolumn {
+		margin-bottom: 7.0em;
 	}
 }
 
