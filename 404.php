@@ -25,6 +25,9 @@ get_header(); ?>
 			</section><!-- .error-404 -->
 
 		</main><!-- .site-main -->
+
+		<?php get_sidebar( 'content-bottom' ); ?>
+		
 	</div><!-- .content-area -->
 
 <?php get_sidebar(); ?>
