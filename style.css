@@ -1364,6 +1364,7 @@ article[class^="post-"]:after,
 	word-wrap: break-word;
 }
 
+.widget-area > :last-child,
 .widget > :last-child {
 	margin-bottom: 0;
 }
@@ -2069,6 +2070,10 @@ body:not(.error404):not(.search-no-results) .page-header {
 	margin: 0 7.6923%;
 }
 
+.content-bottom-widgets .widget-area {
+	margin-bottom: 3.5em;
+}
+
 
 /**
  * 11.3 - Post Formats
@@ -2320,10 +2325,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 .sidebar {
 	margin-bottom: 3.5em;
 	padding: 0 7.6923%;
-}
-
-.sidebar > :last-child {
-	margin-bottom: 0;
 }
 
 
@@ -2841,11 +2842,6 @@ p > video {
 		width: -webkit-calc(50% - 0.736842105em);
 		width: calc(50% - 0.736842105em);
 	}
-
-	.comments-area {
-		margin-bottom: 5.25em;
-	}
-
 	.comment-author {
 		margin-bottom: 0;
 	}
@@ -2866,15 +2862,13 @@ p > video {
 		padding-top: 3.5em;
 	}
 
-	.sidebar {
-		margin-bottom: 5.25em;
-		padding-right: 23.0769%;
-	}
-
-	.widget {
+	.comments-area,
+	.widget,
+	.content-bottom-widgets .widget-area {
 		margin-bottom: 5.25em;
 	}
 
+	.sidebar,
 	.widecolumn {
 		margin-bottom: 5.25em;
 		padding-right: 23.0769%;
@@ -3337,6 +3331,10 @@ p > video {
 		margin-bottom: 5.894736842em;
 	}
 
+	.widget {
+		margin-bottom: 4.307692308em;
+	}
+
 	article[class^="post-"] {
 		margin-bottom: 7.0em;
 	}
@@ -3519,23 +3517,14 @@ p > video {
 		width: 15%;
 	}
 
-	.comments-area {
-		margin-bottom: 7.0em;
-	}
-
 	.comment-list + .comment-respond,
 	.comment-navigation + .comment-respond {
 		padding-top: 5.25em;
 	}
 
-	.sidebar {
-		margin-bottom: 7.0em;
-	}
-
-	.widget {
-		margin-bottom: 4.307692308em;
-	}
-
+	.comments-area,
+	.sidebar,
+	.content-bottom-widgets .widget-area,
 	.widecolumn {
 		margin-bottom: 7.0em;
 	}
