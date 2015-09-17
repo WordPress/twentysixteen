@@ -46,7 +46,7 @@ function twentysixteen_custom_header_and_background() {
 	 *     @type int    $width                  Width in pixels of the custom header image. Default 1200.
 	 *     @type int    $height                 Height in pixels of the custom header image. Default 280.
 	 *     @type bool   $flex-height            Whether to allow flexible-height header images. Default true.
-	 *     @type string $wp-head-callback       Callback function used to styles the header image and text
+	 *     @type string $wp-head-callback       Callback function used to style the header image and text
 	 *                                          displayed on the blog.
 	 * }
 	 */
