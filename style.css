@@ -2547,7 +2547,11 @@ p > video {
 }
 
 .widecolumn .mu_alert {
-	margin-bottom: 1.6em;
+	margin-bottom: 1.75em;
+}
+
+.widecolumn  .mu_register .mu_alert {
+	padding: 0.875em;
 }
 
 .widecolumn form,
@@ -2558,6 +2562,7 @@ p > video {
 .widecolumn h2 {
 	font-size: 23px;
 	font-size: 1.4375rem;
+	font-weight: 900;
 	line-height: 1.2173913043;
 	margin-bottom: 1.2173913043em;
 }
@@ -2577,7 +2582,9 @@ p > video {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: 400;
+	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
+	text-transform: uppercase;
 }
 
 .widecolumn .mu_register label {
