@@ -148,7 +148,7 @@
 				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 );
 			
 			// Add a class to big image and caption larger than or equal to 840px.	
-			if ( 'img.size-full' == param ) {
+			if ( param == 'img.size-full' ) {
 
 				var caption              = element.closest( 'figure' ),
 					newImg               = new Image();
@@ -159,11 +159,11 @@
 					var imgWidth = newImg.width;
 
 					if ( elementPosTop > entryFooterPosBottom ) {
-						if ( 840 <= imgWidth  ) {
+						if ( imgWidth >= 840  ) {
 							element.addClass( 'size-big' );
 						}
 
-						if ( caption.hasClass( 'wp-caption' ) && 840 <= imgWidth  ) {
+						if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 840) {
 							caption.addClass( 'caption-big' );
 							caption.removeAttr( 'style' );
 						}
@@ -175,7 +175,7 @@
 			}
 
 			// Prevent blockquote on the top of the post from bleeding over to post meta
-			if ( 'blockquote.alignleft' == param ) {
+			if ( param == 'blockquote.alignleft' ) {
 				if ( elementPosTop > entryFooterPosBottom ) {
 					element.addClass( 'farleft' );
 				} else {
