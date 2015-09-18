@@ -2879,6 +2879,7 @@ p > video {
 
 	.main-navigation ul ul {
 		border-bottom: 1px solid #e8e8e8;
+		display: block;
 		float: left;
 		margin: 0;
 		position: absolute;
