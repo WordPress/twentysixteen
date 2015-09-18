@@ -149,7 +149,7 @@
 				newImg               = new Image();
 
 			// Add a class to big image and caption larger than or equal to 840px.
-			if ( 'img.size-full' == param ) {
+			if ( 'img.size-full' === param ) {
 				newImg.src = element.attr( 'src' );
 
 				$( newImg ).load( function() {
@@ -172,7 +172,7 @@
 			}
 
 			// Prevent blockquote on the top of the post from bleeding over to post meta
-			if ( 'blockquote.alignleft' == param ) {
+			if ( 'blockquote.alignleft' === param ) {
 				if ( elementPosTop > entryFooterPosBottom ) {
 					element.addClass( 'farleft' );
 				} else {
