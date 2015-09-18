@@ -1278,13 +1278,11 @@ a:active {
  */
 
 .alignleft {
-	display: inline;
 	float: left;
 	margin: 0.375em 1.75em 1.75em 0;
 }
 
 .alignright {
-	display: inline;
 	float: right;
 	margin: 0.375em 0 1.75em 1.75em;
 }
