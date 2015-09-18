@@ -152,7 +152,7 @@ msgstr ""
 
 #: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
 msgid ""
-"Twenty Sixteen requires at least WordPress version 4.2. You are running "
+"Twenty Sixteen requires at least WordPress version 4.3. You are running "
 "version %s. Please upgrade and try again."
 msgstr ""
 
