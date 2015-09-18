@@ -138,21 +138,18 @@
 		// jscs:disable
 		var entryContent = $( '.entry-content' );
 		// jscs:enable
-
 		entryContent.find( param ).each( function() {
 			var element              = $( this ),
 				elementPos           = element.offset(),
 				elementPosTop        = elementPos.top,
 				entryFooter          = element.closest( 'article' ).find( '.entry-footer' ),
 				entryFooterPos       = entryFooter.offset(),
-				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 );
+				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
+				caption              = element.closest( 'figure' ),
+				newImg               = new Image();
 			
 			// Add a class to big image and caption larger than or equal to 840px.
 			if ( 'img.size-full' == param ) {
-
-				var caption              = element.closest( 'figure' ),
-					newImg               = new Image();
-
 				newImg.src = element.attr( 'src' );
 
 				$( newImg ).load( function() {
