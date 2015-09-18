@@ -147,8 +147,8 @@
 				entryFooterPos       = entryFooter.offset(),
 				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 );
 			
-			// Add a class to big image and caption larger than or equal to 840px.	
-			if ( param == 'img.size-full' ) {
+			// Add a class to big image and caption larger than or equal to 840px.
+			if ( 'img.size-full' == param ) {
 
 				var caption              = element.closest( 'figure' ),
 					newImg               = new Image();
@@ -163,7 +163,7 @@
 							element.addClass( 'size-big' );
 						}
 
-						if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 840) {
+						if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 840 ) {
 							caption.addClass( 'caption-big' );
 							caption.removeAttr( 'style' );
 						}
@@ -175,7 +175,7 @@
 			}
 
 			// Prevent blockquote on the top of the post from bleeding over to post meta
-			if ( param == 'blockquote.alignleft' ) {
+			if ( 'blockquote.alignleft' == param ) {
 				if ( elementPosTop > entryFooterPosBottom ) {
 					element.addClass( 'farleft' );
 				} else {
