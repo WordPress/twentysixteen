@@ -147,7 +147,7 @@
 				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
 				caption              = element.closest( 'figure' ),
 				newImg               = new Image();
-			
+
 			// Add a class to big image and caption larger than or equal to 840px.
 			if ( 'img.size-full' == param ) {
 				newImg.src = element.attr( 'src' );
