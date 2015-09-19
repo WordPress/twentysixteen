@@ -3445,7 +3445,7 @@ p > video {
 		width: 71.42857144%;
 	}
 
-	body:not(.search-results) .type-post .entry-content blockquote.alignleft {
+	body:not(.search-results) .type-post .entry-content blockquote.farleft {
 		margin-left: -40%;
 		width: -webkit-calc(60% - 1.4736842105em);
 		width: calc(60% - 1.4736842105em);
