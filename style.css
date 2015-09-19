@@ -662,12 +662,12 @@ textarea:focus {
 
 .post-password-form label {
 	color: #757575;
+	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
-	display: block;
 	margin-bottom: 1.75em;
 	text-transform: uppercase;
 }
@@ -829,9 +829,9 @@ a:active {
 	height: 48px;
 	padding: 0;
 	position: absolute;
+	right: 0;
 	text-transform: none;
 	top: 0;
-	right: 0;
 	width: 48px;
 }
 
@@ -839,8 +839,8 @@ a:active {
 	border-left: 1px solid #e8e8e8;
 	content: "\f431";
 	font-size: 24px;
-	position: relative;
 	left: 1px;
+	position: relative;
 	width: 48px;
 }
 
@@ -1463,7 +1463,7 @@ blockquote.aligncenter {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: inherit !important;
 	line-height: 1;
-	margin: 0 0.1875em 0.4375em 0 !important;
+	margin: 0 0.1875em 0.4375em 0;
 	padding: 0.5625em 0.4375em 0.5em;
 }
 
@@ -1839,6 +1839,10 @@ body:not(.search-results) .entry-summary fieldset {
 	padding: 0.3684210526em;
 }
 
+body:not(.search-results) .entry-summary blockquote {
+	border-color: currentColor;
+}
+
 body:not(.search-results) .entry-summary .alignleft {
 	margin: 0.2631578947em 1.4736842105em 1.4736842105em 0;
 }
@@ -1904,7 +1908,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin-bottom: 1.6153846154em;
-	word-wrap: break-word;
 }
 
 .author-link {
@@ -1941,8 +1944,8 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .entry-footer .avatar {
-	margin: -0.1538461538em 0.5384615385em 0 0;
 	height: 21px;
+	margin: -0.1538461538em 0.5384615385em 0 0;
 	width: 21px;
 }
 
@@ -2046,10 +2049,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 	margin-bottom: 1.75em;
 }
 
-.type-attachment .entry-title {
-	word-wrap: break-word;
-}
-
 .entry-caption {
 	color: #757575;
 	font-size: 13px;
@@ -2057,7 +2056,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 	font-style: italic;
 	line-height: 1.6153846154;
 	padding-top: 1.0769230769em;
-	word-wrap: break-word;
 }
 
 .entry-caption > :last-child {
@@ -2162,9 +2160,9 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .bypostauthor > article .fn:after {
 	content: "\f304";
+	left: 3px;
 	position: relative;
 	top: 5px;
-	left: 3px;
 }
 
 .comment-metadata,
@@ -2241,10 +2239,10 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .comment-form label {
 	color: #757575;
+	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	display: block;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
@@ -2472,8 +2470,8 @@ p > video {
 
 .gallery-item {
 	display: inline-block;
-	text-align: center;
 	padding: 0 1.1400652% 2.2801304%;
+	text-align: center;
 	vertical-align: top;
 	width: 100%;
 }
@@ -2936,9 +2934,9 @@ p > video {
 		border-bottom: 1px solid #e8e8e8;
 		display: block;
 		float: left;
+		left: -999em;
 		margin: 0;
 		position: absolute;
-		left: -999em;
 		z-index: 99999;
 	}
 
@@ -2971,23 +2969,23 @@ p > video {
 
 	.main-navigation ul ul:before,
 	.main-navigation ul ul:after {
-		content: "";
 		border-style: solid;
+		content: "";
 		position: absolute;
 	}
 
 	.main-navigation ul ul:before {
-		top: -9px;
-		left: 7px;
 		border-width: 0 10px 10px;
 		border-color: #e8e8e8 transparent;
+		left: 7px;
+		top: -9px;
 	}
 
 	.main-navigation ul ul:after {
-		top: -7px;
-		left: 9px;
 		border-width: 0 8px 8px;
 		border-color: #fff transparent;
+		left: 9px;
+		top: -7px;
 	}
 
 	.main-navigation li:hover > ul,
@@ -3003,8 +3001,8 @@ p > video {
 	.main-navigation .menu-item-has-children > a:after {
 		content: "\f431";
 		position: absolute;
-		top: 0.8125em;
 		right: 0.625em;
+		top: 0.8125em;
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a {
@@ -3012,12 +3010,12 @@ p > video {
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a:after {
+		right: 0.5625em;
+		top: 0.8125em;
 		-webkit-transform: rotate(-90deg);
 		-moz-transform: rotate(-90deg);
 		-ms-transform: rotate(-90deg);
 		transform: rotate(-90deg);
-		top: 0.8125em;
-		right: 0.5625em;
 	}
 
 	.dropdown-toggle,
@@ -3064,9 +3062,9 @@ p > video {
 	.widget {
 		font-size: 13px;
 		font-size: 0.8125rem;
+		line-height: 1.6153846154;
 		margin-bottom: 3.230769231em;
 		padding-top: 1.615384615em;
-		line-height: 1.6153846154;
 	}
 
 	.widget .widget-title {
@@ -3201,7 +3199,7 @@ p > video {
 	}
 
 	.tagcloud a {
-		margin: 0 0.2307692308em 0.5384615385em 0 !important;
+		margin: 0 0.2307692308em 0.5384615385em 0;
 		padding: 0.5384615385em 0.4615384615em 0.4615384615em;
 	}
 
@@ -3440,76 +3438,75 @@ p > video {
 		margin-top: 4.3076923077em;
 	}
 
-	body:not(.search-results) .type-post .entry-content {
+	body:not(.search-results) article:not(.type-page) .entry-content {
 		float: right;
 		width: 71.42857144%;
 	}
 
-	body:not(.search-results) .type-post .entry-content blockquote.farleft {
+	body:not(.search-results) article:not(.type-page) .entry-content blockquote.farleft {
 		margin-left: -40%;
 		width: -webkit-calc(60% - 1.4736842105em);
 		width: calc(60% - 1.4736842105em);
 	}
 
-	body:not(.search-results) .type-post .size-big,
-	body:not(.search-results) .type-post .caption-big {
+	body:not(.search-results) article:not(.type-page) .size-big,
+	body:not(.search-results) article:not(.type-page) .caption-big {
 		clear: both;
 		display: block;
 		float: none;
-		margin-left: -40%;
 		margin-right: 0;
+		margin-left: -40%;
 		max-width: 140%;
 	}
 
-	body:not(.search-results) .type-post .caption-big .size-big,
-	body:not(.search-results) .type-post table .caption-big,
-	body:not(.search-results) .type-post table .caption-big .wp-caption-text,
-	body:not(.search-results) .type-post table .size-big {
-		margin: 0 !important;
-		max-width: 100% !important;
+	body:not(.search-results) article:not(.type-page) .caption-big .size-big,
+	body:not(.search-results) article:not(.type-page) table .caption-big,
+	body:not(.search-results) article:not(.type-page) table .size-big {
+		margin: 0;
+		max-width: 100%;
 	}
 
-	body:not(.search-results) .type-post .entry-footer {
+	body:not(.search-results) article:not(.type-page) .entry-footer {
 		float: left;
 		margin-top: 0.1538461538em;
 		width: 21.42857143%;
 	}
 
-	body:not(.search-results) .type-post .entry-footer > span:not(:last-child):after {
+	body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
 		display: none;
 	}
 
 	.single .byline,
 	body:not(.search-results).group-blog .byline,
-	body:not(.search-results) .type-post:not(.sticky) .posted-on,
 	body:not(.search-results) .entry-format,
 	body:not(.search-results) .cat-links,
 	body:not(.search-results) .tags-links,
-	body:not(.search-results) .type-post .comments-link,
-	body:not(.search-results) .type-post .entry-footer .edit-link {
+	body:not(.search-results) article:not(.sticky) .posted-on,
+	body:not(.search-results) article:not(.type-page) .comments-link,
+	body:not(.search-results) article:not(.type-page) .entry-footer .edit-link {
 		display: block;
 		margin-bottom: 0.5384615385em;
 	}
 
-	body:not(.search-results) .type-post .entry-footer > span:last-child {
+	body:not(.search-results) article:not(.type-page) .entry-footer > span:last-child {
 		margin-bottom: 0;
 	}
 
-	body:not(.search-results) .type-post .entry-footer .avatar {
+	body:not(.search-results) article:not(.type-page) .entry-footer .avatar {
 		display: block;
 		height: auto;
 		margin: 0 0 0.5384615385em;
 		width: 49px;
 	}
 
-	body.no-sidebar:not(.search-results) .type-post .entry-content {
+	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
 		float: left;
 		margin-right: -100%;
 		margin-left: 34.99999999%;
 		width: 50.00000001%;
 	}
 
-	body.no-sidebar:not(.search-results) .type-post .entry-footer {
+	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
 		margin-right: -100%;
 		margin-left: 15%;
 		width: 15%;
@@ -3619,6 +3616,15 @@ p > video {
 	body:not(.search-results) .entry-summary h6 {
 		margin-top: 3.684210526em;
 		margin-bottom: 1.842105263em;
+	}
+
+	body:not(.search-results) .entry-summary h1:first-child,
+	body:not(.search-results) .entry-summary h2:first-child,
+	body:not(.search-results) .entry-summary h3:first-child,
+	body:not(.search-results) .entry-summary h4:first-child,
+	body:not(.search-results) .entry-summary h5:first-child,
+	body:not(.search-results) .entry-summary h6:first-child {
+		margin-top: 0;
 	}
 
 	body:not(.search-results) .entry-summary .alignleft {

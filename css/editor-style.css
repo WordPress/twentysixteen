@@ -76,8 +76,8 @@ h6 {
 }
 
 h4 {
-	text-transform: uppercase;
 	letter-spacing: 0.13333em;
+	text-transform: uppercase;
 }
 
 h6 {
@@ -409,7 +409,8 @@ a {
  */
 
 .gallery {
-    margin: 0 -1.1666667% 1.75em;
+    margin: 0 -1.1666667%;
+    padding: 0;
 }
 
 .gallery .gallery-item {
@@ -457,6 +458,7 @@ a {
 	display: block;
 	font-size: 13px;
 	line-height: 1.6153846154;
+	margin: 0;
 	padding: 7px 0;
 }
 
