@@ -57,7 +57,12 @@ get_header(); ?>
 
 	</main><!-- .site-main -->
 
-	<?php get_sidebar( 'content-bottom' ); ?>
+	<?php 
+	if ( !is_front_page() ) { 
+		//Don't display content bottom on front page.
+		get_sidebar( 'content-bottom' );
+	}
+	?>
 
 </div><!-- .content-area -->
 
