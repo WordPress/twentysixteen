@@ -51,3 +51,7 @@ Source: https://github.com/aFarkas/html5shiv
 Genericons icon font, Copyright 2013-2015 Automattic.com
 License: GNU GPL, Version 2 (or later)
 Source: http://www.genericons.com
+
+== Notes ==
+
+Only the default and dark color schemes are accessibility ready.
