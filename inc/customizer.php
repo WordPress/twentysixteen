@@ -540,6 +540,18 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		color: {$colors['main_text_color']};
 	}
 
+	/* 
+	IE8 and earlier will drop any block with CSS3 selectors. Do not
+	combine these styles with the next block.
+	*/
+	body:not(.error404):not(.search-no-results) .page-header {
+		border-color: {$colors['main_text_color']};
+	}
+
+	/* 
+	IE8 and earlier will drop any block with CSS3 selectors. Do not
+	combine these styles with the previous block.
+	*/
 	blockquote,
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
@@ -548,7 +560,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.post-navigation div + div,
 	.pagination,
 	.widget,
-	body:not(.error404):not(.search-no-results) .page-header,
 	.page-links a,
 	.comments-title,
 	.comment-reply-title {
@@ -567,6 +578,18 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	}
 
 	/* Secondary Text Color */
+	/* 
+	IE8 and earlier will drop any block with CSS3 selectors. Do not
+	combine these styles with the next block.
+	*/
+	body:not(.search-results) .entry-summary {
+		color: {$colors['secondary_text_color']};
+	}
+
+	/* 
+	IE8 and earlier will drop any block with CSS3 selectors. Do not
+	combine these styles with the previous block.
+	*/
 	blockquote,
 	.post-password-form label,
 	a:hover,
@@ -579,7 +602,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.widget_rss .rss-date,
 	.widget_rss cite,
 	.site-description,
-	body:not(.search-results) .entry-summary,
 	.author-bio,
 	.entry-footer,
 	.entry-footer a,
@@ -941,6 +963,18 @@ function twentysixteen_main_text_color_css() {
 			color: %1$s
 		}
 
+		/* 
+		IE8 and earlier will drop any block with CSS3 selectors. Do not
+		combine these styles with the next block.
+		*/
+		body:not(.error404):not(.search-no-results) .page-header {
+			border-color: %1$s;
+		}
+		
+		/* 
+		IE8 and earlier will drop any block with CSS3 selectors. Do not
+		combine these styles with the previous block.
+		*/
 		blockquote,
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
@@ -949,7 +983,6 @@ function twentysixteen_main_text_color_css() {
 		.post-navigation div + div,
 		.pagination,
 		.widget,
-		body:not(.error404):not(.search-no-results) .page-header,
 		.page-links a,
 		.comments-title,
 		.comment-reply-title {
@@ -1042,6 +1075,18 @@ function twentysixteen_secondary_text_color_css() {
 
 	$css = '
 		/* Custom Secondary Text Color */
+		/* 
+		IE8 and earlier will drop any block with CSS3 selectors. Do not
+		combine these styles with the next block.
+		*/
+		body:not(.search-results) .entry-summary {
+			color: %1$s;
+		}
+
+		/* 
+		IE8 and earlier will drop any block with CSS3 selectors. Do not
+		combine these styles with the previous block.
+		*/
 		blockquote,
 		.post-password-form label,
 		a:hover,
@@ -1054,7 +1099,6 @@ function twentysixteen_secondary_text_color_css() {
 		.widget_rss .rss-date,
 		.widget_rss cite,
 		.site-description,
-		body:not(.search-results) .entry-summary,
 		.author-bio,
 		.entry-footer,
 		.entry-footer a,
