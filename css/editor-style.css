@@ -497,16 +497,16 @@ body.rtl {
 }
 
 .rtl blockquote {
-	border-left: none;
 	border-right: 4px solid currentColor;
+	border-left: none;
 	margin: 0 0 28px 0;
-	padding-left: 0;
 	padding-right: 21px;
+	padding-left: 0;
 }
 
 .rtl blockquote > blockquote {
-	margin-left: auto;
 	margin-right: 0;
+	margin-left: auto;
 }
 
 .rtl ul,
