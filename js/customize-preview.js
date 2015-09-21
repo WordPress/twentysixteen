@@ -28,11 +28,7 @@
 	// Add custom-background-image body class when background image is added.
 	api( 'background_image', function( value ) {
 		value.bind( function( to ) {
-			if ( '' === to ) {
-				$( 'body' ).removeClass( 'custom-background-image' );
-			} else {
-				$( 'body' ).addClass( 'custom-background-image' );
-			}
+			$( 'body' ).toggleClass( 'custom-background-image', '' !== to );
 		} );
 	} );
 
