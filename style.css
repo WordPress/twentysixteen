@@ -1929,6 +1929,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-footer a {
 	color: #757575;
+	word-wrap: break-word;
 }
 
 .entry-footer a:hover,
