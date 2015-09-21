@@ -9,35 +9,6 @@
  * @since Twenty Sixteen 1.0
  */
 
-if ( ! function_exists( 'twentysixteen_comment_nav' ) ) :
-/**
- * Display navigation to next/previous comments when applicable.
- *
- * @since Twenty Sixteen 1.0
- */
-function twentysixteen_comment_nav() {
-	// Are there comments to navigate through?
-	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-	?>
-	<nav class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'twentysixteen' ); ?></h2>
-		<div class="nav-links">
-			<?php
-				if ( $prev_link = get_previous_comments_link( esc_html__( 'Older Comments', 'twentysixteen' ) ) ) {
-					printf( '<div class="nav-previous">%s</div>', $prev_link );
-				}
-
-				if ( $next_link = get_next_comments_link( esc_html__( 'Newer Comments', 'twentysixteen' ) ) ) {
-					printf( '<div class="nav-next">%s</div>', $next_link );
-				}
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .comment-navigation -->
-	<?php
-	endif;
-}
-endif;
-
 if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags.
