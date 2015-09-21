@@ -46,9 +46,9 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => esc_html__( 'Previous page', 'twentysixteen' ),
-				'next_text'          => esc_html__( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'twentysixteen' ) . ' </span>',
+				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+				'next_text'          => __( 'Next page', 'twentysixteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
 
 		// If no content, include the "No posts found" template.

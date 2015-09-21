@@ -70,8 +70,8 @@ function twentysixteen_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'twentysixteen' ),
-		'social'  => esc_html__( 'Social Links Menu', 'twentysixteen' ),
+		'primary' => __( 'Primary Menu', 'twentysixteen' ),
+		'social'  => __( 'Social Links Menu', 'twentysixteen' ),
 	) );
 
 	/*
@@ -131,9 +131,9 @@ add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
  */
 function twentysixteen_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'twentysixteen' ),
+		'name'          => __( 'Sidebar', 'twentysixteen' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -141,9 +141,9 @@ function twentysixteen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Content Bottom 1', 'twentysixteen' ),
+		'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
 		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -151,9 +151,9 @@ function twentysixteen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Content Bottom 2', 'twentysixteen' ),
+		'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
 		'id'            => 'sidebar-3',
-		'description'   => esc_html__( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -176,17 +176,17 @@ function twentysixteen_fonts_url() {
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
+	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
 		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
 		$fonts[] = 'Montserrat:400,700';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
+	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
 		$fonts[] = 'Inconsolata:400';
 	}
 
@@ -250,8 +250,8 @@ function twentysixteen_scripts() {
 	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150825', true );
 
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
-		'expand'   => esc_html__( 'expand child menu', 'twentysixteen' ),
-		'collapse' => esc_html__( 'collapse child menu', 'twentysixteen' ),
+		'expand'   => __( 'expand child menu', 'twentysixteen' ),
+		'collapse' => __( 'collapse child menu', 'twentysixteen' ),
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
