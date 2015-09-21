@@ -296,8 +296,8 @@ th {
 	font-family: "Genericons";
 	font-size: 16px;
 	font-style: normal;
-	font-weight: normal;
 	font-variant: normal;
+	font-weight: normal;
 	line-height: 1;
 	speak: none;
 	text-align: center;
@@ -604,9 +604,9 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
+	background: #007acc;
 	border: 2px solid #007acc;
 	border-radius: 2px;
-	background: #007acc;
 	color: #fff;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-weight: 700;
@@ -1193,9 +1193,9 @@ a:active {
 	border-top: 1px solid #e8e8e8;
 	border-bottom: 1px solid #e8e8e8;
 	color: #757575;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	line-height: 1.6153846154;
 	margin: 0 7.6923% 2.1538461538em;
 	padding: 1.0769230769em 0;
@@ -1393,8 +1393,8 @@ blockquote.aligncenter {
 .widget_calendar td,
 .widget_calendar th {
 	line-height: 2.5625;
-	text-align: center;
 	padding: 0;
+	text-align: center;
 }
 
 .widget_calendar caption {
@@ -1419,9 +1419,9 @@ blockquote.aligncenter {
 .widget_recent_entries .post-date {
 	color: #757575;
 	display: block;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	line-height: 1.615384615;
 	margin-bottom: 0.538461538em;
 }
@@ -1439,9 +1439,9 @@ blockquote.aligncenter {
 .widget_rss cite {
 	color: #757575;
 	display: block;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	line-height: 1.615384615;
 	margin-bottom: 0.538461538em;
@@ -1902,12 +1902,12 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .author-bio {
-	overflow: hidden;
 	color: #757575;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin-bottom: 1.6153846154em;
+	overflow: hidden;
 }
 
 .author-link {
@@ -2376,8 +2376,8 @@ body:not(.error404):not(.search-no-results) .page-header {
 .entry-summary .wp-smiley,
 .comment-content .wp-smiley {
 	border: none;
-	margin-bottom: 0;
 	margin-top: 0;
+	margin-bottom: 0;
 	padding: 0;
 }
 
@@ -2974,15 +2974,15 @@ p > video {
 	}
 
 	.main-navigation ul ul:before {
-		border-width: 0 10px 10px;
 		border-color: #e8e8e8 transparent;
+		border-width: 0 10px 10px;
 		left: 7px;
 		top: -9px;
 	}
 
 	.main-navigation ul ul:after {
-		border-width: 0 8px 8px;
 		border-color: #fff transparent;
+		border-width: 0 8px 8px;
 		left: 9px;
 		top: -7px;
 	}
