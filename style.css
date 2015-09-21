@@ -37,7 +37,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *    11.4 - Comments
  *    11.5 - Sidebar
  *    11.6 - Footer
- * 12.0 -  Media
+ * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
  * 13.0 - Multisite
@@ -52,7 +52,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 /**
- * 1.0 Normalize
+ * 1.0 - Normalize
  *
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -279,7 +279,7 @@ th {
 
 
 /**
- * 2.0 Genericons
+ * 2.0 - Genericons
  */
 
 .menu-item-has-children a:after,
@@ -309,7 +309,7 @@ th {
 
 
 /**
- * 3.0 Typography
+ * 3.0 - Typography
  */
 
 body,
@@ -458,7 +458,7 @@ big {
 
 
 /**
- * 4.0 Elements
+ * 4.0 - Elements
  */
 
 html {
@@ -590,7 +590,7 @@ td {
 
 
 /**
- * 5.0 Forms
+ * 5.0 - Forms
  */
 
 button,
@@ -688,7 +688,7 @@ textarea:focus {
 
 
 /**
- * 6.0 Navigation
+ * 6.0 - Navigation
  */
 
 /**
@@ -1229,7 +1229,7 @@ a:active {
 
 
 /**
- * 7.0 Accessibility
+ * 7.0 - Accessibility
  */
 
 /* Text meant only for screen readers */
@@ -1277,7 +1277,7 @@ a:active {
 
 
 /**
- * 8.0 Alignments
+ * 8.0 - Alignments
  */
 
 .alignleft {
@@ -1310,7 +1310,7 @@ blockquote.aligncenter {
 
 
 /**
- * 9.0 Clearings
+ * 9.0 - Clearings
  */
 
 .clear:before,
@@ -1355,7 +1355,7 @@ blockquote.aligncenter {
 
 
 /**
- * 10.0 Widgets
+ * 10.0 - Widgets
  */
 
 .widget {
@@ -1478,7 +1478,7 @@ blockquote.aligncenter {
 
 
 /**
- * 11.0 Content
+ * 11.0 - Content
  */
 
 .site {
@@ -2367,7 +2367,7 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 
 /**
- * 12.0 Media
+ * 12.0 - Media
  */
 
 .site .avatar {
@@ -2535,7 +2535,7 @@ p > video {
 
 
 /**
- * 13.0 Multisites
+ * 13.0 - Multisites
  */
 
 .widecolumn {
@@ -2636,7 +2636,7 @@ p > video {
 
 
 /**
- * 14.0 Media Queries
+ * 14.0 - Media Queries
  */
 
 /*
