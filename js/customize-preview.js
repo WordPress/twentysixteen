@@ -3,11 +3,11 @@
  */
 
 ( function( $ ) {
-	var $style = $( '#twentysixteen-color-scheme-css' ),
+	var style = $( '#twentysixteen-color-scheme-css' ),
 		api = wp.customize;
 
-	if ( ! $style.length ) {
-		$style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
+	if ( ! style.length ) {
+		style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
 		                    .find( '#twentysixteen-color-scheme-css' );
 	}
 
@@ -39,7 +39,7 @@
 	// Color Scheme CSS.
 	api.bind( 'preview-ready', function() {
 		api.preview.bind( 'update-color-scheme-css', function( css ) {
-			$style.html( css );
+			style.html( css );
 		} );
 	} );
 } )( jQuery );
