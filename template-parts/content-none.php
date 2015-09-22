@@ -21,8 +21,8 @@
 			<p><?php
 				printf(
 					/* translators: %s: Link to post-new.php */
-					__( 'Ready to publish your first post? %s.', 'twentysixteen' ),
-					'<a href="' . esc_url( admin_url( 'post-new.php' ) ) . '">' . __( 'Get started here', 'twentysixteen' ) . '</a>'
+					esc_html__( 'Ready to publish your first post? %s.', 'twentysixteen' ),
+					'<a href="' . esc_url( admin_url( 'post-new.php' ) ) . '">' . esc_html__( 'Get started here', 'twentysixteen' ) . '</a>'
 				);
 			?></p>
 
