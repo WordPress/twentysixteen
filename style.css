@@ -37,7 +37,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *    11.4 - Comments
  *    11.5 - Sidebar
  *    11.6 - Footer
- * 12.0 -  Media
+ * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
  * 13.0 - Multisite
@@ -47,11 +47,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *    14.3 - >= 910px
  *    14.4 - >= 985px
  *    14.5 - >= 1200px
+ * 15.0 - Print
  */
 
 
 /**
- * 1.0 Normalize
+ * 1.0 - Normalize
  *
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -217,10 +218,6 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-input {
-	line-height: normal;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box;
@@ -278,7 +275,7 @@ th {
 
 
 /**
- * 2.0 Genericons
+ * 2.0 - Genericons
  */
 
 .menu-item-has-children a:after,
@@ -308,7 +305,7 @@ th {
 
 
 /**
- * 3.0 Typography
+ * 3.0 - Typography
  */
 
 body,
@@ -457,7 +454,7 @@ big {
 
 
 /**
- * 4.0 Elements
+ * 4.0 - Elements
  */
 
 html {
@@ -589,8 +586,12 @@ td {
 
 
 /**
- * 5.0 Forms
+ * 5.0 - Forms
  */
+
+input {
+	line-height: normal;
+}
 
 button,
 button[disabled]:hover,
@@ -640,7 +641,7 @@ textarea {
 	border: 1px solid #e8e8e8;
 	border-radius: 2px;
 	color: #757575;
-	padding: 0.375em 0.4375em;
+	padding: 0.625em 0.4375em;
 	width: 100%;
 }
 
@@ -687,7 +688,7 @@ textarea:focus {
 
 
 /**
- * 6.0 Navigation
+ * 6.0 - Navigation
  */
 
 /**
@@ -716,7 +717,6 @@ a:active {
 
 .entry-content a,
 .entry-summary a,
-.page-content a,
 .taxonomy-description a,
 .logged-in-as a,
 .comment-content a,
@@ -731,8 +731,6 @@ a:active {
 .entry-content a:focus,
 .entry-summary a:hover,
 .entry-summary a:focus,
-.page-content a:hover,
-.page-content a:focus,
 .taxonomy-description a:hover,
 .taxonomy-description a:focus,
 .logged-in-as a:hover,
@@ -1228,7 +1226,7 @@ a:active {
 
 
 /**
- * 7.0 Accessibility
+ * 7.0 - Accessibility
  */
 
 /* Text meant only for screen readers */
@@ -1239,6 +1237,8 @@ a:active {
 	overflow: hidden;
 	position: absolute !important;
 	width: 1px;
+	/* many screen reader and browser combinations announce broken words as they would appear visually */
+	word-wrap: normal !important;
 }
 
 /* must have higher specificity than alternative color schemes inline styles */
@@ -1274,7 +1274,7 @@ a:active {
 
 
 /**
- * 8.0 Alignments
+ * 8.0 - Alignments
  */
 
 .alignleft {
@@ -1307,11 +1307,13 @@ blockquote.aligncenter {
 
 
 /**
- * 9.0 Clearings
+ * 9.0 - Clearings
  */
 
 .clear:before,
 .clear:after,
+blockquote:before,
+blockquote:after,
 .entry-content:before,
 .entry-content:after,
 .entry-summary:before,
@@ -1337,6 +1339,7 @@ blockquote.aligncenter {
 }
 
 .clear:after,
+blockquote:after,
 .entry-content:after,
 .entry-summary:after,
 .comment-content:after,
@@ -1352,7 +1355,7 @@ blockquote.aligncenter {
 
 
 /**
- * 10.0 Widgets
+ * 10.0 - Widgets
  */
 
 .widget {
@@ -1475,7 +1478,7 @@ blockquote.aligncenter {
 
 
 /**
- * 11.0 Content
+ * 11.0 - Content
  */
 
 .site {
@@ -1652,7 +1655,6 @@ a.post-thumbnail:focus {
 
 .entry-content h1,
 .entry-summary h1,
-.page-content h1,
 .comment-content h1,
 .textwidget h1 {
 	font-size: 28px;
@@ -1664,7 +1666,6 @@ a.post-thumbnail:focus {
 
 .entry-content h2,
 .entry-summary h2,
-.page-content h2,
 .comment-content h2,
 .textwidget h2 {
 	font-size: 23px;
@@ -1676,7 +1677,6 @@ a.post-thumbnail:focus {
 
 .entry-content h3,
 .entry-summary h3,
-.page-content h3,
 .comment-content h3,
 .textwidget h3 {
 	font-size: 19px;
@@ -1692,9 +1692,6 @@ a.post-thumbnail:focus {
 .entry-summary h4,
 .entry-summary h5,
 .entry-summary h6,
-.page-content h4,
-.page-content h5,
-.page-content h6,
 .comment-content h4,
 .comment-content h5,
 .comment-content h6,
@@ -1710,7 +1707,6 @@ a.post-thumbnail:focus {
 
 .entry-content h4,
 .entry-summary h4,
-.page-content h4,
 .comment-content h4,
 .textwidget h4 {
 	letter-spacing: 0.140625em;
@@ -1719,7 +1715,6 @@ a.post-thumbnail:focus {
 
 .entry-content h6,
 .entry-summary h6,
-.page-content h6,
 .comment-content h6,
 .textwidget h6 {
 	font-style: italic;
@@ -1737,12 +1732,6 @@ a.post-thumbnail:focus {
 .entry-summary h4,
 .entry-summary h5,
 .entry-summary h6,
-.page-content h1,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6,
 .comment-content h1,
 .comment-content h2,
 .comment-content h3,
@@ -1770,12 +1759,6 @@ a.post-thumbnail:focus {
 .entry-summary h4:first-child,
 .entry-summary h5:first-child,
 .entry-summary h6:first-child,
-.page-content h1:first-child,
-.page-content h2:first-child,
-.page-content h3:first-child,
-.page-content h4:first-child,
-.page-content h5:first-child,
-.page-content h6:first-child,
 .comment-content h1:first-child,
 .comment-content h2:first-child,
 .comment-content h3:first-child,
@@ -1841,6 +1824,10 @@ body:not(.search-results) .entry-summary fieldset {
 
 body:not(.search-results) .entry-summary blockquote {
 	border-color: currentColor;
+}
+
+body:not(.search-results) .entry-summary blockquote > :last-child {
+	margin-bottom: 0;
 }
 
 body:not(.search-results) .entry-summary .alignleft {
@@ -2364,17 +2351,17 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 
 /**
- * 12.0 Media
+ * 12.0 - Media
  */
 
 .site .avatar {
 	border-radius: 50%;
 }
 
-.page-content .wp-smiley,
 .entry-content .wp-smiley,
 .entry-summary .wp-smiley,
-.comment-content .wp-smiley {
+.comment-content .wp-smiley,
+.textwidget .wp-smiley {
 	border: none;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -2383,7 +2370,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .entry-content a img,
 .entry-summary a img,
-.page-content a img,
 .comment-content a img,
 .textwidget a img {
 	display: block;
@@ -2532,7 +2518,7 @@ p > video {
 
 
 /**
- * 13.0 Multisites
+ * 13.0 - Multisites
  */
 
 .widecolumn {
@@ -2633,7 +2619,7 @@ p > video {
 
 
 /**
- * 14.0 Media Queries
+ * 14.0 - Media Queries
  */
 
 /*
@@ -2775,38 +2761,40 @@ p > video {
 		margin-bottom: 0.8484848485em;
 	}
 
+	.entry-content blockquote.alignleft,
+	.entry-content blockquote.alignright {
+		border-width: 4px 0 0 0;
+		padding: 0.9473684211em 0 0;
+		width: -webkit-calc(50% - 0.736842105em);
+		width: calc(50% - 0.736842105em);
+	}
+
 	.entry-content blockquote:not(.alignleft):not(.alignright),
 	.entry-summary blockquote,
-	.page-content blockquote,
 	.comment-content blockquote {
 		margin-left: -1.473684211em;
 	}
 
-	.entry-content blockquote blockquote,
+	.entry-content blockquote blockquote:not(.alignleft):not(.alignright),
 	.entry-summary blockquote blockquote,
-	.page-content blockquote blockquote,
 	.comment-content blockquote blockquote {
 		margin-left: 0;
 	}
 
 	.entry-content ul,
 	.entry-summary ul,
-	.page-content ul,
 	.comment-content ul,
 	.entry-content ol,
 	.entry-summary ol,
-	.page-content ol,
 	.comment-content ol {
 		margin-left: 0;
 	}
 
 	.entry-content li > ul,
 	.entry-summary li > ul,
-	.page-content li > ul,
 	.comment-content li > ul,
 	.entry-content blockquote > ul,
 	.entry-summary blockquote > ul,
-	.page-content blockquote > ul,
 	.comment-content blockquote > ul {
 		margin-left: 1.25em;
 	}
@@ -2818,11 +2806,9 @@ p > video {
 
 	.entry-content li > ol,
 	.entry-summary li > ol,
-	.page-content li > ol,
 	.comment-content li > ol,
 	.entry-content blockquote > ol,
 	.entry-summary blockquote > ol,
-	.page-content blockquote > ol,
 	.comment-content blockquote > ol {
 		margin-left: 1.5em;
 	}
@@ -2832,13 +2818,6 @@ p > video {
 		margin-left: 1.473684211em;
 	}
 
-	.entry-content blockquote.alignleft,
-	.entry-content blockquote.alignright {
-		border-width: 4px 0 0 0;
-		padding: 0.9473684211em 0 0;
-		width: -webkit-calc(50% - 0.736842105em);
-		width: calc(50% - 0.736842105em);
-	}
 	.comment-author {
 		margin-bottom: 0;
 	}
@@ -3363,7 +3342,6 @@ p > video {
 
 	.entry-content h1,
 	.entry-summary h1,
-	.page-content h1,
 	.comment-content h1 {
 		font-size: 33px;
 		font-size: 2.0625rem;
@@ -3374,7 +3352,6 @@ p > video {
 
 	.entry-content h2,
 	.entry-summary h2,
-	.page-content h2,
 	.comment-content h2 {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -3385,7 +3362,6 @@ p > video {
 
 	.entry-content h3,
 	.entry-summary h3,
-	.page-content h3,
 	.comment-content h3 {
 		font-size: 23px;
 		font-size: 1.4375rem;
@@ -3397,7 +3373,6 @@ p > video {
 	.entry-content h4,
 	.entry-summary h4,
 	.entry-intro h4,
-	.page-content h4,
 	.comment-content h4 {
 		letter-spacing: 0.131578947em;
 	}
@@ -3408,9 +3383,6 @@ p > video {
 	.entry-summary h4,
 	.entry-summary h5,
 	.entry-summary h6,
-	.page-content h4,
-	.page-content h5,
-	.page-content h6,
 	.comment-content h4,
 	.comment-content h5,
 	.comment-content h6 {
@@ -3443,7 +3415,7 @@ p > video {
 		width: 71.42857144%;
 	}
 
-	body:not(.search-results) article:not(.type-page) .entry-content blockquote.farleft {
+	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.farleft {
 		margin-left: -40%;
 		width: -webkit-calc(60% - 1.4736842105em);
 		width: calc(60% - 1.4736842105em);
@@ -3477,6 +3449,7 @@ p > video {
 	}
 
 	.single .byline,
+	.full-size-link,
 	body:not(.search-results).group-blog .byline,
 	body:not(.search-results) .entry-format,
 	body:not(.search-results) .cat-links,
@@ -3567,8 +3540,16 @@ p > video {
 		font-size: 23px;
 		font-size: 1.4375rem;
 		line-height: 1.5217391304;
-		margin: 0 0 1.5217391304em -1.52173913em;
+		margin: 0 0 1.5217391304em;
 		padding-left: 1.347826087em;
+	}
+
+	body:not(.search-results) .entry-summary blockquote:not(.alignleft):not(.alignright) {
+		margin-left: -1.52173913em;
+	}
+
+	body:not(.search-results) .entry-summary blockquote blockquote:not(.alignleft):not(.alignright) {
+		margin-left: 0;
 	}
 
 	body:not(.search-results) .entry-summary blockquote cite,
@@ -3637,5 +3618,245 @@ p > video {
 
 	body:not(.search-results) .entry-summary .aligncenter {
 		margin-bottom: 1.5217391304em;
+	}
+}
+
+
+/**
+ * 15.0 - Print
+ */
+
+@media print {
+	form,
+	button,
+	input,
+	select,
+	textarea,
+	.navigation,
+	.main-navigation,
+	.social-navigation,
+	.sidebar,
+	.content-bottom-widgets,
+	.header-image,
+	.page-links,
+	.edit-link,
+	.comment-respond,
+	.comment-edit-link,
+	.comment-reply-link,
+	.comment-metadata .edit-link,
+	.pingback .edit-link {
+		display: none;
+	}
+
+	body,
+	blockquote cite,
+	blockquote small,
+	pre,
+	.entry-content h4,
+	.entry-content h5,
+	.entry-content h6,
+	.entry-summary h4,
+	.entry-summary h5,
+	.entry-summary h6,
+	.comment-content h4,
+	.comment-content h5,
+	.comment-content h6,
+	.entry-content .author-title {
+		font-size: 12pt;
+	}
+
+	blockquote {
+		font-size: 14.25pt;
+	}
+
+	.site-title,
+	.page-title,
+	.comments-title,
+	.entry-content h2,
+	.entry-summary h2,
+	.comment-content h2,
+	.widecolumn h2 {
+		font-size: 17.25pt;
+	}
+
+	.site-description {
+		display: block;
+	}
+
+	.entry-title {
+		font-size: 24.75pt;
+		line-height: 1.2727272727;
+		margin-bottom: 1.696969697em;
+	}
+
+	.format-aside .entry-title,
+	.format-image .entry-title,
+	.format-video .entry-title,
+	.format-quote .entry-title,
+	.format-gallery .entry-title,
+	.format-status .entry-title,
+	.format-link .entry-title,
+	.format-audio .entry-title,
+	.format-chat .entry-title {
+		font-size: 17.25pt;
+		line-height: 1.304347826;
+		margin-bottom: 1.826086957em;
+	}
+
+	.entry-content h1,
+	.entry-summary h1,
+	.comment-content h1 {
+		font-size: 21pt;
+	}
+
+	.entry-content h3,
+	.entry-summary h3,
+	.comment-content h3,
+	body:not(.search-results) .entry-summary {
+		font-size: 14.25pt;
+	}
+
+	.site-description,
+	.author-bio,
+	.entry-footer,
+	.sticky-post,
+	.taxonomy-description,
+	.entry-caption,
+	.comment-metadata,
+	.comment-notes,
+	.comment-awaiting-moderation,
+	.site-info,
+	.wp-caption .wp-caption-text,
+	.gallery-caption {
+		font-size: 9.75pt;
+	}
+
+	body,
+	.site {
+		background: none !important; /* Brute force since user agents all print differently. */
+	}
+
+	body,
+	blockquote cite,
+	blockquote small,
+	.site-title a,
+	.entry-title a,
+	.comment-author {
+		color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
+	}
+
+	blockquote,
+	body:not(.error404):not(.search-no-results) .page-header,
+	.comments-title {
+		border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
+	}
+
+	blockquote,
+	.site-description,
+	body:not(.search-results) .entry-summary,
+	body:not(.search-results) .entry-summary blockquote,
+	.author-bio,
+	.entry-footer,
+	.entry-footer a,
+	.sticky-post,
+	.taxonomy-description,
+	.entry-caption,
+	.comment-author,
+	.comment-metadata a,
+	.comment-notes,
+	.comment-awaiting-moderation,
+	.site-info,
+	.site-info a,
+	.wp-caption .wp-caption-text,
+	.gallery-caption {
+		color: #757575 !important; /* Make sure color schemes don't affect to print */
+	}
+
+	code,
+	hr {
+		background-color: #e8e8e8 !important; /* Make sure color schemes don't affect to print */
+	}
+
+	pre,
+	abbr,
+	acronym,
+	table,
+	th,
+	td,
+	.author-info,
+	.comment-list article,
+	.comment-list .pingback,
+	.comment-list .trackback,
+	.no-comments {
+		border-color: #e8e8e8 !important; /* Make sure color schemes don't affect to print */
+	}
+
+	a {
+		color: #007acc !important; /* Make sure color schemes don't affect to print */
+	}
+
+	.entry-content a,
+	.entry-summary a,
+	.taxonomy-description a,
+	.comment-content a,
+	.pingback .comment-body > a {
+		box-shadow: none;
+		border-bottom: 1px solid #007acc !important; /* Make sure color schemes don't affect to print */
+	}
+
+	.site {
+		margin: 5%;
+	}
+
+	.site-inner {
+		max-width: none;
+	}
+
+	.site-header {
+		padding: 0 0 1.75em;
+	}
+
+	.site-branding {
+		margin-top: 0;
+		margin-bottom: 1.75em;
+	}
+
+	.site-main {
+		margin-bottom: 3.5em;
+	}
+
+	.entry-header,
+	.entry-footer,
+	.page-header,
+	.page-content,
+	.entry-content,
+	.entry-summary,
+	.post-thumbnail img,
+	.comments-area,
+	.post-thumbnail {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.post-thumbnail,
+	.site-main > article {
+		margin-bottom: 3.5em;
+	}
+
+	.entry-content blockquote.alignleft,
+	.entry-content blockquote.alignright {
+		border-width: 4px 0 0 0;
+		padding: 0.9473684211em 0 0;
+		width: -webkit-calc(50% - 0.736842105em);
+		width: calc(50% - 0.736842105em);
+	}
+
+	body:not(.search-results) .entry-header + .entry-summary {
+		margin-top: -1.473684211em;
+	}
+
+	.site-footer,
+	.widecolumn {
+		padding: 0;
 	}
 }

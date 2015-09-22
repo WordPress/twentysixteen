@@ -3,11 +3,11 @@
  */
 
 ( function( $ ) {
-	var $style = $( '#twentysixteen-color-scheme-css' ),
+	var style = $( '#twentysixteen-color-scheme-css' ),
 		api = wp.customize;
 
-	if ( ! $style.length ) {
-		$style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
+	if ( ! style.length ) {
+		style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
 		                    .find( '#twentysixteen-color-scheme-css' );
 	}
 
@@ -28,18 +28,14 @@
 	// Add custom-background-image body class when background image is added.
 	api( 'background_image', function( value ) {
 		value.bind( function( to ) {
-			if ( '' === to ) {
-				$( 'body' ).removeClass( 'custom-background-image' );
-			} else {
-				$( 'body' ).addClass( 'custom-background-image' );
-			}
+			$( 'body' ).toggleClass( 'custom-background-image', '' !== to );
 		} );
 	} );
 
 	// Color Scheme CSS.
 	api.bind( 'preview-ready', function() {
 		api.preview.bind( 'update-color-scheme-css', function( css ) {
-			$style.html( css );
+			style.html( css );
 		} );
 	} );
 } )( jQuery );

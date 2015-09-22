@@ -6,7 +6,7 @@
  */
 
 ( function( $ ) {
-	var $body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
+	var body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
 	function initMainNavigation( container ) {
 
@@ -131,7 +131,7 @@
 
 	// Preventing left offseted elements to bleed into the post meta
 	function offsetLeft( param ) {
-		if ( $body.hasClass( 'page' ) || $body.hasClass( 'search' ) || $body.hasClass( 'single-attachment' ) || $body.hasClass( 'error404' ) ) {
+		if ( body.hasClass( 'page' ) || body.hasClass( 'search' ) || body.hasClass( 'single-attachment' ) || body.hasClass( 'error404' ) ) {
 			return;
 		}
 
@@ -184,7 +184,7 @@
 	}
 
 	$( document ).ready( function() {
-		$body = $( document.body );
+		body = $( document.body );
 
 		$( window )
 			.on( 'load.twentysixteen', onResizeARIA )
