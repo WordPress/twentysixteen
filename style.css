@@ -717,7 +717,6 @@ a:active {
 
 .entry-content a,
 .entry-summary a,
-.page-content a,
 .taxonomy-description a,
 .logged-in-as a,
 .comment-content a,
@@ -732,8 +731,6 @@ a:active {
 .entry-content a:focus,
 .entry-summary a:hover,
 .entry-summary a:focus,
-.page-content a:hover,
-.page-content a:focus,
 .taxonomy-description a:hover,
 .taxonomy-description a:focus,
 .logged-in-as a:hover,
@@ -1658,7 +1655,6 @@ a.post-thumbnail:focus {
 
 .entry-content h1,
 .entry-summary h1,
-.page-content h1,
 .comment-content h1,
 .textwidget h1 {
 	font-size: 28px;
@@ -1670,7 +1666,6 @@ a.post-thumbnail:focus {
 
 .entry-content h2,
 .entry-summary h2,
-.page-content h2,
 .comment-content h2,
 .textwidget h2 {
 	font-size: 23px;
@@ -1682,7 +1677,6 @@ a.post-thumbnail:focus {
 
 .entry-content h3,
 .entry-summary h3,
-.page-content h3,
 .comment-content h3,
 .textwidget h3 {
 	font-size: 19px;
@@ -1698,9 +1692,6 @@ a.post-thumbnail:focus {
 .entry-summary h4,
 .entry-summary h5,
 .entry-summary h6,
-.page-content h4,
-.page-content h5,
-.page-content h6,
 .comment-content h4,
 .comment-content h5,
 .comment-content h6,
@@ -1716,7 +1707,6 @@ a.post-thumbnail:focus {
 
 .entry-content h4,
 .entry-summary h4,
-.page-content h4,
 .comment-content h4,
 .textwidget h4 {
 	letter-spacing: 0.140625em;
@@ -1725,7 +1715,6 @@ a.post-thumbnail:focus {
 
 .entry-content h6,
 .entry-summary h6,
-.page-content h6,
 .comment-content h6,
 .textwidget h6 {
 	font-style: italic;
@@ -1743,12 +1732,6 @@ a.post-thumbnail:focus {
 .entry-summary h4,
 .entry-summary h5,
 .entry-summary h6,
-.page-content h1,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6,
 .comment-content h1,
 .comment-content h2,
 .comment-content h3,
@@ -1776,12 +1759,6 @@ a.post-thumbnail:focus {
 .entry-summary h4:first-child,
 .entry-summary h5:first-child,
 .entry-summary h6:first-child,
-.page-content h1:first-child,
-.page-content h2:first-child,
-.page-content h3:first-child,
-.page-content h4:first-child,
-.page-content h5:first-child,
-.page-content h6:first-child,
 .comment-content h1:first-child,
 .comment-content h2:first-child,
 .comment-content h3:first-child,
@@ -2381,10 +2358,10 @@ body:not(.error404):not(.search-no-results) .page-header {
 	border-radius: 50%;
 }
 
-.page-content .wp-smiley,
 .entry-content .wp-smiley,
 .entry-summary .wp-smiley,
-.comment-content .wp-smiley {
+.comment-content .wp-smiley,
+.textwidget .wp-smiley {
 	border: none;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -2393,7 +2370,6 @@ body:not(.error404):not(.search-no-results) .page-header {
 
 .entry-content a img,
 .entry-summary a img,
-.page-content a img,
 .comment-content a img,
 .textwidget a img {
 	display: block;
@@ -2795,36 +2771,30 @@ p > video {
 
 	.entry-content blockquote:not(.alignleft):not(.alignright),
 	.entry-summary blockquote,
-	.page-content blockquote,
 	.comment-content blockquote {
 		margin-left: -1.473684211em;
 	}
 
 	.entry-content blockquote blockquote:not(.alignleft):not(.alignright),
 	.entry-summary blockquote blockquote,
-	.page-content blockquote blockquote,
 	.comment-content blockquote blockquote {
 		margin-left: 0;
 	}
 
 	.entry-content ul,
 	.entry-summary ul,
-	.page-content ul,
 	.comment-content ul,
 	.entry-content ol,
 	.entry-summary ol,
-	.page-content ol,
 	.comment-content ol {
 		margin-left: 0;
 	}
 
 	.entry-content li > ul,
 	.entry-summary li > ul,
-	.page-content li > ul,
 	.comment-content li > ul,
 	.entry-content blockquote > ul,
 	.entry-summary blockquote > ul,
-	.page-content blockquote > ul,
 	.comment-content blockquote > ul {
 		margin-left: 1.25em;
 	}
@@ -2836,11 +2806,9 @@ p > video {
 
 	.entry-content li > ol,
 	.entry-summary li > ol,
-	.page-content li > ol,
 	.comment-content li > ol,
 	.entry-content blockquote > ol,
 	.entry-summary blockquote > ol,
-	.page-content blockquote > ol,
 	.comment-content blockquote > ol {
 		margin-left: 1.5em;
 	}
@@ -3374,7 +3342,6 @@ p > video {
 
 	.entry-content h1,
 	.entry-summary h1,
-	.page-content h1,
 	.comment-content h1 {
 		font-size: 33px;
 		font-size: 2.0625rem;
@@ -3385,7 +3352,6 @@ p > video {
 
 	.entry-content h2,
 	.entry-summary h2,
-	.page-content h2,
 	.comment-content h2 {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -3396,7 +3362,6 @@ p > video {
 
 	.entry-content h3,
 	.entry-summary h3,
-	.page-content h3,
 	.comment-content h3 {
 		font-size: 23px;
 		font-size: 1.4375rem;
@@ -3408,7 +3373,6 @@ p > video {
 	.entry-content h4,
 	.entry-summary h4,
 	.entry-intro h4,
-	.page-content h4,
 	.comment-content h4 {
 		letter-spacing: 0.131578947em;
 	}
@@ -3419,9 +3383,6 @@ p > video {
 	.entry-summary h4,
 	.entry-summary h5,
 	.entry-summary h6,
-	.page-content h4,
-	.page-content h5,
-	.page-content h6,
 	.comment-content h4,
 	.comment-content h5,
 	.comment-content h6 {
@@ -3696,9 +3657,6 @@ p > video {
 	.entry-summary h4,
 	.entry-summary h5,
 	.entry-summary h6,
-	.page-content h4,
-	.page-content h5,
-	.page-content h6,
 	.comment-content h4,
 	.comment-content h5,
 	.comment-content h6,
@@ -3715,7 +3673,6 @@ p > video {
 	.comments-title,
 	.entry-content h2,
 	.entry-summary h2,
-	.page-content h2,
 	.comment-content h2,
 	.widecolumn h2 {
 		font-size: 17.25pt;
@@ -3747,14 +3704,12 @@ p > video {
 
 	.entry-content h1,
 	.entry-summary h1,
-	.page-content h1,
 	.comment-content h1 {
 		font-size: 21pt;
 	}
 
 	.entry-content h3,
 	.entry-summary h3,
-	.page-content h3,
 	.comment-content h3,
 	body:not(.search-results) .entry-summary {
 		font-size: 14.25pt;
@@ -3841,7 +3796,6 @@ p > video {
 
 	.entry-content a,
 	.entry-summary a,
-	.page-content a,
 	.taxonomy-description a,
 	.comment-content a,
 	.pingback .comment-body > a {
