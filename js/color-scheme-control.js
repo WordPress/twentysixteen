@@ -25,36 +25,42 @@
 		ready: function() {
 			if ( 'color_scheme' === this.id ) {
 				this.setting.bind( 'change', function( value ) {
+					var colors = colorScheme[value].colors;
 
 					// Update Background Color.
-					api( 'background_color' ).set( colorScheme[value].colors[0] );
+					var color = colors[0];
+					api( 'background_color' ).set( color );
 					api.control( 'background_color' ).container.find( '.color-picker-hex' )
-						.data( 'data-default-color', colorScheme[value].colors[0] )
-						.wpColorPicker( 'defaultColor', colorScheme[value].colors[0] );
+						.data( 'data-default-color', color )
+						.wpColorPicker( 'defaultColor', color );
 
 					// Update Page Background Color.
-					api( 'page_background_color' ).set( colorScheme[value].colors[1] );
+					color = colors[1];
+					api( 'page_background_color' ).set( color );
 					api.control( 'page_background_color' ).container.find( '.color-picker-hex' )
-						.data( 'data-default-color', colorScheme[value].colors[1] )
-						.wpColorPicker( 'defaultColor', colorScheme[value].colors[1] );
+						.data( 'data-default-color', color )
+						.wpColorPicker( 'defaultColor', color );
 
 					// Update Link Color.
-					api( 'link_color' ).set( colorScheme[value].colors[2] );
+					color = colors[2];
+					api( 'link_color' ).set( color );
 					api.control( 'link_color' ).container.find( '.color-picker-hex' )
-						.data( 'data-default-color', colorScheme[value].colors[2] )
-						.wpColorPicker( 'defaultColor', colorScheme[value].colors[2] );
+						.data( 'data-default-color', color )
+						.wpColorPicker( 'defaultColor', color );
 
 					// Update Main Text Color.
-					api( 'main_text_color' ).set( colorScheme[value].colors[3] );
+					color = colors[3];
+					api( 'main_text_color' ).set( color );
 					api.control( 'main_text_color' ).container.find( '.color-picker-hex' )
-						.data( 'data-default-color', colorScheme[value].colors[3] )
-						.wpColorPicker( 'defaultColor', colorScheme[value].colors[3] );
+						.data( 'data-default-color', color )
+						.wpColorPicker( 'defaultColor', color );
 
 					// Update Secondary Text Color.
-					api( 'secondary_text_color' ).set( colorScheme[value].colors[4] );
+					color = colors[4];
+					api( 'secondary_text_color' ).set( color );
 					api.control( 'secondary_text_color' ).container.find( '.color-picker-hex' )
-						.data( 'data-default-color', colorScheme[value].colors[4] )
-						.wpColorPicker( 'defaultColor', colorScheme[value].colors[4] );
+						.data( 'data-default-color', color )
+						.wpColorPicker( 'defaultColor', color );
 				} );
 			}
 		}
@@ -62,7 +68,8 @@
 
 	// Generate the CSS for the current Color Scheme.
 	function updateCSS() {
-		var scheme = api( 'color_scheme' )(), css,
+		var scheme = api( 'color_scheme' )(),
+			css,
 			colors = _.object( colorSchemeKeys, colorScheme[ scheme ].colors );
 
 		// Merge in color scheme overrides.
