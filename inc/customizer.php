@@ -113,7 +113,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'color_scheme', array(
-		'label'    => esc_html__( 'Base Color Scheme', 'twentysixteen' ),
+		'label'    => __( 'Base Color Scheme', 'twentysixteen' ),
 		'section'  => 'colors',
 		'type'     => 'select',
 		'choices'  => twentysixteen_get_color_scheme_choices(),
@@ -128,7 +128,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'page_background_color', array(
-		'label'       => esc_html__( 'Page Background Color', 'twentysixteen' ),
+		'label'       => __( 'Page Background Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -143,7 +143,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label'       => esc_html__( 'Link Color', 'twentysixteen' ),
+		'label'       => __( 'Link Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -155,7 +155,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_text_color', array(
-		'label'       => esc_html__( 'Main Text Color', 'twentysixteen' ),
+		'label'       => __( 'Main Text Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -167,7 +167,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
-		'label'       => esc_html__( 'Secondary Text Color', 'twentysixteen' ),
+		'label'       => __( 'Secondary Text Color', 'twentysixteen' ),
 		'section'     => 'colors',
 	) ) );
 }
@@ -192,7 +192,7 @@ add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
 function twentysixteen_get_color_schemes() {
 	return apply_filters( 'twentysixteen_color_schemes', array(
 		'default' => array(
-			'label'  => esc_html__( 'Default', 'twentysixteen' ),
+			'label'  => __( 'Default', 'twentysixteen' ),
 			'colors' => array(
 				'#1a1a1a',
 				'#ffffff',
@@ -202,7 +202,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'dark' => array(
-			'label'  => esc_html__( 'Dark', 'twentysixteen' ),
+			'label'  => __( 'Dark', 'twentysixteen' ),
 			'colors' => array(
 				'#262626',
 				'#1a1a1a',
@@ -212,7 +212,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'gray' => array(
-			'label'  => esc_html__( 'Gray', 'twentysixteen' ),
+			'label'  => __( 'Gray', 'twentysixteen' ),
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
@@ -222,7 +222,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'green' => array(
-			'label'  => esc_html__( 'Green', 'twentysixteen' ),
+			'label'  => __( 'Green', 'twentysixteen' ),
 			'colors' => array(
 				'#ffffff',
 				'#acc1a2',
@@ -232,7 +232,7 @@ function twentysixteen_get_color_schemes() {
 			),
 		),
 		'yellow' => array(
-			'label'  => esc_html__( 'Yellow', 'twentysixteen' ),
+			'label'  => __( 'Yellow', 'twentysixteen' ),
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
