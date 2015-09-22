@@ -3449,6 +3449,7 @@ p > video {
 	}
 
 	.single .byline,
+	.full-size-link,
 	body:not(.search-results).group-blog .byline,
 	body:not(.search-results) .entry-format,
 	body:not(.search-results) .cat-links,
