@@ -218,10 +218,6 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-input {
-	line-height: normal;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box;
@@ -593,6 +589,10 @@ td {
  * 5.0 - Forms
  */
 
+input {
+	line-height: normal;
+}
+
 button,
 button[disabled]:hover,
 button[disabled]:focus,
@@ -641,7 +641,7 @@ textarea {
 	border: 1px solid #e8e8e8;
 	border-radius: 2px;
 	color: #757575;
-	padding: 0.375em 0.4375em;
+	padding: 0.625em 0.4375em;
 	width: 100%;
 }
 
