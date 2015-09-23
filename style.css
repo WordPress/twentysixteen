@@ -1530,12 +1530,12 @@ blockquote:after,
 	margin: 0;
 }
 
-.site-title a {
+.site-branding .site-title a {
 	color: #1a1a1a;
 }
 
-.site-title a:hover,
-.site-title a:focus {
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus {
 	color: #007acc;
 }
 
@@ -1945,7 +1945,7 @@ body:not(.search-results) .entry-summary > :last-child,
 	text-transform: uppercase;
 }
 
-/* 
+/*
 IE8 and earlier will drop any block with CSS3 selectors. Do not
 combine these styles with the next block.
 */
@@ -1954,10 +1954,6 @@ combine these styles with the next block.
 	display: none;
 }
 
-/* 
-IE8 and earlier will drop any block with CSS3 selectors. Do not
-combine these styles with the previous block.
-*/
 .updated:not(.published) {
 	display: none;
 }
@@ -1968,12 +1964,15 @@ combine these styles with the previous block.
 }
 
 .page-header {
+	border-top: 4px solid #1a1a1a;
 	margin: 0 7.6923% 3.5em;
+	padding-top: 1.75em;
 }
 
-body:not(.error404):not(.search-no-results) .page-header {
-	border-top: 4px solid #1a1a1a;
-	padding-top: 1.75em;
+body.error404 .page-header,
+body.search-no-results .page-header {
+	border-top: 0;
+	padding-top: 0;
 }
 
 .page-title {
@@ -2807,11 +2806,6 @@ p > video {
 		margin-left: 1.25em;
 	}
 
-	body:not(.search-results) .entry-summary li > ul,
-	body:not(.search-results) .entry-summary blockquote > ul {
-		margin-left: 1.157894737em;
-	}
-
 	.entry-content li > ol,
 	.entry-summary li > ol,
 	.comment-content li > ol,
@@ -2819,6 +2813,11 @@ p > video {
 	.entry-summary blockquote > ol,
 	.comment-content blockquote > ol {
 		margin-left: 1.5em;
+	}
+
+	body:not(.search-results) .entry-summary li > ul,
+	body:not(.search-results) .entry-summary blockquote > ul {
+		margin-left: 1.157894737em;
 	}
 
 	body:not(.search-results) .entry-summary li > ol,
@@ -3401,14 +3400,6 @@ p > video {
 		margin-bottom: 1.473684211em;
 	}
 
-	body:not(.search-results) .entry-summary {
-		margin-bottom: 2.210526316em;
-	}
-
-	body:not(.search-results) .entry-header + .entry-summary {
-		margin-top: -1.105263158em;
-	}
-
 	.author-info {
 		border-bottom: 0;
 		padding-bottom: 0;
@@ -3416,6 +3407,14 @@ p > video {
 
 	.entry-footer {
 		margin-top: 4.3076923077em;
+	}
+
+	body:not(.search-results) .entry-summary {
+		margin-bottom: 2.210526316em;
+	}
+
+	body:not(.search-results) .entry-header + .entry-summary {
+		margin-top: -1.105263158em;
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
@@ -3747,14 +3746,14 @@ p > video {
 	body,
 	blockquote cite,
 	blockquote small,
-	.site-title a,
+	.site-branding .site-title a,
 	.entry-title a,
 	.comment-author {
 		color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
 	}
 
 	blockquote,
-	body:not(.error404):not(.search-no-results) .page-header,
+	.page-header,
 	.comments-title {
 		border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
 	}
