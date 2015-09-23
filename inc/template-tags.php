@@ -201,7 +201,6 @@ function twentysixteen_categorized_blog() {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
-
 			// We only need to know if there is more than one category.
 			'number'     => 2,
 		) );
