@@ -190,7 +190,10 @@
 			.on( 'load.twentysixteen', onResizeARIA )
 			.on( 'resize.twentysixteen', function() {
 				clearTimeout( resizeTimer );
-				resizeTimer = setTimeout( offsetLeft, 300 );
+				resizeTimer = setTimeout( function() {
+					offsetLeft( 'img.size-full' );
+					offsetLeft( 'blockquote.alignleft' );
+				}, 300 );
 				onResizeARIA();
 			} );
 
