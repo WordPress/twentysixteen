@@ -872,6 +872,7 @@ a:active {
 .social-navigation a {
 	border: 1px solid #e8e8e8;
 	border-radius: 50%;
+	color: #1a1a1a;
 	display: block;
 	height: 35px;
 	position: relative;
@@ -879,7 +880,6 @@ a:active {
 }
 
 .social-navigation a:before {
-	color: #1a1a1a;
 	content: "\f415";
 	height: 33px;
 	line-height: 33px;
@@ -1604,10 +1604,10 @@ blockquote:after,
 }
 
 .entry-header,
-.entry-footer,
-.page-content,
+.entry-summary,
 .entry-content,
-.entry-summary {
+.entry-footer,
+.page-content {
 	margin-right: 7.6923%;
 	margin-left: 7.6923%;
 }
