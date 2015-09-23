@@ -33,7 +33,10 @@ code {
 .pingback .comment-body > a:hover,
 .pingback .comment-body > a:focus,
 .textwidget a:hover,
-.textwidget a:focus {
+.textwidget a:focus,
+.entry-content .wp-audio-shortcode a,
+.entry-content .wp-playlist a,
+.page-links a {
 	text-decoration: none;
 }
 
@@ -187,6 +190,10 @@ code {
 .comment-list + .comment-respond,
 .comment-navigation + .comment-respond {
 	padding-top: 3.5em;
+}
+
+.comment-reply-link {
+	margin-top: 0;
 }
 
 .comments-area,
