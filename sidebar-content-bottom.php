@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) ) 
 	return;
 }
 
-// If we get this far, we have widgets. Let do this.
+// If we get this far, we have widgets. Let's do this.
 ?>
 <div id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
 	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
