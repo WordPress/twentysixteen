@@ -1359,7 +1359,6 @@ blockquote:after,
 	border-top: 4px solid #1a1a1a;
 	margin-bottom: 3.5em;
 	padding-top: 1.75em;
-	word-wrap: break-word;
 }
 
 .widget-area > :last-child,
@@ -1486,6 +1485,10 @@ blockquote:after,
 	margin: 0 auto;
 	max-width: 1320px;
 	position: relative;
+}
+
+.site-content {
+	word-wrap: break-word;
 }
 
 .site-main {
@@ -1642,14 +1645,6 @@ a.post-thumbnail:focus {
 	opacity: 0.85;
 }
 
-.entry-content,
-.entry-summary,
-.page-content,
-.comment-content,
-.textwidget {
-	word-wrap: break-word;
-}
-
 .entry-content h1,
 .entry-summary h1,
 .comment-content h1,
@@ -1778,7 +1773,6 @@ a.post-thumbnail:focus {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
-	word-wrap: break-word;
 }
 
 body:not(.search-results) .entry-summary {
@@ -1866,10 +1860,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	height: 42px;
 	margin: 0 1.75em 1.75em 0;
 	width: 42px;
-}
-
-.author-description {
-	word-wrap: break-word;
 }
 
 .author-description > :last-child {
