@@ -417,7 +417,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	input[type="submit"][disabled]:focus,
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
-	.menu-toggle.toggled-on:focus,
 	.pagination .prev,
 	.pagination .next,
 	.pagination .prev:hover,
@@ -444,6 +443,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	input[type="reset"]:focus,
 	input[type="submit"]:hover,
 	input[type="submit"]:focus,
+	.menu-toggle.toggled-on:focus,
 	a,
 	.main-navigation a:hover,
 	.main-navigation a:focus,
@@ -519,7 +519,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.tagcloud a:hover,
 	.tagcloud a:focus,
 	.menu-toggle:hover,
-	.menu-toggle:focus {
+	.menu-toggle:focus,
+	.menu-toggle.toggled-on:focus {
 		border-color: {$colors['link_color']};
 	}
 
@@ -548,7 +549,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	blockquote,
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
-	.menu-toggle.toggled-on:focus,
 	.post-navigation,
 	.post-navigation div + div,
 	.pagination,
@@ -562,7 +562,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 
 	.menu-toggle.toggled-on,
 	.menu-toggle.toggled-on:hover,
-	.menu-toggle.toggled-on:focus,
 	.pagination:before,
 	.pagination:after,
 	.pagination .prev,
@@ -758,7 +757,6 @@ function twentysixteen_page_background_color_css() {
 		input[type="submit"][disabled]:focus,
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
-		.menu-toggle.toggled-on:focus,
 		.pagination .prev,
 		.pagination .next,
 		.pagination .prev:hover,
@@ -819,6 +817,7 @@ function twentysixteen_link_color_css() {
 		input[type="reset"]:focus,
 		input[type="submit"]:hover,
 		input[type="submit"]:focus,
+		.menu-toggle.toggled-on:focus,
 		a,
 		.main-navigation a:hover,
 		.main-navigation a:focus,
@@ -894,7 +893,8 @@ function twentysixteen_link_color_css() {
 		.tagcloud a:hover,
 		.tagcloud a:focus,
 		.menu-toggle:hover,
-		.menu-toggle:focus {
+		.menu-toggle:focus,
+		.menu-toggle.toggled-on:focus {
 			border-color: %1$s;
 		}
 
@@ -964,7 +964,6 @@ function twentysixteen_main_text_color_css() {
 		blockquote,
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
-		.menu-toggle.toggled-on:focus,
 		.post-navigation,
 		.post-navigation div + div,
 		.pagination,
@@ -978,7 +977,6 @@ function twentysixteen_main_text_color_css() {
 
 		.menu-toggle.toggled-on,
 		.menu-toggle.toggled-on:hover,
-		.menu-toggle.toggled-on:focus,
 		.pagination:before,
 		.pagination:after,
 		.pagination .prev,

@@ -1558,11 +1558,16 @@ blockquote:after,
 }
 
 .menu-toggle.toggled-on,
-.menu-toggle.toggled-on:hover,
-.menu-toggle.toggled-on:focus {
+.menu-toggle.toggled-on:hover {
 	background-color: #1a1a1a;
 	border-color: #1a1a1a;
 	color: #fff;
+}
+
+.menu-toggle.toggled-on:focus {
+	background-color: transparent;
+	border-color: #007acc;
+	color: #007acc;
 }
 
 .header-image {
