@@ -760,6 +760,7 @@ a:active {
 	color: #1a1a1a;
 	display: block;
 	line-height: 1.3125;
+	outline-offset: -1px;
 	padding: 0.84375em 0;
 }
 
@@ -791,7 +792,7 @@ a:active {
 }
 
 .main-navigation .menu-item-has-children > a {
-	margin-right: 50px;
+	margin-right: 56px;
 }
 
 .dropdown-toggle {
@@ -821,6 +822,15 @@ a:active {
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
 	color: #007acc;
+}
+
+.dropdown-toggle:focus {
+	outline: thin dotted;
+	outline-offset: -1px;
+}
+
+.dropdown-toggle:focus:after {
+	border-color: transparent;
 }
 
 .dropdown-toggle.toggled-on:after {
