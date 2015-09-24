@@ -468,6 +468,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.comment-reply-link,
 	.comment-reply-link:hover,
 	.comment-reply-link:focus,
+	.required,
 	.site-info a:hover,
 	.site-info a:focus {
 		color: {$colors['link_color']};
@@ -572,10 +573,10 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 
 	/* Secondary Text Color */
 
-	/*
-	IE8 and earlier will drop any block with CSS3 selectors. Do not
-	combine these styles with the next block.
-	*/
+	/**
+	 * IE8 and earlier will drop any block with CSS3 selectors.
+	 * Do not combine these styles with the next block.
+	 */
 	body:not(.search-results) .entry-summary {
 		color: {$colors['secondary_text_color']};
 	}
@@ -842,6 +843,7 @@ function twentysixteen_link_color_css() {
 		.comment-reply-link,
 		.comment-reply-link:hover,
 		.comment-reply-link:focus,
+		.required,
 		.site-info a:hover,
 		.site-info a:focus {
 			color: %1$s;
@@ -1063,10 +1065,10 @@ function twentysixteen_secondary_text_color_css() {
 	$css = '
 		/* Custom Secondary Text Color */
 
-		/*
-		IE8 and earlier will drop any block with CSS3 selectors. Do not
-		combine these styles with the next block.
-		*/
+		/**
+		 * IE8 and earlier will drop any block with CSS3 selectors.
+		 * Do not combine these styles with the next block.
+		 */
 		body:not(.search-results) .entry-summary {
 			color: %1$s;
 		}

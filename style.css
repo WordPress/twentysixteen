@@ -114,15 +114,6 @@ strong {
 	font-weight: 700;
 }
 
-dfn {
-	font-style: italic;
-}
-
-mark {
-	background: #ff0;
-	color: #000;
-}
-
 small {
 	font-size: 80%;
 }
@@ -157,18 +148,12 @@ figure {
 
 hr {
 	box-sizing: content-box;
-	height: 0;
-}
-
-pre {
-	overflow: auto;
 }
 
 code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
 	font-size: 1em;
 }
 
@@ -182,7 +167,6 @@ textarea {
 	margin: 0;
 }
 
-button,
 select {
 	text-transform: none;
 }
@@ -261,16 +245,6 @@ textarea {
 
 optgroup {
 	font-weight: bold;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-td,
-th {
-	padding: 0;
 }
 
 
@@ -1937,16 +1911,16 @@ body:not(.search-results) .entry-summary > :last-child,
 	text-transform: uppercase;
 }
 
-/*
-IE8 and earlier will drop any block with CSS3 selectors. Do not
-combine these styles with the next block.
-*/
-.sticky .posted-on,
-.byline {
+/**
+ * IE8 and earlier will drop any block with CSS3 selectors.
+ * Do not combine these styles with the next block.
+ */
+.updated:not(.published) {
 	display: none;
 }
 
-.updated:not(.published) {
+.sticky .posted-on,
+.byline {
 	display: none;
 }
 
@@ -2276,7 +2250,8 @@ body.search-no-results .page-header {
 }
 
 .required {
-	color: #c0392b;
+	color: #007acc;
+	font-family: Merriweather, Georgia, serif;
 }
 
 .comment-reply-title small {
@@ -2625,7 +2600,7 @@ p > video {
  * 14.0 - Media Queries
  */
 
-/*
+/**
  * Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
@@ -2811,16 +2786,6 @@ p > video {
 		margin-left: 1.5em;
 	}
 
-	body:not(.search-results) .entry-summary li > ul,
-	body:not(.search-results) .entry-summary blockquote > ul {
-		margin-left: 1.157894737em;
-	}
-
-	body:not(.search-results) .entry-summary li > ol,
-	body:not(.search-results) .entry-summary blockquote > ol {
-		margin-left: 1.473684211em;
-	}
-
 	.comment-author {
 		margin-bottom: 0;
 	}
@@ -2851,6 +2816,16 @@ p > video {
 	.widecolumn {
 		margin-bottom: 5.25em;
 		padding-right: 23.0769%;
+	}
+
+	body:not(.search-results) .entry-summary li > ul,
+	body:not(.search-results) .entry-summary blockquote > ul {
+		margin-left: 1.157894737em;
+	}
+
+	body:not(.search-results) .entry-summary li > ol,
+	body:not(.search-results) .entry-summary blockquote > ol {
+		margin-left: 1.473684211em;
 	}
 }
 
@@ -3405,6 +3380,18 @@ p > video {
 		margin-top: 4.3076923077em;
 	}
 
+	.comment-list + .comment-respond,
+	.comment-navigation + .comment-respond {
+		padding-top: 5.25em;
+	}
+
+	.comments-area,
+	.sidebar,
+	.content-bottom-widgets .widget-area,
+	.widecolumn {
+		margin-bottom: 7.0em;
+	}
+
 	body:not(.search-results) .entry-summary {
 		margin-bottom: 2.210526316em;
 	}
@@ -3486,18 +3473,6 @@ p > video {
 		margin-right: -100%;
 		margin-left: 15%;
 		width: 15%;
-	}
-
-	.comment-list + .comment-respond,
-	.comment-navigation + .comment-respond {
-		padding-top: 5.25em;
-	}
-
-	.comments-area,
-	.sidebar,
-	.content-bottom-widgets .widget-area,
-	.widecolumn {
-		margin-bottom: 7.0em;
 	}
 }
 
