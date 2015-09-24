@@ -72,23 +72,22 @@ function twentysixteen_header_style() {
 	// If the header text option is untouched, let's bail.
 	if ( display_header_text() ) {
 		return;
+	}
 
 	// If the header text has been hidden.
-	} else {
 	?>
-		<style type="text/css" id="twentysixteen-header-css">
-			.site-branding {
-				margin: 0 auto 0 0;
-			}
+	<style type="text/css" id="twentysixteen-header-css">
+		.site-branding {
+			margin: 0 auto 0 0;
+		}
 
-			.site-branding .site-title,
-			.site-description {
-				clip: rect(1px, 1px, 1px, 1px);
-				position: absolute;
-			}
-		</style>
+		.site-branding .site-title,
+		.site-description {
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute;
+		}
+	</style>
 	<?php
-	}
 }
 endif; // twentysixteen_header_style
 
@@ -298,7 +297,7 @@ function twentysixteen_sanitize_color_scheme( $value ) {
 	$color_schemes = twentysixteen_get_color_scheme_choices();
 
 	if ( ! array_key_exists( $value, $color_schemes ) ) {
-		$value = 'default';
+		return 'default';
 	}
 
 	return $value;
@@ -388,7 +387,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		'border_color'          => '',
 	) );
 
-	$css = <<<CSS
+	return <<<CSS
 	/* Color Scheme */
 
 	/* Background Color */
@@ -688,8 +687,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	}
 
 CSS;
-
-	return $css;
 }
 
 
