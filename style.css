@@ -1093,7 +1093,6 @@ a:active {
 
 .pagination .page-numbers {
 	display: none;
-	font-weight: 700;
 	letter-spacing: 0.013157895em;
 	line-height: 1;
 	margin: 0 0.7368421053em 0 -0.7368421053em;
@@ -1103,6 +1102,7 @@ a:active {
 
 .pagination .current {
 	display: inline-block;
+	font-weight: 700;
 }
 
 .pagination .prev,
@@ -2711,7 +2711,6 @@ p > video {
 
 	.pagination .page-numbers {
 		display: inline-block;
-		font-weight: 400;
 	}
 
 	.site-main > article {
