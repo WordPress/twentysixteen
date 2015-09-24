@@ -1931,6 +1931,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .tags-links a:before {
 	content: "\0023";
+	speak: none;
 }
 
 .page-header {
