@@ -401,6 +401,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		background-color: {$colors['page_background_color']};
 	}
 
+	mark,
+	ins,
 	button,
 	button[disabled]:hover,
 	button[disabled]:focus,
@@ -471,6 +473,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		color: {$colors['link_color']};
 	}
 
+	mark,
+	ins,
 	button,
 	button[disabled]:hover,
 	button[disabled]:focus,
@@ -737,6 +741,8 @@ function twentysixteen_page_background_color_css() {
 			background-color: %1$s;
 		}
 
+		mark,
+		ins,
 		button,
 		button[disabled]:hover,
 		button[disabled]:focus,
@@ -841,6 +847,8 @@ function twentysixteen_link_color_css() {
 			color: %1$s;
 		}
 
+		mark,
+		ins,
 		button,
 		button[disabled]:hover,
 		button[disabled]:focus,

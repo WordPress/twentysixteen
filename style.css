@@ -444,7 +444,9 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background: #007acc;
+	color: #fff;
+	padding: 0.125em 0.25em;
 	text-decoration: none;
 }
 
