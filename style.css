@@ -320,9 +320,8 @@ i {
 }
 
 blockquote {
-	border-color: #1a1a1a;
-	border-style: solid;
-	border-width: 0 0 0 4px;
+	border: 0 solid #1a1a1a;
+	border-left-width: 4px;
 	color: #757575;
 	font-size: 19px;
 	font-size: 1.1875rem;
@@ -612,8 +611,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	background-color: #f7f7f7;
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	background: #f7f7f7 -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 	border: 1px solid #e8e8e8;
 	border-radius: 2px;
 	color: #757575;
@@ -2923,9 +2921,8 @@ p > video {
 
 	.main-navigation ul ul li {
 		background-color: #fff;
-		border-color: #e8e8e8;
-		border-style: solid;
-		border-width: 1px 1px 0;
+		border: 1px solid #e8e8e8;
+		border-bottom-width: 0;
 	}
 
 	.main-navigation ul ul li:hover > ul,
