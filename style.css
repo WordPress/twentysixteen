@@ -260,7 +260,8 @@ optgroup {
 .pagination .prev:before,
 .pagination .next:before,
 .pagination .nav-links:before,
-.pagination .nav-links:after {
+.pagination .nav-links:after,
+.search-submit:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -654,9 +655,32 @@ textarea:focus {
 	margin-bottom: 0;
 }
 
-.search-form input[type="submit"],
-.widget .search-form input[type="submit"] {
+.search-form {
+	position: relative;
+}
+
+input[type="search"].search-field {
+	padding-right: 49px;
+}
+
+.search-submit:before {
+	content: "\f400";
+	font-size: 24px;
+	left: 2px;
+	line-height: 42px;
+	position: relative;
+	width: 42px;
+}
+
+.search-submit {
+	border-radius: 0 2px 2px 0;
+	bottom: 0;
+	overflow: hidden;
 	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 42px;
 }
 
 
@@ -3099,7 +3123,7 @@ p > video {
 	.widget input[type="reset"],
 	.widget input[type="submit"] {
 		line-height: 1;
-		padding: 0.846153846em 0.5384615385em;
+		padding: 0.846153846em;
 	}
 
 	.widget input[type="text"],
@@ -3161,6 +3185,22 @@ p > video {
 
 	.widget_rss .rssSummary:last-child {
 		margin-bottom: 1.615384615em;
+	}
+
+	.widget input[type="search"].search-field {
+		padding-right: 42px;
+	}
+
+	.widget .search-submit:before {
+		font-size: 16px;
+		left: 1px;
+		line-height: 35px;
+		width: 35px;
+	}
+
+	.widget button.search-submit {
+		padding: 0;
+		width: 35px;
 	}
 
 	.tagcloud a {

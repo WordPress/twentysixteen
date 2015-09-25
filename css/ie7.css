@@ -31,6 +31,20 @@ Description: IE7 specific style.
 	padding-left: 28px;
 }
 
+.search-submit {
+	height: auto;
+	margin-top: 28px;
+	padding: 15px 0 8px;
+	position: relative;
+	width: auto;
+}
+
+.search-submit .screen-reader-text {
+	height: auto;
+	position: relative !important;
+	width: auto;
+}
+
 .image-navigation .nav-previous,
 .image-navigation .nav-next,
 .comment-navigation .nav-previous,
