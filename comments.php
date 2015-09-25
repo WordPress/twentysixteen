@@ -26,6 +26,7 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 				printf(
+					/* translators: %1$s: number of comments, %2$s: post title */
 					_nx(
 						'%1$s thought on &ldquo;%2$s&rdquo;',
 						'%1$s thoughts on &ldquo;%2$s&rdquo;',
