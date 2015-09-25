@@ -197,7 +197,7 @@ function twentysixteen_get_color_schemes() {
 				'#ffffff',
 				'#007acc',
 				'#1a1a1a',
-				'#757575',
+				'#686868',
 			),
 		),
 		'dark' => array(
