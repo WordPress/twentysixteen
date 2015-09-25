@@ -602,7 +602,14 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
 	background: #007acc;
-	outline: none;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+	outline: thin dotted;
+	outline-offset: -4px;
 }
 
 input[type="text"],
@@ -1478,6 +1485,7 @@ blockquote:after,
 .tagcloud a:focus {
 	border-color: #007acc;
 	color: #007acc;
+	outline: 0;
 }
 
 
@@ -1587,6 +1595,14 @@ blockquote:after,
 	background-color: #1a1a1a;
 	border-color: #1a1a1a;
 	color: #fff;
+}
+
+.menu-toggle:focus {
+	outline: 0;
+}
+
+.menu-toggle.toggled-on:focus {
+	outline: thin dotted;
 }
 
 .header-image {
