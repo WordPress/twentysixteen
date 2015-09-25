@@ -111,7 +111,7 @@ i {
 
 blockquote {
 	border-left: 4px solid #1a1a1a;
-	color: #757575;
+	color: #686868;
 	font-size: 19px;
 	font-style: italic;
 	line-height: 1.4736842105;
@@ -454,7 +454,7 @@ a {
 }
 
 .gallery .gallery-caption {
-	color: #757575;
+	color: #686868;
 	display: block;
 	font-size: 13px;
 	line-height: 1.6153846154;
