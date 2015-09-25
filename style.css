@@ -3102,7 +3102,7 @@ p > video {
 	.widget input[type="reset"],
 	.widget input[type="submit"] {
 		line-height: 1;
-		padding: 0.6923076923em 0.5384615385em;
+		padding: 0.846153846em 0.5384615385em;
 	}
 
 	.widget input[type="text"],
