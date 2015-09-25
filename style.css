@@ -1000,7 +1000,7 @@ a:active {
 	content: "\f213";
 }
 
-.social-navigation a[href*="mailto:"]:before {
+.social-navigation a[href^="mailto:"]:before {
 	content: "\f410";
 }
 
