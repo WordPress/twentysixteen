@@ -183,7 +183,7 @@ if ( ! function_exists( 'twentysixteen_excerpt' ) ) :
 	function twentysixteen_excerpt( $class = 'entry-summary' ) {
 		$class = esc_attr( $class );
 
-		if ( has_excerpt() ) : ?>
+		if ( has_excerpt() || is_search() ) : ?>
 			<div class="<?php echo $class; ?>">
 				<?php the_excerpt(); ?>
 			</div><!-- .<?php echo $class; ?> -->
