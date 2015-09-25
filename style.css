@@ -589,7 +589,7 @@ input[type="submit"][disabled]:focus {
 	font-weight: 700;
 	letter-spacing: 0.046875em;
 	line-height: 1;
-	padding: 13.5px 0.875em 12.5px;
+	padding: 0.84375em 0.875em 0.78125em;
 	text-transform: uppercase;
 }
 
