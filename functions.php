@@ -261,19 +261,6 @@ function twentysixteen_scripts() {
 add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
 
 /**
- * Add a `screen-reader-text` class to the search form's submit button.
- *
- * @since Twenty Sixteen 1.0
- *
- * @param string $html Search form HTML.
- * @return string Modified search form HTML.
- */
-function twentysixteen_search_form_modify( $html ) {
-	return str_replace( 'class="search-submit"', 'class="search-submit screen-reader-text"', $html );
-}
-add_filter( 'get_search_form', 'twentysixteen_search_form_modify' );
-
-/**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
