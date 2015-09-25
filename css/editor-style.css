@@ -169,7 +169,7 @@ pre {
 }
 
 pre {
-	border: 1px solid #e8e8e8;
+	border: 1px solid #d1d1d1;
 	font-size: 16px;
 	line-height: 1.3125;
 	margin: 0 0 28px;
@@ -182,12 +182,12 @@ pre {
 }
 
 code {
-	background-color: #e8e8e8;
+	background-color: #d1d1d1;
 	padding: 2px 4px;
 }
 
 abbr[title] {
-	border-bottom: 1px dotted #e8e8e8;
+	border-bottom: 1px dotted #d1d1d1;
 	cursor: help;
 }
 
@@ -228,7 +228,7 @@ big {
  */
 
 hr {
-	background-color: #e8e8e8;
+	background-color: #d1d1d1;
 	border: 0;
 	height: 1px;
 	margin-bottom: 28px;
@@ -281,7 +281,7 @@ td,
 .mce-item-table,
 .mce-item-table th,
 .mce-item-table td {
-	border: 1px solid #e8e8e8;
+	border: 1px solid #d1d1d1;
 }
 
 table a {

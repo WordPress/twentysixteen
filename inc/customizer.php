@@ -336,7 +336,7 @@ function twentysixteen_color_scheme_css() {
 		'link_color'            => $color_scheme[2],
 		'main_text_color'       => $color_scheme[3],
 		'secondary_text_color'  => $color_scheme[4],
-		'border_color'          => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.1)', $color_textcolor_rgb ),
+		'border_color'          => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.2)', $color_textcolor_rgb ),
 
 	);
 
@@ -901,7 +901,7 @@ function twentysixteen_main_text_color_css() {
 	}
 
 	// If we get this far, we have a custom color scheme.
-	$border_color = vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.1)', $main_text_color_rgb );
+	$border_color = vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.2)', $main_text_color_rgb );
 
 	$css = '
 		/* Custom Main Text Color */
