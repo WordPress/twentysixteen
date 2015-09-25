@@ -1963,10 +1963,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	display: inline;
 }
 
-.tags-links a:before {
-	content: "\0023";
-}
-
 .page-header {
 	border-top: 4px solid #1a1a1a;
 	margin: 0 7.6923% 3.5em;
