@@ -141,7 +141,7 @@ endif;
 
 if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
 /**
- * Display an optional post thumbnail.
+ * Displays an optional post thumbnail.
  *
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
@@ -168,6 +168,27 @@ function twentysixteen_post_thumbnail() {
 
 	<?php endif; // End is_singular()
 }
+endif;
+
+if ( ! function_exists( 'twentysixteen_excerpt' ) ) :
+	/**
+	 * Displays the optional excerpt.
+	 *
+	 * Wraps the excerpt in a div element.
+	 *
+	 * @since Twenty Sixteen 1.0
+	 *
+	 * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
+	 */
+	function twentysixteen_excerpt( $class = 'entry-summary' ) {
+		$class = esc_attr( $class );
+
+		if ( has_excerpt() ) : ?>
+			<div class="<?php echo $class; ?>">
+				<?php the_excerpt(); ?>
+			</div><!-- .<?php echo $class; ?> -->
+		<?php endif;
+	}
 endif;
 
 if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :

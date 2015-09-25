@@ -17,9 +17,7 @@
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	<?php twentysixteen_excerpt(); ?>
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 
