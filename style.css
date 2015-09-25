@@ -581,15 +581,15 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
-	background: #007acc;
-	border: 2px solid #007acc;
+	background: #1a1a1a;
+	border: 0;
 	border-radius: 2px;
 	color: #fff;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-weight: 700;
 	letter-spacing: 0.046875em;
 	line-height: 1;
-	padding: 0.75em 0.875em 0.625em;
+	padding: 0.84375em 0.875em 0.78125em;
 	text-transform: uppercase;
 }
 
@@ -601,8 +601,7 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	background: transparent;
-	color: #007acc;
+	background: #007acc;
 	outline: none;
 }
 
@@ -821,6 +820,7 @@ a:active {
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
+	background-color: transparent;
 	color: #007acc;
 }
 
@@ -1554,20 +1554,17 @@ blockquote:after,
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-	border-color: #007acc;
-}
-
-.menu-toggle.toggled-on,
-.menu-toggle.toggled-on:hover {
-	background-color: #1a1a1a;
-	border-color: #1a1a1a;
-	color: #fff;
-}
-
-.menu-toggle.toggled-on:focus {
 	background-color: transparent;
 	border-color: #007acc;
 	color: #007acc;
+}
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+	background-color: #1a1a1a;
+	border-color: #1a1a1a;
+	color: #fff;
 }
 
 .header-image {
@@ -3105,7 +3102,7 @@ p > video {
 	.widget input[type="reset"],
 	.widget input[type="submit"] {
 		line-height: 1;
-		padding: 0.6923076923em 0.5384615385em;
+		padding: 0.846153846em 0.5384615385em;
 	}
 
 	.widget input[type="text"],
