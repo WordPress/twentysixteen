@@ -54,7 +54,7 @@
 	( function() {
 
 		// Return early if menuToggle is missing.
-		if ( ! menuToggle ) {
+		if ( ! menuToggle.length ) {
 			return;
 		}
 
