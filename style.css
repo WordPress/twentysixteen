@@ -304,9 +304,9 @@ h6 {
 	clear: both;
 	-webkit-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
-	text-rendering: optimizeLegibility;
 	font-weight: 700;
 	margin: 0;
+	text-rendering: optimizeLegibility;
 }
 
 p {
@@ -2428,7 +2428,7 @@ p > video {
 	margin-bottom: 1.75em;
 }
 
-.wp-playlist.wp-playlist {
+.wp-playlist.wp-audio-playlist {
 	padding-bottom: 0;
 }
 
@@ -2480,11 +2480,11 @@ p > video {
 
 .gallery-item {
 	display: inline-block;
+	max-width: 33.33%;
 	padding: 0 1.1400652% 2.2801304%;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
-	max-width: 33.33%;
 }
 
 .gallery-columns-1 .gallery-item {

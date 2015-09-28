@@ -15,13 +15,13 @@ Description: Used to style the TinyMCE editor.
  * 6.0 - Galleries
  * 7.0 - Audio / Video
  * 8.0 - RTL
- * 9.0 - Media Queries
  */
 
 
 /**
- * 1.0 Body
+ * 1.0 - Body
  */
+
 body {
 	color: #1a1a1a;
 	font-family: Merriweather, Georgia, serif;
@@ -39,7 +39,7 @@ body.post-type-page {
 
 
 /**
- * 2.0 Typography
+ * 2.0 - Typography
  */
 
 h1,
@@ -115,15 +115,29 @@ blockquote {
 	font-size: 19px;
 	font-style: italic;
 	line-height: 1.4736842105;
-	margin: 0 0 28px -28px;
+	margin-bottom: 28px;
 	padding: 0 0 0 24px;
 }
 
-blockquote > blockquote {
+blockquote:not(.alignleft):not(.alignright) {
+	margin-left: -28px;
+}
+
+blockquote blockquote:not(.alignleft):not(.alignright) {
 	margin-left: 0;
 }
 
-blockquote > p:last-child {
+blockquote:before,
+blockquote:after {
+	content: "";
+	display: table;
+}
+
+blockquote:after {
+	clear: both;
+}
+
+blockquote > :last-child {
 	margin-bottom: 0;
 }
 
@@ -193,7 +207,9 @@ abbr[title] {
 
 mark,
 ins {
-	background-color: #fff9c0;
+	background: #007acc;
+	color: #fff;
+	padding: 2px 4px;
 	text-decoration: none;
 }
 
@@ -207,11 +223,11 @@ sub {
 }
 
 sub {
-	top: -0.5em;
+	top: -6px;
 }
 
 sup {
-	bottom: -0.25em;
+	bottom: -3px;
 }
 
 small {
@@ -224,7 +240,7 @@ big {
 
 
 /**
- * 3.0 Elements
+ * 3.0 - Elements
  */
 
 hr {
@@ -301,7 +317,7 @@ table th,
 .mce-item-table th,
 table caption {
 	border-width: 0 1px 1px 0;
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 700;
 	padding: 7px;
 	text-align: left;
@@ -311,7 +327,7 @@ table caption {
 table td,
 .mce-item-table td {
 	border-width: 0 1px 1px 0;
-	font-size: 17px;
+	font-size: 16px;
 	padding: 7px;
 	vertical-align: baseline;
 }
@@ -319,16 +335,12 @@ table td,
 img {
 	border: 0;
 	height: auto;
-	max-width: 600px;
+	max-width: 100%;
 	vertical-align: middle;
 }
 
 a img {
 	display: block;
-}
-
-body.post-type-page img {
-	max-width: 840px;
 }
 
 figure {
@@ -345,19 +357,25 @@ a {
 	text-decoration: none;
 }
 
+fieldset {
+	border: 1px solid #d1d1d1;
+	margin: 0 0 28px;
+	padding: 14px;
+}
+
 
 /**
- * 4.0 Alignment
+ * 4.0 - Alignment
  */
 
 .alignleft {
 	float: left;
-	margin: 6px 28px 22px 0;
+	margin: 6px 28px 28px 0;
 }
 
 .alignright {
 	float: right;
-	margin: 6px 0 22px 28px;
+	margin: 6px 0 28px 28px;
 }
 
 .aligncenter {
@@ -368,44 +386,35 @@ a {
 
 
 /**
- * 5.0 Caption
+ * 5.0 - Caption
  */
 
-.wp-caption,
-.html5-captions .wp-caption {
+.wp-caption {
 	background: transparent;
 	border: none;
-	color: #707070;
-	margin: 0 0 28px 0;
-	max-width: 660px;
+	margin-bottom: 28px;
+	max-width: 100%;
 	padding: 0;
 	text-align: inherit;
 }
 
-.wp-caption.alignleft {
-	margin: 6px 28px 22px 0;
-}
-
-.wp-caption.alignright {
-	margin: 6px 0 22px 28px;
-}
-
-.wp-caption.aligncenter {
-	margin: 0 auto 28px;
-}
-
-.wp-caption .wp-caption-text,
+.wp-caption-text,
 .wp-caption-dd {
+	color: #686868;
 	font-size: 13px;
 	font-style: italic;
-	line-height: 1.75;
-	padding: 7px 0 0;
+	line-height: 1.6153846154;
+	padding-top: 7px;
 }
 
 
 /**
- * 6.0 Galleries
+ * 6.0 - Galleries
  */
+
+.mce-content-body .wpview-wrap {
+	margin-bottom: 28px;
+}
 
 .gallery {
 	margin: 0 -1.1666667%;
@@ -414,11 +423,11 @@ a {
 
 .gallery .gallery-item {
 	display: inline-block;
+	max-width: 33.33%;
 	padding: 0 1.1400652% 2.2801304%;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
-	max-width: 33.33%;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -454,12 +463,8 @@ a {
 }
 
 .gallery .gallery-caption {
-	color: #686868;
-	display: block;
 	font-size: 13px;
-	line-height: 1.6153846154;
 	margin: 0;
-	padding: 7px 0;
 }
 
 .gallery-columns-6 .gallery-caption,
@@ -471,86 +476,71 @@ a {
 
 
 /**
- * 7.0 Audio / Video
+ * 7.0 - Audio / Video
  */
-
-.mce-content-body .wpview-wrap {
-	margin-bottom: 28px;
-}
-
-.mce-content-body .wp-audio-playlist {
-	margin: 0;
-}
 
 .wp-audio-shortcode a,
 .wp-playlist a {
 	box-shadow: none;
 }
 
+.mce-content-body .wp-audio-playlist {
+	margin: 0;
+	padding-bottom: 0;
+}
+
+.mce-content-body .wp-playlist-tracks {
+	margin-top: 0;
+}
+
+.mce-content-body  .wp-playlist-item {
+	padding: 10px 0;
+}
+
+.mce-content-body .wp-playlist-item-length {
+	top: 10px;
+}
+
 
 /**
- * 8.0 RTL
+ * 8.0 - RTL
  */
 
-body.rtl {
-	font-family: Arial, Tahoma, sans-serif;
-}
-
 .rtl blockquote {
-	border-right: 4px solid currentColor;
-	border-left: none;
-	margin: 0 0 28px 0;
-	padding-right: 21px;
-	padding-left: 0;
+	border: 0 solid #1a1a1a;
+	border-right-width: 4px;
 }
 
-.rtl blockquote > blockquote {
+.rtl blockquote.alignleft,
+.rtl blockquote.alignright {
+	border: 0 solid #1a1a1a;
+	border-top-width: 4px;
+}
+
+.rtl blockquote:not(.alignleft):not(.alignright) {
+	margin-right: -28px;
+	padding: 0 24px 0 0;
+}
+
+.rtl blockquote blockquote:not(.alignleft):not(.alignright) {
 	margin-right: 0;
 	margin-left: auto;
 }
 
-.rtl ul,
-.rtl ol {
-	margin: 0 20px 28px 0;
+.rtl li > ul,
+.rtl blockquote > ul {
+	margin-right: 20px;
+	margin-left: auto;
 }
 
-.rtl ol {
+.rtl li > ol,
+.rtl blockquote > ol {
 	margin-right: 24px;
-	margin-left: 0;
+	margin-left: auto;
 }
 
 .rtl table th,
+.rtl .mce-item-table th,
 .rtl table caption {
 	text-align: right;
-}
-
-
-/**
- * 9.0 Media Queries
- */
-
-@media screen and (max-width: 920px) {
-	body.post-type-page,
-	body.post-type-page img,
-	body.post-type-page .wp-caption {
-		max-width: 100%;
-	}
-
-	body.post-type-page img,
-	body.post-type-page .wp-caption {
-		width: auto !important;
-	}
-}
-
-@media screen and (max-width: 680px) {
-	body,
-	img,
-	.wp-caption {
-		max-width: 100%;
-	}
-
-	img,
-	.wp-caption {
-		width: auto !important;
-	}
 }
