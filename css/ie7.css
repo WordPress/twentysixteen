@@ -3,8 +3,8 @@ Theme Name: Twenty Sixteen
 Description: IE7 specific style.
 */
 
-.site-inner,
-.entry-content {
+.site-inner {
+	max-width: 656px;
 }
 
 .post-navigation,
