@@ -331,15 +331,6 @@ input[type="search"].search-field {
  * 8.2 - Posts and pages
  */
 
-.entry-header,
-.entry-summary,
-.entry-content,
-.entry-footer,
-.page-content {
-	margin-right: 7.6923%;
-	margin-left: 7.6923%;
-}
-
 .author-avatar .avatar {
 	float: right;
 	margin-right: 0;
