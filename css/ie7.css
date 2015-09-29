@@ -3,8 +3,8 @@ Theme Name: Twenty Sixteen
 Description: IE7 specific style.
 */
 
-.site-inner {
-	max-width: 656px;
+.site-inner,
+.entry-content {
 }
 
 .post-navigation,
@@ -21,6 +21,7 @@ Description: IE7 specific style.
 .comments-area {
 	margin-right: 28px;
 	margin-left: 28px;
+	max-width: 100%;
 }
 
 .site-header,
@@ -126,7 +127,7 @@ Description: IE7 specific style.
 	max-width: 30%;
 }
 
-.gallery-columns-2 .gallery-item {
+.gallery-columns-1 .gallery-item {
 	max-width: 100%;
 }
 
@@ -156,4 +157,20 @@ Description: IE7 specific style.
 
 .gallery-columns-9 .gallery-item {
 	max-width: 8%;
+}
+
+.rtl .image-navigation .nav-previous + .nav-next,
+.rtl .comment-navigation .nav-previous + .nav-next {
+	margin-right: 14px;
+	margin-left: 0;
+}
+
+.rtl .entry-footer > span {
+	margin-right: 14px;
+	margin-left: 0;
+}
+
+.rtl .site-info .site-title {
+	margin-right: 0;
+	margin-left: 14px;
 }
