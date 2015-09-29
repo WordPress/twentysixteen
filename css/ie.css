@@ -30,4 +30,19 @@ Description: Global Styles for older IE versions (previous to IE10).
 	.site-footer .social-navigation {
 		margin-left: 7px;
 	}
+
+	.rtl .site-branding,
+	.rtl .site-info {
+		float: right;
+	}
+
+	.rtl .site-header-menu,
+	.rtl .site-footer .social-navigation {
+		float: left;
+	}
+
+	.rtl .site-footer .social-navigation {
+		margin-right: 7px;
+		margin-left: 0;
+	}
 }
