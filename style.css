@@ -7,7 +7,7 @@ Description: Twenty Sixteen is a modernized take on an ever-popular WordPress la
 Version: 0.1.20150828
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, sticky-post, threaded-comments, translation-ready
+Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Text Domain: twentysixteen
 
 This theme, like WordPress, is licensed under the GPL.
@@ -839,7 +839,8 @@ a:active {
 }
 
 .dropdown-toggle:after {
-	border-left: 1px solid #d1d1d1;
+	border: 0 solid #d1d1d1;
+	border-left-width: 1px;
 	content: "\f431";
 	font-size: 24px;
 	left: 1px;
@@ -1663,6 +1664,9 @@ blockquote:after,
 
 .post-thumbnail img {
 	display: block;
+}
+
+.no-sidebar .post-thumbnail img {
 	margin: 0 auto;
 }
 
@@ -3282,6 +3286,7 @@ p > video {
 
 	.no-sidebar .content-area {
 		float: none;
+		margin: 0;
 		width: 100%;
 	}
 
@@ -3298,11 +3303,6 @@ p > video {
 	.no-sidebar .content-bottom-widgets {
 		margin-right: 15%;
 		margin-left: 15%;
-	}
-
-	.no-sidebar .post-thumbnail {
-		margin-right: 0;
-		margin-left: 0;
 	}
 
 	.widecolumn {
@@ -3869,9 +3869,8 @@ p > video {
 	.page-content,
 	.entry-content,
 	.entry-summary,
-	.post-thumbnail img,
-	.comments-area,
-	.post-thumbnail {
+	.post-thumbnail,
+	.comments-area {
 		margin-right: 0;
 		margin-left: 0;
 	}
