@@ -1,6 +1,6 @@
 /*
 Theme Name: Twenty Sixteen
-Description: IE8 and 7 specific style.
+Description: IE8 specific style.
 */
 
 code {
@@ -210,4 +210,17 @@ code {
 .site-footer .main-navigation,
 .site-footer .social-navigation {
 	display: none;
+}
+
+.rtl .site-branding {
+	float: right;
+}
+
+.rtl .menu-toggle {
+	float: left;
+}
+
+.rtl .comment-list .children > li {
+	padding-right: 1.75em;
+	padding-left: 0;
 }
