@@ -136,16 +136,13 @@
 		}
 	}
 
-	// Preventing left offseted elements to bleed into the post meta
-	function offsetLeft( param ) {
+	// Add 'below-entry-meta' class to elements.
+	function belowEntryMetaClass( param ) {
 		if ( body.hasClass( 'page' ) || body.hasClass( 'search' ) || body.hasClass( 'single-attachment' ) || body.hasClass( 'error404' ) ) {
 			return;
 		}
 
-		// jscs:disable
-		var entryContent = $( '.entry-content' );
-		// jscs:enable
-		entryContent.find( param ).each( function() {
+		$( '.entry-content' ).find( param ).each( function() {
 			var element              = $( this ),
 				elementPos           = element.offset(),
 				elementPosTop        = elementPos.top,
@@ -153,40 +150,35 @@
 				entryFooterPos       = entryFooter.offset(),
 				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
 				caption              = element.closest( 'figure' ),
-				newImg               = new Image();
+				newImg;
 
-			// Add a class to big image and caption larger than or equal to 840px.
-			if ( 'img.size-full' === param ) {
-				newImg.src = element.attr( 'src' );
+			// Add 'below-entry-meta' to elements below the entry meta.
+			if ( elementPosTop > entryFooterPosBottom ) {
 
-				$( newImg ).load( function() {
-					var imgWidth = newImg.width;
+				// Check if full-size images and captions are larger than or equal to 840px.
+				if ( 'img.size-full' === param ) {
 
-					if ( elementPosTop > entryFooterPosBottom ) {
-						if ( imgWidth >= 840  ) {
-							element.addClass( 'size-big' );
+					// Create an image to find native image width of resized images (i.e. max-width: 100%).
+					newImg = new Image();
+					newImg.src = element.attr( 'src' );
+
+					$( newImg ).load( function() {
+						if ( newImg.width >= 840  ) {
+							element.addClass( 'below-entry-meta' );
+
+							if ( caption.hasClass( 'wp-caption' ) ) {
+								caption.addClass( 'below-entry-meta' );
+								caption.removeAttr( 'style' );
+							}
 						}
-
-						if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 840 ) {
-							caption.addClass( 'caption-big' );
-							caption.removeAttr( 'style' );
-						}
-					} else {
-						element.removeClass( 'size-big' );
-						caption.removeClass( 'caption-big' );
-					}
-				} );
-			}
-
-			// Prevent blockquote on the top of the post from bleeding over to post meta
-			if ( 'blockquote.alignleft' === param ) {
-				if ( elementPosTop > entryFooterPosBottom ) {
-					element.addClass( 'farleft' );
+					} );
 				} else {
-					element.removeClass( 'farleft' );
+					element.addClass( 'below-entry-meta' );
 				}
+			} else {
+				element.removeClass( 'below-entry-meta' );
+				caption.removeClass( 'below-entry-meta' );
 			}
-
 		} );
 	}
 
@@ -198,13 +190,13 @@
 			.on( 'resize.twentysixteen', function() {
 				clearTimeout( resizeTimer );
 				resizeTimer = setTimeout( function() {
-					offsetLeft( 'img.size-full' );
-					offsetLeft( 'blockquote.alignleft' );
+					belowEntryMetaClass( 'img.size-full' );
+					belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 				}, 300 );
 				onResizeARIA();
 			} );
 
-		offsetLeft( 'img.size-full' );
-		offsetLeft( 'blockquote.alignleft' );
+		belowEntryMetaClass( 'img.size-full' );
+		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 	} );
 } )( jQuery );

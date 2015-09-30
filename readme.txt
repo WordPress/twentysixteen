@@ -52,6 +52,8 @@ Genericons icon font, Copyright 2013-2015 Automattic.com
 License: GNU GPL, Version 2 (or later)
 Source: http://www.genericons.com
 
+Image used in screenshot.png: A photo by Austin Schmid (https://unsplash.com/schmidy/), licensed under Creative Commons Zero(http://creativecommons.org/publicdomain/zero/1.0/)
+
 == Notes ==
 
 Only the default and dark color schemes are accessibility ready.

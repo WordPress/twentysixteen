@@ -125,6 +125,36 @@ blockquote {
 	padding-left: 0;
 }
 
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-summary h1,
+.entry-summary h2,
+.entry-summary h3,
+.entry-summary h4,
+.entry-summary h5,
+.entry-summary h6,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6,
+.textwidget h1,
+.textwidget h2,
+.textwidget h3,
+.textwidget h4,
+.textwidget h5,
+.textwidget h6,
+.entry-content .author-title,
+.widget_calendar caption,
+.widecolumn h2 {
+	font-weight: 700;
+}
+
 
 /**
  * 3.0 - Elements
@@ -300,15 +330,6 @@ input[type="search"].search-field {
 /**
  * 8.2 - Posts and pages
  */
-
-.entry-header,
-.entry-summary,
-.entry-content,
-.entry-footer,
-.page-content {
-	margin-right: 7.6923%;
-	margin-left: 7.6923%;
-}
 
 .author-avatar .avatar {
 	float: right;
@@ -662,13 +683,22 @@ body:not(.search-results) .entry-summary .alignleft {
 		float: left;
 	}
 
-	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.farright {
-		margin-right: -40%;
-		margin-left: auto;
+	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
+		margin-right: 1.473684211em;
+		margin-left: 0;
+		width: -webkit-calc(50% - 0.736842105em);
+		width: calc(50% - 0.736842105em);;
 	}
 
-	body:not(.search-results) article:not(.type-page) .size-big,
-	body:not(.search-results) article:not(.type-page) .caption-big {
+	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignright.below-entry-meta {
+		margin-right: -40%;
+		margin-left: 1.473684211em;
+		width: -webkit-calc(60% - 1.4736842105em);
+		width: calc(60% - 1.4736842105em);
+	}
+
+	body:not(.search-results) article:not(.type-page) img.below-entry-meta,
+	body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
 		margin-right: -40%;
 		margin-left: 0;
 	}
