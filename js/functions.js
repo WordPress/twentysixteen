@@ -152,6 +152,7 @@
 
 				// Check if full-size images and captions are larger than or equal to 840px.
 				if ( 'img.size-full' === param ) {
+
 					// jscs:disable
 					// Create an image to find native image width of resized images (i.e. max-width: 100%).
 					var newImg = new Image();
