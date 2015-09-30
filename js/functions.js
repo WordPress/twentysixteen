@@ -152,7 +152,7 @@
 
 				// Check if full-size images and captions are larger than or equal to 840px.
 				if ( 'img.size-full' === param ) {
-					var newImg = new Image(); // Create an image to find native image width of resized images (i.e. max-width: 100%).
+					var newImg = new Image();
 					newImg.src = element.attr( 'src' );
 
 					$( newImg ).load( function() {
