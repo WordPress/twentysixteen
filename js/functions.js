@@ -135,17 +135,15 @@
 			return;
 		}
 
-		// jscs:disable
-		var entryContent = $( '.entry-content' );
-		// jscs:enable
-		entryContent.find( param ).each( function() {
+		$( '.entry-content' ).find( param ).each( function() {
 			var element              = $( this ),
 				elementPos           = element.offset(),
 				elementPosTop        = elementPos.top,
 				entryFooter          = element.closest( 'article' ).find( '.entry-footer' ),
 				entryFooterPos       = entryFooter.offset(),
 				entryFooterPosBottom = entryFooterPos.top + ( entryFooter.height() + 28 ),
-				caption              = element.closest( 'figure' );
+				caption              = element.closest( 'figure' ),
+				newImg;
 
 			// Add 'below-entry-meta' to elements below the entry meta.
 			if ( elementPosTop > entryFooterPosBottom ) {
@@ -153,10 +151,8 @@
 				// Check if full-size images and captions are larger than or equal to 840px.
 				if ( 'img.size-full' === param ) {
 
-					// jscs:disable
 					// Create an image to find native image width of resized images (i.e. max-width: 100%).
-					var newImg = new Image();
-					// jscs:enable
+					newImg = new Image();
 					newImg.src = element.attr( 'src' );
 
 					$( newImg ).load( function() {
