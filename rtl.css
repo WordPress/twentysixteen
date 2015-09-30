@@ -683,13 +683,22 @@ body:not(.search-results) .entry-summary .alignleft {
 		float: left;
 	}
 
-	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.farright {
-		margin-right: -40%;
-		margin-left: auto;
+	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
+		margin-right: 1.473684211em;
+		margin-left: 0;
+		width: -webkit-calc(50% - 0.736842105em);
+		width: calc(50% - 0.736842105em);;
 	}
 
-	body:not(.search-results) article:not(.type-page) .size-big,
-	body:not(.search-results) article:not(.type-page) .caption-big {
+	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignright.below-entry-meta {
+		margin-right: -40%;
+		margin-left: 1.473684211em;
+		width: -webkit-calc(60% - 1.4736842105em);
+		width: calc(60% - 1.4736842105em);
+	}
+
+	body:not(.search-results) article:not(.type-page) img.below-entry-meta,
+	body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
 		margin-right: -40%;
 		margin-left: 0;
 	}
