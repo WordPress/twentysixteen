@@ -8,11 +8,11 @@
  */
 
 /**
- * Set up the WordPress core custom header and custom background features.
+ * Sets up the WordPress core custom header and custom background features.
  *
  * @since Twenty Sixteen 1.0
  *
- * @uses twentysixteen_header_style()
+ * @see twentysixteen_header_style()
  */
 function twentysixteen_custom_header_and_background() {
 	$color_scheme             = twentysixteen_get_color_scheme();
@@ -20,14 +20,14 @@ function twentysixteen_custom_header_and_background() {
 	$default_text_color       = trim( $color_scheme[3], '#' );
 
 	/**
-	 * Filter Twenty Sixteen custom-background support argument.
+	 * Filter the arguments used when adding 'custom-background' support in Twenty Sixteen.
 	 *
 	 * @since Twenty Sixteen 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-background support arguments.
 	 *
-	 *     @type string $default-color     Default color of the background.
+	 *     @type string $default-color Default color of the background.
 	 * }
 	 */
 	add_theme_support( 'custom-background', apply_filters( 'twentysixteen_custom_background_args', array(
@@ -35,19 +35,19 @@ function twentysixteen_custom_header_and_background() {
 	) ) );
 
 	/**
-	 * Filter Twenty Sixteen custom-header support arguments.
+	 * Filter the arguments used when adding 'custom-header' support in Twenty Sixteen.
 	 *
 	 * @since Twenty Sixteen 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
 	 *
-	 *     @type string $default-text-color     Default color of the header text.
-	 *     @type int    $width                  Width in pixels of the custom header image. Default 1200.
-	 *     @type int    $height                 Height in pixels of the custom header image. Default 280.
-	 *     @type bool   $flex-height            Whether to allow flexible-height header images. Default true.
-	 *     @type string $wp-head-callback       Callback function used to style the header image and text
-	 *                                          displayed on the blog.
+	 *     @type string $default-text-color Default color of the header text.
+	 *     @type int      $width            Width in pixels of the custom header image. Default 1200.
+	 *     @type int      $height           Height in pixels of the custom header image. Default 280.
+	 *     @type bool     $flex-height      Whether to allow flexible-height header images. Default true.
+	 *     @type callable $wp-head-callback Callback function used to style the header image and text
+	 *                                      displayed on the blog.
 	 * }
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'twentysixteen_custom_header_args', array(
@@ -62,7 +62,7 @@ add_action( 'after_setup_theme', 'twentysixteen_custom_header_and_background' );
 
 if ( ! function_exists( 'twentysixteen_header_style' ) ) :
 /**
- * Styles the header text displayed on the site
+ * Styles the header text displayed on the site.
  *
  * @since Twenty Sixteen 1.0
  *
@@ -92,11 +92,11 @@ function twentysixteen_header_style() {
 endif; // twentysixteen_header_style
 
 /**
- * Add postMessage support for site title and description for the Customizer.
+ * Adds postMessage support for site title and description for the Customizer.
  *
  * @since Twenty Sixteen 1.0
  *
- * @param WP_Customize_Manager $wp_customize the Customizer object.
+ * @param WP_Customize_Manager $wp_customize The Customizer object.
  */
 function twentysixteen_customize_register( $wp_customize ) {
 	$color_scheme = twentysixteen_get_color_scheme();
@@ -173,7 +173,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
 
 /**
- * Register color schemes for Twenty Sixteen.
+ * Registers color schemes for Twenty Sixteen.
  *
  * Can be filtered with {@see 'twentysixteen_color_schemes'}.
  *
@@ -265,11 +265,11 @@ function twentysixteen_get_color_schemes() {
 
 if ( ! function_exists( 'twentysixteen_get_color_scheme' ) ) :
 /**
- * Get the current Twenty Sixteen color scheme.
+ * Retrieves the current Twenty Sixteen color scheme.
  *
  * @since Twenty Sixteen 1.0
  *
- * @return array An associative array of either the current or default color scheme hex values.
+ * @return array An associative array of either the current or default color scheme HEX values.
  */
 function twentysixteen_get_color_scheme() {
 	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
@@ -285,7 +285,7 @@ endif; // twentysixteen_get_color_scheme
 
 if ( ! function_exists( 'twentysixteen_get_color_scheme_choices' ) ) :
 /**
- * Returns an array of color scheme choices registered for Twenty Sixteen.
+ * Retrieves an array of color scheme choices registered for Twenty Sixteen.
  *
  * @since Twenty Sixteen 1.0
  *
@@ -306,7 +306,7 @@ endif; // twentysixteen_get_color_scheme_choices
 
 if ( ! function_exists( 'twentysixteen_sanitize_color_scheme' ) ) :
 /**
- * Sanitization callback for color schemes.
+ * Handles sanitization for Twenty Sixteen color schemes.
  *
  * @since Twenty Sixteen 1.0
  *
@@ -367,7 +367,7 @@ function twentysixteen_color_scheme_css() {
 add_action( 'wp_enqueue_scripts', 'twentysixteen_color_scheme_css' );
 
 /**
- * Binds JS listener to make Customizer color_scheme control.
+ * Binds the JS listener to make Customizer color_scheme control.
  *
  * Passes color scheme data as colorScheme global.
  *
@@ -702,10 +702,10 @@ CSS;
 
 
 /**
- * Output an Underscore template for generating CSS for the color scheme.
+ * Outputs an Underscore template for generating CSS for the color scheme.
  *
- * The template generates the css dynamically for instant display in the Customizer
- * preview.
+ * The template generates the css dynamically for instant display in the
+ * Customizer preview.
  *
  * @since Twenty Sixteen 1.0
  */
