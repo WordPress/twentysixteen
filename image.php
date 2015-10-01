@@ -92,12 +92,12 @@ get_header(); ?>
 				</article><!-- #post-## -->
 
 				<?php
-					// If comments are open or we have at least one comment, load up the comment template
+					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
 					}
 
-					// Parent post navigation
+					// Parent post navigation.
 					the_post_navigation( array(
 						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
 					) );
