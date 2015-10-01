@@ -315,7 +315,8 @@ if ( ! function_exists( 'twentysixteen_sanitize_color_scheme' ) ) :
 /**
  * Handles sanitization for Twenty Sixteen color schemes.
  *
- * Create your own twentysixteen_sanitize_color_scheme() function to override in a child theme.
+ * Create your own twentysixteen_sanitize_color_scheme() function to override
+ * in a child theme.
  *
  * @since Twenty Sixteen 1.0
  *
