@@ -6,6 +6,8 @@
  * version 4.3. Note that it uses conditional logic to display
  * different content based on the post type.
  *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
