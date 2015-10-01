@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Author biography
+ * The template part for displaying an Author biography
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
