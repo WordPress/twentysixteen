@@ -40,6 +40,8 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  *
+ * Create your own twentysixteen_setup() function to override in a child theme.
+ *
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_setup() {
@@ -171,6 +173,8 @@ add_action( 'widgets_init', 'twentysixteen_widgets_init' );
 if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 /**
  * Register Google fonts for Twenty Sixteen.
+ *
+ * Create your own twentysixteen_fonts_url() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  *
