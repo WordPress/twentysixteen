@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom template tags for this theme.
+ * Custom Twenty Sixteen template tags
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
@@ -11,12 +11,14 @@
 
 if ( ! function_exists( 'twentysixteen_comment_nav' ) ) :
 /**
- * Display navigation to next/previous comments when applicable.
+ * Displays navigation to next/previous comments when applicable.
+ *
+ * Create your own twentysixteen_comment_nav() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_comment_nav() {
-	// Are there comments to navigate through?
+	// Determin if there are comments to navigate through.
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 	?>
 	<nav class="navigation comment-navigation" role="navigation">
@@ -42,7 +44,7 @@ if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags.
  *
- * Create your own twentysixteen_entry_meta() to override in a child theme.
+ * Create your own twentysixteen_entry_meta() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  */
@@ -84,9 +86,9 @@ endif;
 
 if ( ! function_exists( 'twentysixteen_entry_date' ) ) :
 /**
- * Print HTML with date information for current post.
+ * Prints HTML with date information for current post.
  *
- * Create your own twentysixteen_entry_date() to override in a child theme.
+ * Create your own twentysixteen_entry_date() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  */
@@ -114,9 +116,9 @@ endif;
 
 if ( ! function_exists( 'twentysixteen_entry_taxonomies' ) ) :
 /**
- * Print HTML with category and tags for current post.
+ * Prints HTML with category and tags for current post.
  *
- * Create your own twentysixteen_entry_taxonomies() to override in a child theme.
+ * Create your own twentysixteen_entry_taxonomies() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  */
@@ -145,6 +147,8 @@ if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
  *
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
+ *
+ * Create your own twentysixteen_post_thumbnail() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  */
@@ -176,6 +180,8 @@ if ( ! function_exists( 'twentysixteen_excerpt' ) ) :
 	 *
 	 * Wraps the excerpt in a div element.
 	 *
+	 * Create your own twentysixteen_excerpt() function to override in a child theme.
+	 *
 	 * @since Twenty Sixteen 1.0
 	 *
 	 * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
@@ -193,7 +199,10 @@ endif;
 
 if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'Continue reading' link.
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+ * a 'Continue reading' link.
+ *
+ * Create your own twentysixteen_excerpt_more() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  *
@@ -211,7 +220,9 @@ add_filter( 'excerpt_more', 'twentysixteen_excerpt_more' );
 endif;
 
 /**
- * Determine whether blog/site has more than one category.
+ * Determines whether blog/site has more than one category.
+ *
+ * Create your own twentysixteen_categorized_blog() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  *
@@ -242,7 +253,7 @@ function twentysixteen_categorized_blog() {
 }
 
 /**
- * Flush out the transients used in {@see twentysixteen_categorized_blog()}.
+ * Flushes out the transients used in twentysixteen_categorized_blog().
  *
  * @since Twenty Sixteen 1.0
  */
