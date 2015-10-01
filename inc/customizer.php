@@ -64,6 +64,8 @@ if ( ! function_exists( 'twentysixteen_header_style' ) ) :
 /**
  * Styles the header text displayed on the site.
  *
+ * Create your own twentysixteen_header_style() function to override in a child theme.
+ *
  * @since Twenty Sixteen 1.0
  *
  * @see twentysixteen_custom_header_and_background().
@@ -267,6 +269,8 @@ if ( ! function_exists( 'twentysixteen_get_color_scheme' ) ) :
 /**
  * Retrieves the current Twenty Sixteen color scheme.
  *
+ * Create your own twentysixteen_get_color_scheme() function to override in a child theme.
+ *
  * @since Twenty Sixteen 1.0
  *
  * @return array An associative array of either the current or default color scheme HEX values.
@@ -286,6 +290,9 @@ endif; // twentysixteen_get_color_scheme
 if ( ! function_exists( 'twentysixteen_get_color_scheme_choices' ) ) :
 /**
  * Retrieves an array of color scheme choices registered for Twenty Sixteen.
+ *
+ * Create your own twentysixteen_get_color_scheme_choices() function to override
+ * in a child theme.
  *
  * @since Twenty Sixteen 1.0
  *
@@ -307,6 +314,8 @@ endif; // twentysixteen_get_color_scheme_choices
 if ( ! function_exists( 'twentysixteen_sanitize_color_scheme' ) ) :
 /**
  * Handles sanitization for Twenty Sixteen color schemes.
+ *
+ * Create your own twentysixteen_sanitize_color_scheme() function to override in a child theme.
  *
  * @since Twenty Sixteen 1.0
  *
