@@ -189,6 +189,26 @@ add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
  * @return array An associative array of color scheme options.
  */
 function twentysixteen_get_color_schemes() {
+	/**
+	 * Filter the color schemes registered for use with Twenty Sixteen.
+	 *
+	 * The default schemes include 'default', 'dark', 'gray', 'green', and 'yellow'.
+	 *
+	 * @since Twenty Sixteen 1.0
+	 *
+	 * @param array $schemes {
+	 *     Associative array of color schemes data.
+	 *
+	 *     @type array $slug {
+	 *         Associative array of information for setting up the color scheme.
+	 *
+	 *         @type string $label  Color scheme label.
+	 *         @type array  $colors HEX codes for default colors prepended with a hash symbol ('#').
+	 *                              Colors are defined in the following order: Main background, page
+	 *                              background, link, main text, secondary text.
+	 *     }
+	 * }
+	 */
 	return apply_filters( 'twentysixteen_color_schemes', array(
 		'default' => array(
 			'label'  => __( 'Default', 'twentysixteen' ),
