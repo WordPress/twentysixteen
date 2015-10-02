@@ -39,6 +39,10 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
+ *
+ * Create your own twentysixteen_setup() function to override in a child theme.
+ *
+ * @since Twenty Sixteen 1.0
  */
 function twentysixteen_setup() {
 	/*
@@ -113,11 +117,13 @@ endif; // twentysixteen_setup
 add_action( 'after_setup_theme', 'twentysixteen_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
+ * Sets the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
+ *
+ * @since Twenty Sixteen 1.0
  */
 function twentysixteen_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
@@ -125,9 +131,11 @@ function twentysixteen_content_width() {
 add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
 
 /**
- * Register widget area.
+ * Registers a widget area.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ *
+ * @since Twenty Sixteen 1.0
  */
 function twentysixteen_widgets_init() {
 	register_sidebar( array(
@@ -166,6 +174,8 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 /**
  * Register Google fonts for Twenty Sixteen.
  *
+ * Create your own twentysixteen_fonts_url() function to override in a child theme.
+ *
  * @since Twenty Sixteen 1.0
  *
  * @return string Google fonts URL for the theme.
@@ -202,7 +212,7 @@ function twentysixteen_fonts_url() {
 endif;
 
 /**
- * JavaScript Detection.
+ * Handles JavaScript detection.
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  *
@@ -214,7 +224,9 @@ function twentysixteen_javascript_detection() {
 add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueues scripts and styles.
+ *
+ * @since Twenty Sixteen 1.0
  */
 function twentysixteen_scripts() {
 	// Add custom fonts, used in the main stylesheet.
@@ -223,6 +235,7 @@ function twentysixteen_scripts() {
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
+	// Theme stylesheet.
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
 
 	// Load the Internet Explorer specific stylesheet.
@@ -263,8 +276,10 @@ add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
 /**
  * Adds custom classes to the array of body classes.
  *
+ * @since Twenty Sixteen 1.0
+ *
  * @param array $classes Classes for the body element.
- * @return array
+ * @return array (Maybe) filtered body classes.
  */
 function twentysixteen_body_classes( $classes ) {
 	// Adds a class of custom-background-image to sites with a custom background image.
@@ -287,7 +302,7 @@ function twentysixteen_body_classes( $classes ) {
 add_filter( 'body_class', 'twentysixteen_body_classes' );
 
 /**
- * Convert HEX to RGB.
+ * Converts a HEX value to RGB.
  *
  * @since Twenty Sixteen 1.0
  *

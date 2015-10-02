@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Author biography
+ * The template part for displaying an Author biography
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
@@ -12,7 +12,7 @@
 	<div class="author-avatar">
 		<?php
 		/**
-		 * Filter the author bio avatar size.
+		 * Filter the Twenty Sixteen author bio avatar size.
 		 *
 		 * @since Twenty Sixteen 1.0
 		 *
