@@ -296,6 +296,11 @@ input[type="search"].search-field {
  * 6.0 - Accessibility
  */
 
+.site .skip-link {
+	left: auto;
+	right: -9999em;
+}
+
 .site .skip-link:focus {
 	left: auto;
 	right: 6px;
@@ -571,9 +576,9 @@ body:not(.search-results) .entry-summary .alignleft {
 		left: 0.5625em;
 		right: auto;
 		-webkit-transform: rotate(90deg);
-    	-moz-transform: rotate(90deg);
-    	-ms-transform: rotate(90deg);
-    	transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
 	}
 
 	.content-area {
