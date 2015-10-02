@@ -617,8 +617,11 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
+input[type="number"],
 textarea {
-	background: #f7f7f7 -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	background: #f7f7f7;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 	border: 1px solid #d1d1d1;
 	border-radius: 2px;
 	color: #686868;
@@ -631,6 +634,8 @@ input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
 textarea:focus {
 	background-color: #fff;
 	border-color: #007acc;
@@ -3147,6 +3152,8 @@ p > video {
 	.widget input[type="url"],
 	.widget input[type="password"],
 	.widget input[type="search"],
+	.widget input[type="tel"],
+	.widget input[type="number"],
 	.widget textarea {
 		padding: 0.4615384615em 0.5384615385em;
 	}
