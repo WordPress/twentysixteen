@@ -3152,6 +3152,8 @@ p > video {
 	.widget input[type="url"],
 	.widget input[type="password"],
 	.widget input[type="search"],
+	.widget input[type="tel"],
+	.widget input[type="number"],
 	.widget textarea {
 		padding: 0.4615384615em 0.5384615385em;
 	}
