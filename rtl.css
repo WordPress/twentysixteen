@@ -535,15 +535,14 @@ body:not(.search-results) .entry-summary .alignleft {
 		right: -999em;
 	}
 
-	.main-navigation ul ul li:hover > ul,
-	.main-navigation ul ul li.focus > ul {
-		left: auto;
-		right: 100%;
-	}
-
 	.main-navigation ul ul:before {
 		left: auto;
 		right: 7px;
+	}
+
+	.main-navigation .primary-menu > li:last-child ul:before {
+		left: 7px;
+		right: auto;
 	}
 
 	.main-navigation ul ul:after {
@@ -551,8 +550,31 @@ body:not(.search-results) .entry-summary .alignleft {
 		right: 9px;
 	}
 
+	.main-navigation .primary-menu > li:last-child ul:after {
+		left: 9px;
+		right: auto;
+	}
+
 	.main-navigation li:hover > ul,
 	.main-navigation li.focus > ul {
+		right: auto;
+	}
+
+	.main-navigation .primary-menu > li:last-child:hover > ul,
+	.main-navigation .primary-menu > li:last-child.focus > ul {
+		left: 0;
+		right: auto;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: auto;
+		right: 100%;
+	}
+
+	.main-navigation .primary-menu > li:last-child ul li:hover > ul,
+	.main-navigation .primary-menu > li:last-child ul li.focus > ul {
+		left: 100%;
 		right: auto;
 	}
 
@@ -579,6 +601,14 @@ body:not(.search-results) .entry-summary .alignleft {
 		-moz-transform: rotate(90deg);
 		-ms-transform: rotate(90deg);
 		transform: rotate(90deg);
+	}
+
+	.main-navigation .primary-menu > li:last-child ul .menu-item-has-children > a:after {
+		top: 0.8125em;
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 	}
 
 	.content-area {
