@@ -46,7 +46,11 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php the_comments_navigation(); ?>
+		<?php
+			if (function_exists('the_comments_navigation')) {
+				the_comments_navigation();
+			}
+		?>
 
 		<ol class="comment-list">
 			<?php
@@ -58,7 +62,11 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php the_comments_navigation(); ?>
+		<?php
+			if (function_exists('the_comments_navigation')) {
+				the_comments_navigation();
+			}
+		?>
 
 	<?php endif; // Check for have_comments(). ?>
 
