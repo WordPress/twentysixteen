@@ -147,6 +147,8 @@ figure {
 }
 
 hr {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
@@ -204,6 +206,8 @@ input::-moz-focus-inner {
 
 input[type="checkbox"],
 input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-right: 0.4375em;
 	padding: 0;
@@ -434,6 +438,8 @@ big {
  */
 
 html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -441,6 +447,8 @@ html {
 *:before,
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
