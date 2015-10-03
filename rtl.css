@@ -182,8 +182,7 @@ td {
  */
 
 input[type="search"].search-field {
-	padding-right: 0.4375em;
-	padding-left: 49px;
+	border-radius: 0 2px 2px 0;
 }
 
 .search-submit:before {
@@ -621,15 +620,6 @@ body:not(.search-results) .entry-summary .alignleft {
 
 	.widget .alignleft {
 		margin: 0.2307692308em 1.6153846154em 1.6153846154em 0;
-	}
-
-	.widget input[type="search"].search-field {
-		padding-right: 0.5384615385em;
-		padding-left: 42px;
-	}
-
-	.widget .search-submit:before {
-		left: 1px;
 	}
 
 	.tagcloud a {
