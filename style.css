@@ -680,7 +680,9 @@ textarea:focus {
 }
 
 input[type="search"].search-field {
-	padding-right: 49px;
+	border-radius: 2px 0 0 2px;
+	width: -webkit-calc(100% - 42px);
+	width: calc(100% - 42px);
 }
 
 .search-submit:before {
@@ -689,7 +691,7 @@ input[type="search"].search-field {
 	left: 2px;
 	line-height: 42px;
 	position: relative;
-	width: 42px;
+	width: 40px;
 }
 
 .search-submit {
@@ -3219,14 +3221,15 @@ p > video {
 	}
 
 	.widget input[type="search"].search-field {
-		padding-right: 42px;
+		width: -webkit-calc(100% - 35px);
+		width: calc(100% - 35px);
 	}
 
 	.widget .search-submit:before {
 		font-size: 16px;
 		left: 1px;
 		line-height: 35px;
-		width: 35px;
+		width: 34px;
 	}
 
 	.widget button.search-submit {
