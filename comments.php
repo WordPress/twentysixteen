@@ -47,7 +47,7 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php
-			if (function_exists('the_comments_navigation')) {
+			if ( function_exists( 'the_comments_navigation' ) ) {
 				the_comments_navigation();
 			}
 		?>
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		</ol><!-- .comment-list -->
 
 		<?php
-			if (function_exists('the_comments_navigation')) {
+			if ( function_exists( 'the_comments_navigation' ) ) {
 				the_comments_navigation();
 			}
 		?>
