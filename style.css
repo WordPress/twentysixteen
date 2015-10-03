@@ -3212,6 +3212,9 @@ p > video {
 
 	.widget input[type="search"].search-field {
 		padding-right: 42px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
 
 	.widget .search-submit:before {
