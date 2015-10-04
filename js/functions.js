@@ -85,7 +85,6 @@
 						$( '.main-navigation li' ).removeClass( 'focus' ); 
 					}
 				} );
-
 				siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.twentysixteen', function( e ) {
 					var el = $( this ).parent( 'li' );
 
