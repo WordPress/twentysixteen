@@ -306,8 +306,6 @@ h4,
 h5,
 h6 {
 	clear: both;
-	-webkit-font-variant-ligatures: common-ligatures;
-	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
 	margin: 0;
 	text-rendering: optimizeLegibility;
@@ -1065,8 +1063,6 @@ a:active {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
-	-webkit-font-variant-ligatures: common-ligatures;
-	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
 	line-height: 1.2173913043;
 	text-rendering: optimizeLegibility;
