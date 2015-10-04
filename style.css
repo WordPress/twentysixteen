@@ -307,6 +307,7 @@ h5,
 h6 {
 	clear: both;
 	-webkit-font-variant-ligatures: common-ligatures;
+	-moz-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
 	margin: 0;
