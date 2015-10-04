@@ -82,7 +82,7 @@
 				$( 'body' ).on( 'touchstart.twentysixteen', function( ) {
 					if ( ! $( event.target ).closest( '.main-navigation li' ).length )
 					{
-						$( '.main-navigation li' ).removeClass( 'focus' ); 
+						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				} );
 				siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.twentysixteen', function( e ) {
