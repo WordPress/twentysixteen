@@ -307,6 +307,7 @@ h5,
 h6 {
 	clear: both;
 	-webkit-font-variant-ligatures: common-ligatures;
+	-moz-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
 	margin: 0;
@@ -1066,6 +1067,7 @@ a:active {
 	font-size: 23px;
 	font-size: 1.4375rem;
 	-webkit-font-variant-ligatures: common-ligatures;
+	-moz-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
 	font-weight: 700;
 	line-height: 1.2173913043;
