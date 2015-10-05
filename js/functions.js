@@ -80,8 +80,7 @@
 		function toggleFocusClassTouchScreen() {
 			if ( window.innerWidth > 910 ) {
 				$( 'body' ).on( 'touchstart.twentysixteen', function( ) {
-					if ( ! $( event.target ).closest( '.main-navigation li' ).length )
-					{
+					if ( ! $( event.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				} );
