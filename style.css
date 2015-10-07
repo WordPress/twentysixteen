@@ -2958,7 +2958,6 @@ p > video {
 	}
 
 	.main-navigation ul ul ul {
-		left: -999em;
 		top: -1px;
 	}
 
@@ -2973,14 +2972,9 @@ p > video {
 		border-bottom-width: 0;
 	}
 
-	.main-navigation ul ul li:hover > ul,
-	.main-navigation ul ul li.focus > ul {
-		left: 100%;
-	}
-
 	.main-navigation ul ul a {
 		white-space: normal;
-		width: 15em;
+		width: 12.6875em;
 	}
 
 	.main-navigation ul ul:before,
@@ -2993,20 +2987,27 @@ p > video {
 	.main-navigation ul ul:before {
 		border-color: #d1d1d1 transparent;
 		border-width: 0 10px 10px;
-		left: 7px;
+		right: 9px;
 		top: -9px;
 	}
 
 	.main-navigation ul ul:after {
 		border-color: #fff transparent;
 		border-width: 0 8px 8px;
-		left: 9px;
+		right: 11px;
 		top: -7px;
 	}
 
 	.main-navigation li:hover > ul,
 	.main-navigation li.focus > ul {
 		left: auto;
+		right: 0;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: auto;
+		right: 100%;
 	}
 
 	.main-navigation .menu-item-has-children > a {
@@ -3027,11 +3028,11 @@ p > video {
 
 	.main-navigation ul ul .menu-item-has-children > a:after {
 		right: 0.5625em;
-		top: 0.8125em;
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		transform: rotate(-90deg);
+		top: 0.875em;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
 	}
 
 	.dropdown-toggle,
