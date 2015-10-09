@@ -345,11 +345,6 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/*
- *
- *
- * @link https://core.trac.wordpress.org/browser/trunk/src/wp-includes/media.php#L1035
- */
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  *
