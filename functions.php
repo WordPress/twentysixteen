@@ -355,8 +355,8 @@ require get_template_directory() . '/inc/customizer.php';
  *
  * @since Twenty Sixteen 1.0
  *
- * @param array $args An array of arguments used to create a 'sizes' attribute.
- * @param int $attachment_id Post ID of the original image.
+ * @param array  $args An array of arguments used to create a 'sizes' attribute.
+ * @param int    $id Post ID of the original image.
  * @param string $size Name of the image size being used.
  * @return string A sizes attribute to be used on an image with a srcset attribute
  */
