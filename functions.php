@@ -72,6 +72,13 @@ function twentysixteen_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1200, 0, true );
 
+	/*
+	 * Add image size to enhance responsive image functionality
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/add_image_size/
+	 */
+	add_image_size( 'intermediate-width', 600, 600 );
+
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'twentysixteen' ),
@@ -239,32 +246,32 @@ function twentysixteen_scripts() {
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20151007' );
+	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20150825' );
 	wp_style_add_data( 'twentysixteen-ie', 'conditional', 'lt IE 10' );
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'twentysixteen-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'twentysixteen-style' ), '20151007' );
+	wp_enqueue_style( 'twentysixteen-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'twentysixteen-style' ), '20150825' );
 	wp_style_add_data( 'twentysixteen-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'twentysixteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentysixteen-style' ), '20151007' );
+	wp_enqueue_style( 'twentysixteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentysixteen-style' ), '20150825' );
 	wp_style_add_data( 'twentysixteen-ie7', 'conditional', 'lt IE 8' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'twentysixteen-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'twentysixteen-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151007', true );
+	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20150825', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'twentysixteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20151007' );
+		wp_enqueue_script( 'twentysixteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20150825' );
 	}
 
-	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20151007', true );
+	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150825', true );
 
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'twentysixteen' ),
@@ -339,23 +346,26 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /*
- * Add image size to enhance responsive image functionality
  *
- * @link https://developer.wordpress.org/reference/functions/add_image_size/
- */
-add_image_size( 'max-content', 600, 600 );
-
-/*
- * Add custom image sizes attribute to enhance responsive image functionality
  *
  * @link https://core.trac.wordpress.org/browser/trunk/src/wp-includes/media.php#L1035
  */
-add_filter( 'wp_image_sizes_args', 'twentysixteen_image_sizes_attr', 10 , 3 );
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ *
+ * @since Twenty Sixteen 1.0
+ *
+ * @param array $args An array of arguments used to create a 'sizes' attribute.
+ * @param int $attachment_id Post ID of the original image.
+ * @param string $size Name of the image size being used.
+ * @return string A sizes attribute to be used on an image with a srcset attribute
+ */
 function twentysixteen_image_sizes_attr( $args, $id, $size ) {
-    if ( $size == 'full' || $size == 'large' ) {
-        $args['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1319px) 44vw, 600px';
-    } elseif ( $size == 'post-thumbnail' ) {
-    	$args['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1379px) 62vw, 840px';
-    }
-    return $args;
+	if ( 'large' == $size ) {
+		$args['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1319px) 44vw, 600px';
+	} elseif ( 'full' == $size || 'post-thumbnail' == $size ) {
+		$args['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1379px) 62vw, 840px';
+	}
+	return $args;
 }
+add_filter( 'wp_image_sizes_args', 'twentysixteen_image_sizes_attr', 10 , 3 );
