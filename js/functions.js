@@ -79,8 +79,8 @@
 		// Toggle `focus` class to allow submenu access on tablets.
 		function toggleFocusClassTouchScreen() {
 			if ( window.innerWidth > 910 ) {
-				$( 'body' ).on( 'touchstart.twentysixteen', function( ec ) {
-					if ( ! $( ec.target ).closest( '.main-navigation li' ).length ) {
+				$( 'document.body' ).on( 'touchstart.twentysixteen', function( e ) {
+					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				} );
