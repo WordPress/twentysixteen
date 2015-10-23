@@ -5,7 +5,7 @@ Hey, it’s really great you want to contribute to the new default theme for the
 Unlike previous default themes, Twenty Sixteen will remain on GitHub. As a result, the process is a little different. The theme is synced to the WordPress.org theme repository every night. It is also bundled with WordPress 4.4 from beta onwards.
 
 ## Reporting an issue
-Twenty Sixteen should have all issues reported on GitHub at github.com/WordPress/twentysixteen/. We are not using trac for issue reporting.
+Twenty Sixteen should have all issues reported on GitHub at https://github.com/WordPress/twentysixteen/. We are not using trac for issue reporting.
 
 ## Best Practices
 Whatever you add, make sure you keep to the theme review handbook guidelines here: https://make.wordpress.org/themes/handbook/review/required/.
