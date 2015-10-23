@@ -8,7 +8,7 @@ Unlike previous default themes, Twenty Sixteen will remain on GitHub. As a resul
 Twenty Sixteen should have all issues reported on GitHub at github.com/WordPress/twentysixteen/. We are not using trac for issue reporting.
 
 ## Best Practices
-Whatever you add, make sure you keep to the theme review handbook.
+Whatever you add, make sure you keep to the theme review handbook guidelines.
 
 ### Commit Messages
 Here are some good ideas for commit messages:
