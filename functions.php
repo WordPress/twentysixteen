@@ -350,17 +350,18 @@ require get_template_directory() . '/inc/customizer.php';
  *
  * @since Twenty Sixteen 1.0
  *
- * @param array  $args An array of arguments used to create a 'sizes' attribute.
- * @param int    $id Post ID of the original image.
- * @param string $size Name of the image size being used.
- * @return string A sizes attribute to be used on an image with a srcset attribute
+ * @param string       $sizes A source size value for use in a 'sizes' attribute.
+ * @param int          $id    Post ID of the original image.
+ * @param array|string $size  Image size. Accepts any valid image size, or an array of width and
+ *                            height values in pixels (in that order). Default 'medium'.
+ * @return string A source size value for use in a 'sizes' attribute.
  */
-function twentysixteen_image_sizes_attr( $args, $id, $size ) {
-	if ( 'large' == $size ) {
-		$args['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1361px) 44vw, 600px';
-	} elseif ( 'full' == $size || 'post-thumbnail' == $size ) {
-		$args['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+function twentysixteen_image_sizes_attr( $sizes, $id, $size ) {
+	if ( 'large' === $size ) {
+		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1361px) 44vw, 600px';
+	} elseif ( 'full' === $size || 'post-thumbnail' === $size ) {
+		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
 	}
-	return $args;
+	return $sizes;
 }
-add_filter( 'wp_image_sizes_args', 'twentysixteen_image_sizes_attr', 10 , 3 );
+add_filter( 'wp_get_attachment_image_sizes', 'twentysixteen_image_sizes_attr', 10 , 3 );
