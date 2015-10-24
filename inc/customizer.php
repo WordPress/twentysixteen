@@ -216,7 +216,7 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
-				'#c7c7c7',
+				'#aaaaaa',
 				'#ededed',
 				'#ededed',
 			),
