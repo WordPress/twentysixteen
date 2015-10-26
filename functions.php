@@ -144,8 +144,8 @@ function twentysixteen_widgets_init() {
 		'name'          => esc_html__( 'Content Bottom 1', 'twentysixteen' ),
 		'id'            => 'sidebar-2',
 		'description'   => esc_html__( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -154,8 +154,8 @@ function twentysixteen_widgets_init() {
 		'name'          => esc_html__( 'Content Bottom 2', 'twentysixteen' ),
 		'id'            => 'sidebar-3',
 		'description'   => esc_html__( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
