@@ -72,13 +72,6 @@ function twentysixteen_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1200, 0, true );
 
-	/*
-	 * Add image size to enhance responsive image functionality
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/add_image_size/
-	 */
-	add_image_size( 'twentysixteen-intermediate-width', 600, 600 );
-
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'twentysixteen' ),
@@ -358,7 +351,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 function twentysixteen_image_sizes_attr( $sizes, $id, $size ) {
 	if ( 'large' === $size ) {
-		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1361px) 44vw, 600px';
+		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 44vw, 600px';
 	} elseif ( 'full' === $size || 'post-thumbnail' === $size ) {
 		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
 	}
