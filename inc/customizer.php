@@ -237,19 +237,19 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
-				'#aaaaaa',
-				'#ededed',
-				'#ededed',
+				'#c7c7c7',
+				'#f2f2f2',
+				'#f2f2f2',
 			),
 		),
-		'green' => array(
-			'label'  => __( 'Green', 'twentysixteen' ),
+		'red' => array(
+			'label'  => __( 'Red', 'twentysixteen' ),
 			'colors' => array(
 				'#ffffff',
-				'#acc1a2',
-				'#6d8c87',
-				'#ffffff',
-				'#efeef4',
+				'#ff675f',
+				'#640c1f',
+				'#402b30',
+				'#402b30',
 			),
 		),
 		'yellow' => array(
@@ -257,9 +257,9 @@ function twentysixteen_get_color_schemes() {
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
-				'#7f7d6f',
-				'#3b3721',
 				'#774e24',
+				'#3b3721',
+				'#5b4d3e',
 			),
 		),
 	) );
