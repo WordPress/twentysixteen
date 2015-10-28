@@ -350,10 +350,12 @@ require get_template_directory() . '/inc/customizer.php';
  * @return string A source size value for use in a 'sizes' attribute.
  */
 function twentysixteen_image_sizes_attr( $sizes, $id, $size ) {
-	if ( 'large' === $size ) {
+	if ( 'large' === $size && 'post' === get_post_type() ) {
 		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 44vw, 600px';
-	} elseif ( 'full' === $size || 'post-thumbnail' === $size ) {
+	} elseif ( 'full' === $size || ( 'page' === get_post_type() && 'large' === $size ) || ( 'post-thumbnail' === $size &&  is_active_sidebar( 'sidebar-1' ) ) ) {
 		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+	} elseif ( false === is_active_sidebar( 'sidebar-1' ) && 'post-thumbnail' === $size ) {
+		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 65vw, (max-width: 1362px) 88vw, 1200px';
 	}
 	return $sizes;
 }
