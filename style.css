@@ -2928,12 +2928,12 @@ p > video {
 		margin: 0 -0.875em;
 	}
 
-	.main-navigation .primary-menu {
+	.main-navigation .primary-menu,
+	.main-navigation .primary-menu > li {
 		border: 0;
 	}
 
-	.main-navigation li {
-		border: 0;
+	.main-navigation .primary-menu > li {
 		float: left;
 	}
 

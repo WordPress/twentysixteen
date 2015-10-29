@@ -519,7 +519,7 @@ body:not(.search-results) .entry-summary .alignleft {
  */
 
 @media screen and (min-width: 56.875em) {
-	.main-navigation li {
+	.main-navigation .primary-menu > li {
 		float: right;
 	}
 
