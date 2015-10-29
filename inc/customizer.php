@@ -670,7 +670,8 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.comment-list .pingback,
 	.comment-list .trackback,
 	.comment-reply-link,
-	.no-comments {
+	.no-comments,
+	.widecolumn .mu_register .mu_alert {
 		border-color: {$colors['main_text_color']}; /* Fallback for IE7 and IE8 */
 		border-color: {$colors['border_color']};
 	}
@@ -1023,7 +1024,8 @@ function twentysixteen_main_text_color_css() {
 		.comment-list .pingback,
 		.comment-list .trackback,
 		.comment-reply-link,
-		.no-comments {
+		.no-comments,
+		.widecolumn .mu_register .mu_alert {
 			border-color: %1$s; /* Fallback for IE7 and IE8 */
 			border-color: %2$s;
 		}

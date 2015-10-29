@@ -2569,12 +2569,12 @@ p > video {
 	width: auto;
 }
 
-.widecolumn .mu_alert {
-	margin-bottom: 1.75em;
-}
-
-.widecolumn  .mu_register .mu_alert {
-	padding: 0.875em;
+.widecolumn .mu_register .mu_alert {
+	background: transparent;
+	border-color: #d1d1d1;
+	color: inherit;
+	margin-bottom: 3.5em;
+	padding: 1.75em;
 }
 
 .widecolumn form,
