@@ -9,7 +9,7 @@
 ?>
 
 <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-	<div id="secondary" class="sidebar widget-area" role="complementary">
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</div><!-- .sidebar .widget-area -->
+	</aside><!-- .sidebar .widget-area -->
 <?php endif; ?>
