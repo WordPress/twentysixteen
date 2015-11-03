@@ -1174,10 +1174,10 @@ a:active {
 .pagination .prev:before,
 .pagination .next:before {
 	font-size: 32px;
-	height: 52px;
+	height: 53px;
 	line-height: 52px;
 	position: relative;
-	width: 52px;
+	width: 53px;
 }
 
 .pagination .prev:hover,
