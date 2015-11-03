@@ -4,7 +4,7 @@
 
 ( function( $ ) {
 	$( document ).on( 'keydown.twentysixteen', function( e ) {
-		var url = '';
+		var url = false;
 
 		// Left arrow key code.
 		if ( 37 === e.which ) {
@@ -19,7 +19,7 @@
 			return;
 		}
 
-		if ( '' !== url && ! $( 'textarea, input' ).is( ':focus' ) ) {
+		if ( url && ! $( 'textarea, input' ).is( ':focus' ) ) {
 			window.location = url;
 		}
 	} );
