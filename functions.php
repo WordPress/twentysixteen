@@ -340,21 +340,42 @@ require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images
  *
  * @since Twenty Sixteen 1.0
  *
  * @param string       $sizes A source size value for use in a 'sizes' attribute.
- * @param int          $id    Post ID of the original image.
- * @param array|string $size  Image size. Accepts any valid image size, or an array of width and
- *                            height values in pixels (in that order). Default 'medium'.
- * @return string A source size value for use in a 'sizes' attribute.
+ * @param array        $size  Image size. Accepts an array of width and height
+ *                            values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function twentysixteen_image_sizes_attr( $sizes, $id, $size ) {
-	if ( 'large' === $size ) {
-		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 44vw, 600px';
-	} elseif ( 'full' === $size || 'post-thumbnail' === $size ) {
-		$sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+	if ( 'page' === get_post_type() ) {
+		840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 60vw, (max-width: 1379px) 62vw, 840px';
+	} else {
+		600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 44vw, 600px';
 	}
 	return $sizes;
 }
-add_filter( 'wp_get_attachment_image_sizes', 'twentysixteen_image_sizes_attr', 10 , 3 );
+add_filter( 'wp_get_attachment_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails
+ *
+ * @since Twenty Sixteen 1.0
+ *
+ * @param string       $sizes A source size value for use in a 'sizes' attribute.
+ * @param array        $size  Image size. Accepts an array of width and height
+ *                            values in pixels (in that order).
+ * @return string A source size value for use in a post thumbnail 'sizes' attribute.
+ */
+function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+	if ( $size === 'post-thumbnail' ) {
+		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+		false === is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 65vw, (max-width: 1362px) 88vw, 1200px';
+	}
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_post_thumbnail_sizes_attr', 10 , 3 );
