@@ -367,14 +367,14 @@ add_filter( 'wp_get_attachment_image_sizes', 'twentysixteen_content_image_sizes_
  * @since Twenty Sixteen 1.0
  *
  * @param array $attr Attributes for the image markup.
- * @param int  $attachment Image attachment ID.
+ * @param int   $attachment Image attachment ID.
  * @param array $size Registered image size or flat array of height and width dimensions.
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
 function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
 		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
-		false === is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 65vw, (max-width: 1362px) 88vw, 1200px';
+		is_active_sidebar( 'sidebar-1' ) === false && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 65vw, (max-width: 1362px) 88vw, 1200px';
 	}
 	return $attr;
 }
