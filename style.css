@@ -1686,6 +1686,11 @@ a.post-thumbnail:focus {
 	opacity: 0.85;
 }
 
+.entry-content,
+.entry-summary {
+	border-color: #d1d1d1;
+}
+
 .entry-content h1,
 .entry-summary h1,
 .comment-content h1,
@@ -1888,8 +1893,9 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .author-info {
-	border-top: 1px solid #d1d1d1;
-	border-bottom: 1px solid #d1d1d1;
+	border-color: inherit;
+	border-style: solid;
+	border-width: 1px 0 1px 0;
 	clear: both;
 	padding-top: 1.75em;
 	padding-bottom: 1.75em;
@@ -3446,7 +3452,7 @@ p > video {
 	}
 
 	.author-info {
-		border-bottom: 0;
+		border-bottom-width: 0;
 		padding-bottom: 0;
 	}
 
