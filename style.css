@@ -1891,7 +1891,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	border-top: 1px solid #d1d1d1;
 	border-bottom: 1px solid #d1d1d1;
 	clear: both;
-	margin-top: 1.75em;
 	padding-top: 1.75em;
 	padding-bottom: 1.75em;
 }
