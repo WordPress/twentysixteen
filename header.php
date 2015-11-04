@@ -76,12 +76,13 @@
 			<?php if ( get_header_image() ) : ?>
 				<?php
 					/**
-					 * Filter the default twentysixteen header image sizes attribute.
+					 * Filter the default twentysixteen custom header sizes attribute.
 					 *
 					 * @since Twenty Sixteen 1.0
 					 *
-					 * @param string $sizes A valid sizes attribute. Default
-					 *                '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px'.
+					 * @param string $custom_header_sizes sizes attribute
+					 * for Custom Header. Default '(max-width: 709px) 85vw,
+					 * (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px'.
 					 */
 					$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
 				?>
