@@ -352,7 +352,7 @@ require get_template_directory() . '/inc/customizer.php';
 function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 	if ( 'page' === get_post_type() ) {
-		840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 60vw, (max-width: 1379px) 62vw, 840px';
+		840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 1362px) 62vw, 840px';
 		840 >= $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
 		600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 44vw, 600px';
@@ -360,7 +360,7 @@ function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
 	}
 	return $sizes;
 }
-add_filter( 'wp_get_attachment_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
+add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
