@@ -346,18 +346,21 @@ require get_template_directory() . '/inc/customizer.php';
  *
  * @param string $sizes A source size value for use in a 'sizes' attribute.
  * @param array  $size  Image size. Accepts an array of width and height
- *                            values in pixels (in that order).
+ *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
+
+	840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
+
 	if ( 'page' === get_post_type() ) {
-		840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 1362px) 62vw, 840px';
-		840 >= $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+		840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
-		600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 44vw, 600px';
-		600 >= $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+		840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
+		600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
+
 	return $sizes;
 }
 add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
@@ -375,8 +378,8 @@ add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr'
  */
 function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
-		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 66vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
-		is_active_sidebar( 'sidebar-1' ) === false && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 65vw, (max-width: 1362px) 88vw, 1200px';
+		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
+		! is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px';
 	}
 	return $attr;
 }
