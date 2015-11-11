@@ -937,7 +937,6 @@ function twentysixteen_main_text_color_css() {
 	$css = '
 		/* Custom Main Text Color */
 		body,
-		select,
 		blockquote cite,
 		blockquote small,
 		.main-navigation a,
