@@ -297,6 +297,11 @@ function twentysixteen_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'twentysixteen_body_classes' );
