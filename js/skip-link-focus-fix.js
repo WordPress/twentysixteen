@@ -27,6 +27,9 @@
 				}
 
 				element.focus();
+
+				// Repositions the window on jump-to-anchor to account for admin bar and border height.
+				window.scrollBy( 0, -53 );
 			}
 		}, false );
 	}
