@@ -34,8 +34,8 @@
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				__( 'Edit %s', 'twentysixteen' ),
-				the_title( '<span class="screen-reader-text">', '</span>', false )
+				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+				the_title( '', '', false )
 			),
 			'<footer class="entry-footer"><span class="edit-link">',
 			'</span></footer><!-- .entry-footer -->'
