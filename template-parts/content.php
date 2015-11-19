@@ -25,8 +25,8 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s', 'twentysixteen' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				__( 'Continue reading<span class="screen-reader-text"> %s</span>', 'twentysixteen' ),
+				the_title( '', '', false )
 			) );
 
 			wp_link_pages( array(
@@ -46,8 +46,8 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					__( 'Edit %s', 'twentysixteen' ),
-					the_title( '<span class="screen-reader-text">', '</span>', false )
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+					the_title( '', '', false )
 				),
 				'<span class="edit-link">',
 				'</span>'
