@@ -26,7 +26,7 @@
 					sprintf(
 						/* translators: %s: Name of current post */
 						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-						the_title( '', '', false )
+						get_the_title()
 					),
 					'<span class="edit-link">',
 					'</span>'
@@ -41,7 +41,7 @@
 				sprintf(
 					/* translators: %s: Name of current post */
 					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					the_title( '', '', false )
+					get_the_title()
 				),
 				'<footer class="entry-footer"><span class="edit-link">',
 				'</span></footer><!-- .entry-footer -->'
