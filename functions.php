@@ -318,11 +318,11 @@ add_filter( 'body_class', 'twentysixteen_body_classes' );
 function twentysixteen_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
-	if ( strlen( $color ) == 3 ) {
+	if ( strlen( $color ) === 3 ) {
 		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
 		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
 		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
-	} else if ( strlen( $color ) == 6 ) {
+	} else if ( strlen( $color ) === 6 ) {
 		$r = hexdec( substr( $color, 0, 2 ) );
 		$g = hexdec( substr( $color, 2, 2 ) );
 		$b = hexdec( substr( $color, 4, 2 ) );
