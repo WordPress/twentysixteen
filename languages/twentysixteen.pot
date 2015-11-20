@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twenty Sixteen 0.1.20150828\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/twentysixteen\n"
-"POT-Creation-Date: 2015-11-19 23:12:07+00:00\n"
+"POT-Creation-Date: 2015-11-20 12:33:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,14 +35,12 @@ msgid "Page"
 msgstr ""
 
 #. translators: %s: post title
-
 #: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-
 #: comments.php:35
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -62,6 +60,8 @@ msgstr ""
 msgid "Footer Social Links Menu"
 msgstr ""
 
+#. #-#-#-#-#  twentysixteen.pot (Twenty Sixteen 0.1.20150828)  #-#-#-#-#
+#. Author URI of the plugin/theme
 #: footer.php:51
 msgid "https://wordpress.org/"
 msgstr ""
@@ -101,7 +101,6 @@ msgstr ""
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
-
 #: functions.php:189
 msgctxt "Merriweather font: on or off"
 msgid "on"
@@ -110,7 +109,6 @@ msgstr ""
 #. translators: If there are characters in your language that are not supported
 #. by Montserrat, translate this to 'off'. Do not translate into your own
 #. language.
-
 #: functions.php:194
 msgctxt "Montserrat font: on or off"
 msgid "on"
@@ -119,7 +117,6 @@ msgstr ""
 #. translators: If there are characters in your language that are not supported
 #. by Inconsolata, translate this to 'off'. Do not translate into your own
 #. language.
-
 #: functions.php:199
 msgctxt "Inconsolata font: on or off"
 msgid "on"
@@ -160,7 +157,6 @@ msgid "Full size"
 msgstr ""
 
 #. translators: %s: Name of current post
-
 #: image.php:84 template-parts/content-page.php:37
 #: template-parts/content-search.php:28 template-parts/content-search.php:43
 #: template-parts/content-single.php:45 template-parts/content.php:49
@@ -169,11 +165,15 @@ msgstr ""
 
 #: image.php:102 single.php:29
 msgctxt "Parent post link"
-msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
+"%title</span>"
 msgstr ""
 
 #: inc/back-compat.php:41 inc/back-compat.php:53 inc/back-compat.php:68
-msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
+msgid ""
+"Twenty Sixteen requires at least WordPress version 4.4. You are running "
+"version %s. Please upgrade and try again."
 msgstr ""
 
 #: inc/customizer.php:117
@@ -251,7 +251,6 @@ msgid "Tags"
 msgstr ""
 
 #. translators: %s: Name of current post
-
 #: inc/template-tags.php:184
 msgid "Continue reading %s"
 msgstr ""
@@ -304,15 +303,20 @@ msgid "Nothing Found"
 msgstr ""
 
 #: template-parts/content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: template-parts/content.php:14
@@ -320,10 +324,10 @@ msgid "Featured"
 msgstr ""
 
 #. translators: %s: Name of current post
-
 #: template-parts/content.php:28
 msgid "Continue reading<span class=\"screen-reader-text\"> %s</span>"
 msgstr ""
+
 #. Theme Name of the plugin/theme
 msgid "Twenty Sixteen"
 msgstr ""
@@ -333,13 +337,15 @@ msgid "https://wordpress.org/themes/twentysixteen/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
+msgid ""
+"Twenty Sixteen is a modernized take on an ever-popular WordPress layout — "
+"the horizontal masthead with an optional right sidebar that works perfectly "
+"for blogs and websites. It has custom color options with beautiful default "
+"color schemes, a harmonious fluid grid using a mobile-first approach, and "
+"impeccable polish in every detail. Twenty Sixteen will make your WordPress "
+"look beautiful everywhere."
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "the WordPress team"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://wordpress.org/"
 msgstr ""
