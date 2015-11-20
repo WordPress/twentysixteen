@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twenty Sixteen 0.1.20150828\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/twentysixteen\n"
-"POT-Creation-Date: 2015-11-20 12:33:47+00:00\n"
+"POT-Creation-Date: 2015-11-20 12:58:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -251,8 +251,8 @@ msgid "Tags"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:184
-msgid "Continue reading %s"
+#: inc/template-tags.php:184 template-parts/content.php:28
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: search.php:18
@@ -321,11 +321,6 @@ msgstr ""
 
 #: template-parts/content.php:14
 msgid "Featured"
-msgstr ""
-
-#. translators: %s: Name of current post
-#: template-parts/content.php:28
-msgid "Continue reading<span class=\"screen-reader-text\"> %s</span>"
 msgstr ""
 
 #. Theme Name of the plugin/theme
