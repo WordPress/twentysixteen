@@ -194,7 +194,7 @@ function twentysixteen_get_color_schemes() {
 	/**
 	 * Filter the color schemes registered for use with Twenty Sixteen.
 	 *
-	 * The default schemes include 'default', 'dark', 'gray', 'green', and 'yellow'.
+	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
 	 *
 	 * @since Twenty Sixteen 1.0
 	 *
