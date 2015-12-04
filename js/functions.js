@@ -10,7 +10,7 @@
 
 	function initMainNavigation( container ) {
 
-		// Add dropdown toggle that display child menu items.
+		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', {
 			'class': 'dropdown-toggle',
 			'aria-expanded': false
