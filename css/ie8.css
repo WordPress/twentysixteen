@@ -132,7 +132,7 @@ code {
 .comment-navigation .nav-previous + .nav-next:before {
 	content: "\002f";
 	display: inline-block;
-	opacity: 0.7;
+	filter: alpha(opacity=70);
 	padding: 0 0.538461538em;
 }
 
@@ -156,7 +156,7 @@ code {
 .entry-footer > span:before {
 	content: "\002f";
 	display: inline-block;
-	opacity: 0.7;
+	filter: alpha(opacity=70);
 	padding: 0 0.538461538em;
 }
 
