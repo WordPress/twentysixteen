@@ -74,8 +74,8 @@ function twentysixteen_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'twentysixteen' ),
-		'social'  => __( 'Social Links Menu', 'twentysixteen' ),
+		'primary' => esc_html__( 'Primary Menu', 'twentysixteen' ),
+		'social'  => esc_html__( 'Social Links Menu', 'twentysixteen' ),
 	) );
 
 	/*
@@ -139,9 +139,9 @@ add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
  */
 function twentysixteen_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'twentysixteen' ),
+		'name'          => esc_html__( 'Sidebar', 'twentysixteen' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
+		'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -149,9 +149,9 @@ function twentysixteen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
+		'name'          => esc_html__( 'Content Bottom 1', 'twentysixteen' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => esc_html__( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -159,9 +159,9 @@ function twentysixteen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
+		'name'          => esc_html__( 'Content Bottom 2', 'twentysixteen' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
+		'description'   => esc_html__( 'Appears at the bottom of the content on posts and pages.', 'twentysixteen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -267,8 +267,8 @@ function twentysixteen_scripts() {
 	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150825', true );
 
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
-		'expand'   => __( 'expand child menu', 'twentysixteen' ),
-		'collapse' => __( 'collapse child menu', 'twentysixteen' ),
+		'expand'   => esc_html__( 'expand child menu', 'twentysixteen' ),
+		'collapse' => esc_html__( 'collapse child menu', 'twentysixteen' ),
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
