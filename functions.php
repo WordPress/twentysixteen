@@ -389,3 +389,19 @@ function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_post_thumbnail_sizes_attr', 10 , 3 );
+
+/**
+ * Modifies tag cloud widget arguments to have all tags in the widget same font size.
+ *
+ * @since Twenty Sixteen 1.1
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array A new modified arguments.
+ */
+function twentysixteen_widget_tag_cloud_args( $args ) {
+	$args['largest'] = 1;
+	$args['smallest'] = 1;
+	$args['unit'] = 'em';
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );

@@ -1487,7 +1487,6 @@ blockquote:after,
 	border-radius: 2px;
 	display: inline-block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: inherit !important;
 	line-height: 1;
 	margin: 0 0.1875em 0.4375em 0;
 	padding: 0.5625em 0.4375em 0.5em;
