@@ -1960,7 +1960,7 @@ body:not(.search-results) .entry-summary > :last-child,
 	color: #007acc;
 }
 
-.entry-footer > span:not(:first-child):before {
+.entry-footer > span:not(:last-child):after {
 	content: "\002f";
 	display: inline-block;
 	opacity: 0.7;
@@ -3514,7 +3514,7 @@ p > video {
 		width: 21.42857143%;
 	}
 
-	body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:first-child):before {
+	body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
 		display: none;
 	}
 

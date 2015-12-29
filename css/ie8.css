@@ -153,15 +153,11 @@ code {
 	width: 50%;
 }
 
-.entry-footer > span:before {
+.entry-footer > span:after {
 	content: "\002f";
 	display: inline-block;
 	filter: alpha(opacity=70);
 	padding: 0 0.538461538em;
-}
-
-.entry-footer > span:first-child:before {
-	display: none;
 }
 
 .updated {
