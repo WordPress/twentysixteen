@@ -39,6 +39,8 @@ Version: 1.0
 @walbo
 
 Version 1.1
+@iamtakashi
+@karmatosed
 @lancewillett
 @joefusco
 @emiluzelac
