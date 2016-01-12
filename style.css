@@ -230,6 +230,7 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
 	border: 1px solid #d1d1d1;
 	margin: 0 0 1.75em;
+	min-width: inherit;
 	padding: 0.875em;
 }
 
