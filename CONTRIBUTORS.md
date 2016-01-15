@@ -44,3 +44,9 @@ Version 1.1
 @lancewillett
 @joefusco
 @emiluzelac
+
+Version 1.2
+@iamtakashi
+@karmatosed
+@obenland
+@joefusco
