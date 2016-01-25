@@ -126,7 +126,10 @@ add_action( 'after_setup_theme', 'twentysixteen_setup' );
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
+	if ( is_page() )
+		$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
+	else
+		$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 600 );
 }
 add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
 
