@@ -64,6 +64,13 @@ function twentysixteen_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
+
+	/**
+	* Enable support for Site Logo in header
+	**/
+	add_image_size( 'twentysixteen-logo', 2400, 350 );
+	add_theme_support( 'site-logo', array( 'size' => 'twentysixteen-logo' ) );
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -405,3 +412,14 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+/**
+ * Return early if Site Logo is not available.
+ */
+function twentysixteen_the_site_logo() {
+	if ( ! function_exists( 'the_site_logo' ) ) {
+		return;
+	} else {
+		the_site_logo();
+	}
+}
