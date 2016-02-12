@@ -1648,7 +1648,7 @@ blockquote:after,
 	width: auto;
 }
 
-.site-logo-link + .site-title {
+.wp-site-logo .site-title {
 	margin-top: 0.608695652em;
 }
 
@@ -2917,7 +2917,7 @@ p > video {
 		max-height: 175px;
 	}
 
-	.site-logo-link + .site-title {
+	.wp-site-logo .site-title {
 		margin-top: 0.5em;
 	}
 }
@@ -3358,7 +3358,7 @@ p > video {
 		padding-left: 15%;
 	}
 
-	.site-logo-link + .site-header-main {
+	.wp-site-logo .site-header-main {
 		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
