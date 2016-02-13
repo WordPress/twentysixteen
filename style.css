@@ -1643,11 +1643,6 @@ blockquote:after,
 	display: block;
 }
 
-.site-logo {
-	max-height: 112px;
-	width: auto;
-}
-
 .wp-site-logo .site-title {
 	margin-top: 0.608695652em;
 }
@@ -2911,10 +2906,6 @@ p > video {
 	body:not(.search-results) .entry-summary li > ol,
 	body:not(.search-results) .entry-summary blockquote > ol {
 		margin-left: 1.473684211em;
-	}
-
-	.site-logo {
-		max-height: 175px;
 	}
 
 	.wp-site-logo .site-title {
