@@ -67,7 +67,7 @@ function twentysixteen_setup() {
 	/*
 	 * Enable support for site logo.
 	 */
-	add_image_size( 'twentysixteen-logo', 2400, 350 );
+	add_image_size( 'twentysixteen-logo', 1200, 175 );
 	add_theme_support( 'site-logo', array( 'size' => 'twentysixteen-logo' ) );
 
 	/*
@@ -430,4 +430,3 @@ function twentysixteen_logo_sizes_attr( $attr, $attachment, $size ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_logo_sizes_attr', 10 , 3 );
-
