@@ -94,6 +94,24 @@ function twentysixteen_header_style() {
 endif; // twentysixteen_header_style
 
 /**
+ * Render the site title for the selective refresh partial.
+ *
+ * @return void
+ */
+function twentysixteen_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @return void
+ */
+function twentysixteen_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+/**
  * Adds postMessage support for site title and description for the Customizer.
  *
  * @since Twenty Sixteen 1.0
@@ -105,6 +123,19 @@ function twentysixteen_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector' => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback' => 'twentysixteen_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector' => '.site-description',
+			'container_inclusive' => false,
+			'render_callback' => 'twentysixteen_customize_partial_blogdescription',
+		) );
+	}
 
 	// Add color scheme setting and control.
 	$wp_customize->add_setting( 'color_scheme', array(
