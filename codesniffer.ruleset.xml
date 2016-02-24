@@ -21,4 +21,8 @@
 	<rule ref="WordPress-Docs">
 
 	</rule>
+
+	<rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing">
+		<severity>0</severity>
+	</rule>
 </ruleset>
