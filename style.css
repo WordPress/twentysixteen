@@ -1636,6 +1636,16 @@ blockquote:after,
 	opacity: 0.85;
 }
 
+/*
+ * Site Logo support only for WP.com
+ */
+.site-logo-link {
+	display: block;
+}
+
+.wp-site-logo .site-title {
+	margin-top: 0.608695652em;
+}
 
 /**
  * 11.2 - Posts and pages
@@ -2897,6 +2907,10 @@ p > video {
 	body:not(.search-results) .entry-summary blockquote > ol {
 		margin-left: 1.473684211em;
 	}
+
+	.wp-site-logo .site-title {
+		margin-top: 0.5em;
+	}
 }
 
 
@@ -3333,6 +3347,12 @@ p > video {
 	.widecolumn {
 		padding-right: 15%;
 		padding-left: 15%;
+	}
+
+	.wp-site-logo .site-header-main {
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
 	}
 }
 
