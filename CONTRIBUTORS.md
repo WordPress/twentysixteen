@@ -50,7 +50,3 @@ Version 1.2
 @karmatosed
 @obenland
 @joefusco
-
-Version 1.3
-@iamtakashi
-@karmatosed
