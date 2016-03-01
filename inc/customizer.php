@@ -106,6 +106,19 @@ function twentysixteen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector' => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback' => 'twentysixteen_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector' => '.site-description',
+			'container_inclusive' => false,
+			'render_callback' => 'twentysixteen_customize_partial_blogdescription',
+		) );
+	}
+
 	// Add color scheme setting and control.
 	$wp_customize->add_setting( 'color_scheme', array(
 		'default'           => 'default',
@@ -173,6 +186,30 @@ function twentysixteen_customize_register( $wp_customize ) {
 	) ) );
 }
 add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @since Twenty Sixteen 1.2
+ * @see twentysixteen_customize_register()
+ *
+ * @return void
+ */
+function twentysixteen_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @since Twenty Sixteen 1.2
+ * @see twentysixteen_customize_register()
+ *
+ * @return void
+ */
+function twentysixteen_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
 
 /**
  * Registers color schemes for Twenty Sixteen.
