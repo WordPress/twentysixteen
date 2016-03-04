@@ -441,7 +441,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_logo_sizes_attr
  * @return array Image size names.
  */
 function twentysixteen_logo_add_image_size_name( $size_names ) {
-	$size_names['twentysixteen-logo'] = __( 'Social Links Menu', 'twentysixteen' );
+	$size_names['twentysixteen-logo'] = __( 'Twenty Sixteen Logo', 'twentysixteen' );
 	return $size_names;
 }
 add_filter( 'image_size_names_choose', 'twentysixteen_logo_add_image_size_name' );
