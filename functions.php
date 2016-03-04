@@ -68,7 +68,7 @@ function twentysixteen_setup() {
 	 * Enable support for site logo.
 	 */
 	add_image_size( 'twentysixteen-logo', 1200, 175 );
-	add_theme_support( 'site-logo', array( 'size' => 'twentysixteen-logo' ) );
+	add_theme_support( 'custom-logo', array( 'size' => 'twentysixteen-logo' ) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
