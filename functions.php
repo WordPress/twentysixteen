@@ -65,7 +65,7 @@ function twentysixteen_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
-	 * Enable support for site logo.
+	 * Enable support for custom logo.
 	 */
 	add_image_size( 'twentysixteen-logo', 1200, 175 );
 	add_theme_support( 'custom-logo', array( 'size' => 'twentysixteen-logo' ) );
@@ -414,7 +414,7 @@ add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
- * for site logo.
+ * for custom logo.
  *
  * @since Twenty Sixteen 1.2
  *
