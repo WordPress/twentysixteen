@@ -430,3 +430,18 @@ function twentysixteen_logo_sizes_attr( $attr, $attachment, $size ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_logo_sizes_attr', 10 , 3 );
+
+/**
+ * Adds twentysixteen-logo to the recognized image sizes for media attachment model.
+ *
+ * @see wp_prepare_attachment_for_js()
+ * @since Twenty Sixteen 1.2
+ *
+ * @param array $size_names Image size names.
+ * @return array Image size names.
+ */
+function twentysixteen_logo_add_image_size_name( $size_names ) {
+	$size_names['twentysixteen-logo'] = __( 'Social Links Menu', 'twentysixteen' );
+	return $size_names;
+}
+add_filter( 'image_size_names_choose', 'twentysixteen_logo_add_image_size_name' );
