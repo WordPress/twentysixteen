@@ -236,19 +236,17 @@ function twentysixteen_category_transient_flusher() {
 add_action( 'edit_category', 'twentysixteen_category_transient_flusher' );
 add_action( 'save_post',     'twentysixteen_category_transient_flusher' );
 
-if ( ! function_exists( 'twentysixteen_the_site_logo' ) ) :
+if ( ! function_exists( 'twentysixteen_the_custom_logo' ) ) :
 /**
- * Displays the optional site logo.
+ * Displays the optional custom logo.
  *
- * Returns early if the site logo is not available.
+ * Does nothing if the custom logo is not available.
  *
  * @since Twenty Sixteen 1.2
  */
-function twentysixteen_the_site_logo() {
-	if ( ! function_exists( 'the_site_logo' ) ) {
-		return;
-	} else {
-		the_site_logo();
+function twentysixteen_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
 	}
 }
 endif;
