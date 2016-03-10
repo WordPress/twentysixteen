@@ -554,6 +554,11 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 		background-color: {$colors['link_color']};
 	}
 
+	input[type="date"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="week"]:focus,
+	input[type="month"]:focus,
 	input[type="text"]:focus,
 	input[type="email"]:focus,
 	input[type="url"]:focus,
@@ -685,6 +690,11 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	table,
 	th,
 	td,
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="week"],
+	input[type="month"],
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -918,6 +928,11 @@ function twentysixteen_link_color_css() {
 			background-color: %1$s;
 		}
 
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
 		input[type="text"]:focus,
 		input[type="email"]:focus,
 		input[type="url"]:focus,
@@ -1039,6 +1054,11 @@ function twentysixteen_main_text_color_css() {
 		table,
 		th,
 		td,
+		input[type="date"],
+		input[type="time"],
+		input[type="datetime-local"],
+		input[type="week"],
+		input[type="month"],
 		input[type="text"],
 		input[type="email"],
 		input[type="url"],
