@@ -213,6 +213,16 @@ input[type="radio"] {
 	padding: 0;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button,
+input[type="week"]::-webkit-inner-spin-button,
+input[type="week"]::-webkit-outer-spin-button,
+input[type="month"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
@@ -619,6 +629,11 @@ input[type="submit"]:focus {
 	outline-offset: -4px;
 }
 
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -636,6 +651,11 @@ textarea {
 	width: 100%;
 }
 
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -3181,6 +3201,11 @@ p > video {
 		padding: 0.846153846em;
 	}
 
+	.widget input[type="date"],
+	.widget input[type="time"],
+	.widget input[type="datetime-local"],
+	.widget input[type="week"],
+	.widget input[type="month"],
 	.widget input[type="text"],
 	.widget input[type="email"],
 	.widget input[type="url"],
