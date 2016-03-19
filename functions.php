@@ -118,9 +118,6 @@ function twentysixteen_setup() {
 	 * specifically font, colors, icons, and column width.
 	 */
 	add_editor_style( array( 'css/editor-style.css', twentysixteen_fonts_url() ) );
-
-	// Indicate widget sidebars can use selective refresh in the Customizer.
-	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif; // twentysixteen_setup
 add_action( 'after_setup_theme', 'twentysixteen_setup' );
@@ -155,6 +152,7 @@ function twentysixteen_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+		'customize_selective_refresh' => true,
 	) );
 
 	register_sidebar( array(
@@ -165,6 +163,7 @@ function twentysixteen_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+		'customize_selective_refresh' => true,
 	) );
 
 	register_sidebar( array(
@@ -175,6 +174,7 @@ function twentysixteen_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+		'customize_selective_refresh' => true,
 	) );
 }
 add_action( 'widgets_init', 'twentysixteen_widgets_init' );
