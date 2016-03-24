@@ -67,7 +67,7 @@ function twentysixteen_setup() {
 	/*
 	 * Enable support for custom logo.
 	 *
-	 *  @since Twenty Sixteen 1.5
+	 *  @since Twenty Sixteen 1.2
 	 */
 	add_theme_support( 'custom-logo', array(
 		'height'      => 240,
