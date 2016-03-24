@@ -66,9 +66,15 @@ function twentysixteen_setup() {
 
 	/*
 	 * Enable support for custom logo.
+	 *
+	 *  @since Twenty Sixteen 1.5
 	 */
-	add_image_size( 'twentysixteen-logo', 1200, 175 );
-	add_theme_support( 'custom-logo', array( 'size' => 'twentysixteen-logo' ) );
+	add_theme_support( 'custom-logo', array(
+		'height'      => 240,
+		'width'       => 240,
+		'flex-height' => true,
+		'flex-width'  => true,
+	) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -414,22 +420,3 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
-
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for custom logo.
- *
- * @since Twenty Sixteen 1.2
- *
- * @param array $attr Attributes for the image markup.
- * @param int   $attachment Image attachment ID.
- * @param array $size Registered image size or flat array of height and width dimensions.
- * @return string A source size value for use in a post thumbnail 'sizes' attribute.
- */
-function twentysixteen_logo_sizes_attr( $attr, $attachment, $size ) {
-	if ( 'twentysixteen-logo' === $size ) {
-		$attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px';
-	}
-	return $attr;
-}
-add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_logo_sizes_attr', 10 , 3 );
