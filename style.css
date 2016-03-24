@@ -1565,6 +1565,10 @@ blockquote:after,
 	display: block;
 }
 
+.custom-logo {
+	max-width: 180px;
+}
+
 .site-title {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
@@ -2743,6 +2747,10 @@ p > video {
 		margin-bottom: 1.3125em;
 	}
 
+	.custom-logo {
+		max-width: 210px;
+	}
+
 	.site-title {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -3376,6 +3384,10 @@ p > video {
 	.header-image {
 		margin-top: 1.75em;
 		margin-bottom: 1.75em;
+	}
+
+	.custom-logo {
+		max-width: 240px;
 	}
 
 	.image-navigation {
