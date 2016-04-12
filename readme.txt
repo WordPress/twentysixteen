@@ -1,6 +1,6 @@
 === Twenty Sixteen ===
 Contributors: the WordPress team
-Requires at least: WordPress 4.5
+Requires at least: WordPress 4.4
 Tested up to: WordPress 4.5
 Version: 1.2
 License: GPLv2 or later
