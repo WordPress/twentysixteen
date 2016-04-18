@@ -404,7 +404,6 @@ pre {
 	overflow: auto;
 	padding: 1.75em;
 	white-space: pre;
-	white-space: pre-wrap;
 	word-wrap: break-word;
 }
 
