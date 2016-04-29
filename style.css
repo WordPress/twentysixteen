@@ -333,6 +333,7 @@ blockquote {
 	line-height: 1.4736842105;
 	margin: 0 0 1.4736842105em;
 	padding: 0 0 0 1.263157895em;
+    overflow: hidden;
 }
 
 blockquote,

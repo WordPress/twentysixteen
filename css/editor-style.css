@@ -117,6 +117,7 @@ blockquote {
 	line-height: 1.4736842105;
 	margin-bottom: 28px;
 	padding: 0 0 0 24px;
+    overflow: hidden;
 }
 
 blockquote:not(.alignleft):not(.alignright) {
