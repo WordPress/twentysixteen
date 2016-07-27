@@ -51,3 +51,11 @@ Version 1.2
 @obenland
 @joefusco
 @westonruter
+
+Version 1.3
+@iamtakashi 
+@karmatosed 
+@davidakennedy 
+@ocean90 
+@grapplerulrich
+@josephfusco
