@@ -47,11 +47,11 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 function twentysixteen_setup() {
 	/*
 	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
+	 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentysixteen
 	 * If you're building a theme based on Twenty Sixteen, use a find and replace
 	 * to change 'twentysixteen' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'twentysixteen', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'twentysixteen' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
