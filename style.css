@@ -1410,6 +1410,10 @@ blockquote:after,
 	padding-top: 1.75em;
 }
 
+.widget:first-child{
+	border-top: none;
+}
+
 .widget-area > :last-child,
 .widget > :last-child {
 	margin-bottom: 0;
