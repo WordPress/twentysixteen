@@ -2758,11 +2758,7 @@ p > video {
 	.site-main {
 		margin-bottom: 5.25em;
 	}
-
-	.site-header {
-		padding: 3.9375em 7.6923%;
-	}
-
+	
 	.site-branding {
 		margin-top: 1.3125em;
 		margin-bottom: 1.3125em;
@@ -2830,20 +2826,6 @@ p > video {
 
 	.site-main > article {
 		margin-bottom: 5.25em;
-	}
-
-	.entry-header,
-	.post-thumbnail,
-	.entry-content,
-	.entry-summary,
-	.entry-footer,
-	.comments-area,
-	.image-navigation,
-	.post-navigation,
-	.page-header,
-	.page-content,
-	.content-bottom-widgets {
-		margin-right: 23.0769%;
 	}
 
 	.entry-title {
@@ -2929,7 +2911,6 @@ p > video {
 	.sidebar,
 	.widecolumn {
 		margin-bottom: 5.25em;
-		padding-right: 23.0769%;
 	}
 
 	body:not(.search-results) .entry-summary li > ul,
@@ -3399,10 +3380,6 @@ p > video {
 @media screen and (min-width: 61.5625em) {
 	.site-main {
 		margin-bottom: 7.0em;
-	}
-
-	.site-header {
-		padding: 5.25em 4.5455%;
 	}
 
 	.site-branding,
