@@ -50,4 +50,3 @@
 
 	<?php endif; ?>
 </article><!-- #post-## -->
-
