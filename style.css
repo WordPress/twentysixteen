@@ -790,6 +790,8 @@ a:active {
 
 .site-header-menu {
 	display: none;
+	-webkit-box-flex: 0 1 100%;
+	-moz-box-flex: 0 1 100%;
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	flex: 0 1 100%;
@@ -1566,6 +1568,8 @@ blockquote:after,
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
+	display: -webkit-box;
+  	display: -moz-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -3341,6 +3345,8 @@ p > video {
 		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
+		display: -webkit-box;
+  		display: -moz-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
