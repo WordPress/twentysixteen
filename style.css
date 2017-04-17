@@ -150,6 +150,8 @@ hr {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+  	-moz-box-sizing: content-box;
 }
 
 code,
@@ -209,6 +211,8 @@ input[type="radio"] {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
 	margin-right: 0.4375em;
 	padding: 0;
 }
@@ -451,6 +455,8 @@ html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
 }
 
 *,
@@ -460,6 +466,8 @@ html {
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+  	-moz-box-sizing: inherit;
 }
 
 body {
